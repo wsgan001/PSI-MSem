@@ -1,0 +1,39 @@
+\begin{thebibliography}{1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+
+\bibitem{kullback1951}
+Kullback, S., Leibler, R.A.: On information and sufficiency. Ann. Math.
+  Statist.  22(1),  79--86 (03 1951),
+  \url{https://doi.org/10.1214/aoms/1177729694}
+
+\bibitem{li2007t}
+Li, N., Li, T., Venkatasubramanian, S.: t-closeness: Privacy beyond k-anonymity
+  and l-diversity. In: Data Engineering, 2007. ICDE 2007. IEEE 23rd
+  International Conference on. pp. 106--115. IEEE (2007)
+
+\bibitem{ldiversity}
+Machanavajjhala, A., Gehrke, J., Kifer, D., Venkitasubramaniam, M.:
+  l-diversity: Privacy beyond k-anonymity. In: Data Engineering, 2006. ICDE'06.
+  Proceedings of the 22nd International Conference on. pp. 24--24. IEEE (2006)
+
+\bibitem{maheshwarkar2011privacy}
+Maheshwarkar, N., Pathak, K., Chourey, V.: Privacy issues for k-anonymity
+  model. International Journal of Engineering Research and Application  1(4),
+  1857--1861 (2011)
+
+\bibitem{datarevo}
+Rossi, B.: Data revolution: the gold rush of the 21st century,
+  \url{http://www.information-age.com/data-revolution-gold-rush-21st-century-2-123460039/}
+
+\bibitem{rubner2000earth}
+Rubner, Y., Tomasi, C., Guibas, L.J.: The earth mover's distance as a metric
+  for image retrieval. International journal of computer vision  40(2),
+  99--121 (2000)
+
+\bibitem{sweeney2002k}
+Sweeney, L.: k-anonymity: A model for protecting privacy. International Journal
+  of Uncertainty, Fuzziness and Knowledge-Based Systems  10(05),  557--570
+  (2002)
+
+\end{thebibliography}

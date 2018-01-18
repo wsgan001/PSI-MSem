@@ -1,0 +1,18 @@
+\contentsline {title}{No Title Given}{1}
+\authcount {1}
+\contentsline {author}{sdf}{1}
+\contentsline {section}{\numberline {1}Introduction}{4}
+\contentsline {section}{\numberline {2}Attacks against K-nonymity}{5}
+\contentsline {subsection}{\numberline {2.1}Linking data}{5}
+\contentsline {subsection}{\numberline {2.2}Unsorted matching attack against k-anonymity}{6}
+\contentsline {subsection}{\numberline {2.3}Complementary release attack against k-anonymity}{7}
+\contentsline {subsection}{\numberline {2.4}Temporal attack against k-anonymity}{7}
+\contentsline {subsection}{\numberline {2.5}Homogeneity Attack}{7}
+\contentsline {subsection}{\numberline {2.6}Background Knowledge Attack}{8}
+\contentsline {subsection}{\numberline {2.7}On the Complexity of Optimal K ? Anonymity}{8}
+\contentsline {subsection}{\numberline {2.8}Complexity of producing k-anonymity}{8}
+\contentsline {section}{\numberline {3}Prevetion Methods}{9}
+\contentsline {subsection}{\numberline {3.1}L-Diversity}{9}
+\contentsline {subsubsection}{Skewness Attack}{9}
+\contentsline {subsubsection}{Similarity Attack}{9}
+\contentsline {subsection}{\numberline {3.2}t-Closeness}{10}
