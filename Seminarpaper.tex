@@ -48,15 +48,17 @@ We will present techniques that override k-anonymity and get the real individual
 %identify individuals. These are known as explicit identifiers
 %and include Social Security Number, Address, and Name,
 %and so on.\cite{li2007t}.
+\section{Basics}
+The definiton of microdata should be clear, therefore in the following on what 
 \section{Barriers against K-anonymity}
 \begin{enumerate}
 	\item Producing k-anonymity
-	\item Reidentify dataholders by linking or matching the data to toher data or by looking at unigque characterstics found the the released data.
+	\item Reidentify dataholders by linking or matching the data to the data or by looking at unigque characterstics found the the released data.
 \end{enumerate}
 \cite{maheshwarkar2011privacy}
 \subsection{Linking data}
 
-Another Problem to do the implementation of k-anonymity, the attacker can take another dataset and link both together to get rid off the k-anonymity and infer the real individual. This process is called linking data and was first described by Sweeney\cite{sweeney2002k}. She showed that with a example of health care data from 37 states in the USA. The institute from which she bought the data, insures the anonymity of the individuals. Sweeney purchased the voter registration list for Cambridge Massachusettts and received information of the voters including ZIP code, birth date and gender of each voter.She linked that information with the medical data. It was possible to deanonymize the data  and get ethnicity, visit date, diagnosis, procedure, medication and total charge of some patients \cite{sweeney2002k}. 
+Another problem to do the implementation of k-anonymity, the attacker can take another dataset and link both together to get rid off the k-anonymity and infer the real individual. This process is called linking data and was first described by Sweeney\cite{sweeney2002k}. She showed that with a example of health care data from 37 states in the USA. The institute from which she bought the data, insures the anonymity of the individuals. Sweeney purchased the voter registration list for Cambridge Massachusettts and received information of the voters including ZIP code, birth date and gender of each voter.She linked that information with the medical data. It was possible to deanonymize the data  and get ethnicity, visit date, diagnosis, procedure, medication and total charge of some patients \cite{sweeney2002k}. 
 \\
 \begin{figure}[]
 	\centering
