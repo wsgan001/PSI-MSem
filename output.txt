@@ -1,0 +1,14 @@
+count of server>  29469
+count of students>  199
+Processing |################################| 29469/29469
+[['http://static.cache.l.google.com"', 37780],
+ ['http://www.google-analytics.com"', 28315], 
+ ['http://www.jetztspielen.de"', 22410],
+ ['http://tbn0.google.com"', 21406],
+ ['http://www.vtunnel.com"', 19507]]
+done
+
+Process returned 0 (0x0)        execution time : 805.145 s
+Drücken Sie eine beliebige Taste . . .
+
+
