@@ -30,15 +30,15 @@ in a realworld application\\[6pt]
 \institute{}
 \maketitle
 %
+%\tableofcontents
 \newpage
 \section{Introduction}
 %
-Nowadays data is a key factor in every domain. Some compare it with the gold rush of the 19. century\cite{datarevo}. Furthermore storage space and network connectivity become for affordable \cite{sweeney2002k}. But to use the data for commercial or scientific purposes the privacy of the dataholder does not have to be compromised or in other words the data holder need to know how to produce anonymous data otherwise the database can not survive \cite{sweeney2002k}.\\
+Nowadays data is a key factor in nearly every domain. It is comparable with the gold rush of the 19. century \cite{datarevo}. Furthermore storage space and network connectivity become affordable \cite{sweeney2002k}. But to use the data for commercial or scientific purposes the privacy of the data holder does not have to be compromised or in other words the data holder need to know how to produce anonymous data otherwise the database can not survive, because if the information of the table get released there will be no need anymore for this data \cite{sweeney2002k}.\\
 
+The paper The so called k-anonymity method, which produce anonymous data, theoretical. But there are practical barriers that will occur in the real world. Those prevent such implementation. The goal of k-anonymity is, to prevent the possibility to get information about the real individual, or at least with k other possible individuals. So if a individual is discriped by a tuple of \ensuremath{\langle f_1, ... ,f_n \rangle} features and each feature can have \ensuremath{\langle a_1,...,a_n \rangle} attributes. There are at least k other individual with the same attribute for each feature so that there is no possibility to reduce the real individual and there will be at least k individuals with the same tuple\cite{sweeney2002k}.\\
 
-
-The so called k-anonymity method, which produce anonymous data, theoretical. But there are practical barriers that will occur in the real world. Those prevent such implementation. The goal of k-anonymity is, to prevent the possibility to get information about the real individual, or at least with k other possible individuals \cite{sweeney2002k}. So if a individual is discriped by a tuple of \ensuremath{\langle f_1, ... ,f_n \rangle} features and each feature can have \ensuremath{\langle a_1,...,a_n \rangle} attributes \cite{sweeney2002k}. There are at least k other individual with the same attribute for each feature so that there is no possibility to reduce the real individual and there will be at least k individuals with the same tuple\cite{sweeney2002k}. The attributes that are used to link the external data is called quasi identifiers. Typical values for them are gender, date of birth and zip code \cite{ldiversity}. \\
-
+The attributes that are used to link the external data is called quasi identifiers. Typical values for them are gender, date of birth and zip code \cite{ldiversity}. 
 We will present techniques that override k-anonymity and get the real individual. Another problem we will introduce is, that the producing of k-anonymity of a computational view is a NP-hard problem, like  meyersond and williams shown.
 ...
 %\\\\WAS IST DAS HIER
@@ -50,8 +50,9 @@ We will present techniques that override k-anonymity and get the real individual
 %identify individuals. These are known as explicit identifiers
 %and include Social Security Number, Address, and Name,
 %and so on.\cite{li2007t}.
-\section{Basics}
-The definiton of microdata should be clear, therefore in the following on what 
+\section{Microdata}
+First of all it should be clear what microdata is, those data is containing records of information about individuals. The upside versus the more known summary or aggregate data is, that microdata is naturally  flexible. Everyone who has this data can perform own statistics from that data \cite{microdataweb}.
+
 \section{Barriers against K-anonymity}
 \begin{enumerate}
 	\item Producing k-anonymity
@@ -144,7 +145,7 @@ Generalization mean, replacing a value with a less specific but semantic identic
 %In this section we presented formal notions of: (1) generalization incorporating suppression; (2) minimal generalization; and, (3) minimal distortion
 %\section{Methods}
 %Unless otherwise stated, the term data refers to person-specific information that is conceptually organized as a table of rows (or records) and columns (or fields). Each row is termed a tuple. Which contains a relationship among the set of values associated with a person. Disclosure means that explicit or inferable information about a person was released that was not intended .
-\subsection{L-Diversity}
+\section{Barriers against L-Diversity}
 
 K-anonymity gives protection on the identity disclosure. L-Diversity more with the same sensitive data. 
 \subsubsection{Skewness Attack} 
@@ -153,7 +154,7 @@ When the overall distribution is skewed, satisfying l-diversity does not prevent
 \subsubsection{Similarity Attack} 
 When the sensitive attribute values in an equivalence class are distinct but semantically similar, an adversary can learn important information [8]. Positive and negative disclosure: the homogeneity attack where A determined that B has cancer is an example of positive disclosure, whereas when an adversary eliminates some possibilities of sensitive tuples is known as negative disclosure. This negative disclosure uses background knowledge attack. L-diversity also fails in the case of multiple sensitive attributes. In short, distributions that have the same level of diversity may provide very different levels of privacy, because there are semantic relationships among the attribute values. Furthermore different values have very different levels of sensitivity, and  privacy is also affected by the relationship with the overall distribution. l-diversity does not consider semantic meanings of sensitive values. l-diversity cannot provide privacy for the multiple sensitive attributes \cite{ldiversity}.
 \\...
-\subsection{t-Closeness}
+\section{Barriers against t-Closeness}
 The publication of Ninghui, Tiancheng and Suresh is about the t-closeness, which takes into account the unavoidable gain of knowledge of an attacker (the weakness of $\ell$-diversity) \cite{li2007t}. To archive t-closeness a special distance measurement method the Earth Mover's Distanz (EMD) is used \cite{rubner2000earth}. Furthermore t-closeness "requires that the distribution of a sensitive attribute in any equivalence class is close to the distribution of the attribute in the overall table" \cite{li2007t}.\\
  
 The weakness of t-closeness by using EMD is that it does not takes the into account if a change of pairs is more significant than another one, which an attacker can use \cite{li2007t}. A combination of EMD and Kullback-Leibler Distance \cite{kullback1951} will help to prevent this attack \cite{li2007t}.

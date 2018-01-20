@@ -3,4 +3,7 @@ The style file: splncs03.bst
 Database file #1: literature.bib
 Warning--entry type for "datarevo" isn't style-file defined
 --line 1 of file literature.bib
-(There was 1 warning)
+Warning--entry type for "microdataweb" isn't style-file defined
+--line 99 of file literature.bib
+Warning--to sort, need author or key in microdataweb
+(There were 3 warnings)
