@@ -1,11 +1,17 @@
 import numpy as np
 from progress.bar import Bar
+import sys
+import datetime
+import time
 
 delay = 10
 students = set()
 left = [[], []]
 right = [[], []]
 server = set()
+mueller = list()
+data_t = list()
+data_id = list()
 
 
 def count_students():
@@ -47,7 +53,43 @@ def takeSecond(elem):
     return elem[1]
 
 
+def getMueller():
+    with open("left.txt", 'r') as f:
+        for line in f.readlines():
+            words = line.lower().split()
+            # left.append
+            data_id.append(words[0])
+            data_t.append(datetime.datetime.strptime(words[1][1:-7].replace("t", " "), "%Y-%m-%d %H:%M:%S"))
+        print("done appending left")
+        for i in range(0, len(data_t)):
+            # if (data_t[i] > start_t and data_t[i] < end_t):
+            for j in range(4, 9):
+                start_t = datetime.datetime.strptime("2009-05-0" + str(j) + " 20:14:30", "%Y-%m-%d %H:%M:%S")
+                end_t = datetime.datetime.strptime("2009-05-0" + str(j) + " 20:15:30", "%Y-%m-%d %H:%M:%S")
+                if (start_t <= data_t[i] <= end_t):
+                    print(start_t)
+                    print(end_t)
+                    print(data_t[i])
+                    print(data_id[i], data_t[i])
+                    mueller.append(data_id[i])
+
+
+def top5ip():
+    if len(mueller) == 0:
+        getMueller()
+    muellercount = []
+    setmueller = set(mueller)
+    listmueller = list(setmueller)
+    for i in (range(0, len(listmueller))):
+        muellercount.append([listmueller[i], mueller.count(listmueller[i])])
+        muellercount.sort(reverse=True, key=takeSecond)
+    print(muellercount, "\n")
+
+
 # count_server()
 # top5servers()
-count_students()
+getMueller()
+# d = datetime.datetime.strptime("01:15:41", "%H:%M:%S")
+# print(d)
+top5ip()
 print("done")
