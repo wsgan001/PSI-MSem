@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.1.19)  19 JAN 2018 17:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.1.19)  19 JAN 2018 21:50
 entering extended mode
 **./Seminarpaper.tex
 (Seminarpaper.tex
@@ -154,18 +154,18 @@ File: pdftex.def 2017/06/24 v1.0g Graphics/color driver for pdftex
 (Seminarpaper.aux)
 \openout1 = `Seminarpaper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
  ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count116
@@ -231,71 +231,74 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-Overfull \hbox (15.0pt too wide) in paragraph at lines 10--12
+Overfull \hbox (15.0pt too wide) in paragraph at lines 11--13
 [][]
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <24.88> on input line 14.
+(Font)              <24.88> on input line 15.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <20.74> on input line 14.
+(Font)              <20.74> on input line 15.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <17.28> on input line 14.
+(Font)              <17.28> on input line 15.
 [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 30.
+(Font)              <7> on input line 31.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 30.
+(Font)              <5> on input line 31.
  [2]
-Underfull \hbox (badness 10000) in paragraph at lines 35--37
+Underfull \hbox (badness 10000) in paragraph at lines 36--37
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 38--39
+Underfull \hbox (badness 10000) in paragraph at lines 40--41
 
  []
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 63.
+               Default added (so using `htbp') on input line 65.
 
 <linkingdata.png, id=11, 440.39531pt x 283.81032pt>
 File: linkingdata.png Graphic file (type png)
 <use linkingdata.png>
-Package pdftex.def Info: linkingdata.png  used on input line 65. on input line 
-65.
+Package pdftex.def Info: linkingdata.png  used on input line 67. on input line 
+67.
 Package pdftex.def Info: Requested size: 242.98541pt x 156.58983pt on input lin
-e 65.
+e 67.
 [3]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 83.
+(Font)              <9> on input line 85.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 83.
+(Font)              <6> on input line 85.
+
+Underfull \vbox (badness 1412) has occurred while \output is active []
+
  [4 <./linkingdata.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 138--145
+Underfull \hbox (badness 10000) in paragraph at lines 140--147
 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 155--156
+Underfull \hbox (badness 10000) in paragraph at lines 157--158
 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 157--159
+Underfull \hbox (badness 10000) in paragraph at lines 159--161
 
  []
 
 <entropy.png, id=31, 201.00093pt x 36.88782pt>
 File: entropy.png Graphic file (type png)
 <use entropy.png>
-Package pdftex.def Info: entropy.png  used on input line 164. on input line 164
+Package pdftex.def Info: entropy.png  used on input line 166. on input line 166
 .
 Package pdftex.def Info: Requested size: 242.98541pt x 44.59271pt on input line
- 164.
+ 166.
 [7 <./entropy.png>] (Seminarpaper.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 26--28
 []\OT1/cmr/m/n/9 Rossi, B.: Data rev-o-lu-tion: the gold rush of the 21st cen-t
@@ -312,7 +315,7 @@ ntury-2-
 Here is how much of TeX's memory you used:
  1900 strings out of 493312
  26131 string characters out of 3138899
- 95079 words of memory out of 3000000
+ 96079 words of memory out of 3000000
  5437 multiletter control sequences out of 15000+200000
  10031 words of font info for 35 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -327,7 +330,7 @@ s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX
 /type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
 lic/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/cm/cmsy10.pfb>
-Output written on Seminarpaper.pdf (8 pages, 173727 bytes).
+Output written on Seminarpaper.pdf (8 pages, 173822 bytes).
 PDF statistics:
  73 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
