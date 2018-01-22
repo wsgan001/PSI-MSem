@@ -1,10 +1,18 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{URL }
 
 \bibitem{microdataweb}
 Ipumsl-confidentiality,
   \url{https://web.archive.org/web/20070823010133/http://international.ipums.org/international/confidentiality.html}
+
+\bibitem{Dalenius1977}
+Dalenius, T.: {T}owards a methodology for statistical disclosure control.
+  Statistik Tidskrift  15,  429--444 (1977)
+
+\bibitem{dalenius1986finding}
+Dalenius, T.: Finding a needle in a haystack or identifying anonymous census
+  records. Journal of official statistics  2(3),  329 (1986)
 
 \bibitem{kullback1951}
 Kullback, S., Leibler, R.A.: On information and sufficiency. Ann. Math.

@@ -50,34 +50,47 @@ We will present techniques that override k-anonymity and get the real individual
 %identify individuals. These are known as explicit identifiers
 %and include Social Security Number, Address, and Name,
 %and so on.\cite{li2007t}.
-\section{Microdata}
-First of all it should be clear what microdata is, those data is containing records of information about individuals. The upside versus the more known summary or aggregate data is, that microdata is naturally  flexible. Everyone who has this data can perform own statistics from that data \cite{microdataweb}.
+\newpage
+\section{Basics}
+\textbf{Microdata:}\\
+First of all it should be clear what microdata is, those data is containing records of information about individuals. The upside versus the more known summary or aggregate data is, that microdata is naturally  flexible. Everyone who has this data can perform own statistics from that data \cite{microdataweb}.\\
+\\
+\textbf{Quasi-identifier:}\\
+Even tho though explicit identifier got removed of published data. Such non explicit attribute, which would not uniquely identify the record owner. But if combined (with other non explicit attributes), they become explicit identifier. Which resulting that those can link towards the owner. In such a case those attributes are called quasi-identifier \cite{dalenius1986finding}. Such process is shown in figure \ref{quasiidentifier}. 
 
-\section{Barriers against K-anonymity}
+
+\section{Barriers of implementation of k-anonymity}
+
+Like Dalenius already mentioned it is absolutely necessary that an attacker, under no circumstances, can learn about whatsoever target if he is studying the published database. Not even if the attacker has background knowledge from any other source  \cite{Dalenius1977}. Unfortunately like Dwork showed 2006 that such safty is impossible because of background knowledge. For example if Bob get paid twice as the average german man and the attacker got acccess to a database which publish the average income by german men. The anonymity of Bob is compromised RICHTIGE QUELLE??? DWORK 2006 \cite{}.  
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{enumerate}
 	\item Producing k-anonymity
-	\item Reidentify dataholders by linking or matching the data to the data or by looking at unigque characterstics found the the released data.
+	\item Reidentify dataholders by linking or matching the data to the record owner or by looking at unique characteristics found the released data.
 \end{enumerate}
 \cite{maheshwarkar2011privacy}
 \subsection{Linking data}
+A barrier to do the implementation of k-anonymity, the attacker can take another dataset and link both together to get rid off the k-anonymity and infer the real individual. This process is called linking data and was first described by Sweeney\cite{sweeney2002k}. She showed that with a example of health care data from 37 states in the USA. The institute from which she bought the data, insures the anonymity of the individuals. Sweeney purchased the voter registration list for Cambridge Massachusettts and received information of the voters including ZIP code, birth date and gender (non explicit identifier) of each voter. She linked that information with the medical data. It was possible to deanonymize the data  and get ethnicity, visit date, diagnosis, procedure, medication and total charge of some patients \cite{sweeney2002k}. 
 
-Another problem to do the implementation of k-anonymity, the attacker can take another dataset and link both together to get rid off the k-anonymity and infer the real individual. This process is called linking data and was first described by Sweeney\cite{sweeney2002k}. She showed that with a example of health care data from 37 states in the USA. The institute from which she bought the data, insures the anonymity of the individuals. Sweeney purchased the voter registration list for Cambridge Massachusettts and received information of the voters including ZIP code, birth date and gender of each voter.She linked that information with the medical data. It was possible to deanonymize the data  and get ethnicity, visit date, diagnosis, procedure, medication and total charge of some patients \cite{sweeney2002k}. 
-\\
 \begin{figure}[]
 	\centering
 	\includegraphics[width=0.7\textwidth]{linkingdata.png}
 	\caption{linking data}%
+	\label{quasiidentifier}
 \end{figure}
-
-You got 2 datasets A and B. Each dataset got \ensuremath{\langle f_1, ... ,f_n \rangle} features and \ensuremath{\langle r_1, ... ,r_n \rangle} rows.
+You got two datasets A and B. Each dataset got \ensuremath{\langle f_1, ... ,f_n \rangle} features and \ensuremath{\langle r_1, ... ,r_n \rangle} rows.
 Each row is then a tuple \ensuremath{r_i} with n features \ensuremath{\langle f_1, ... ,f_n \rangle} describing the individual.
-And A got k-anonimity you can get rid oft he anonymity of the individual by linking the A to B. So if \ensuremath{A \cap B \not \neq \emptyset} it is possible to infer the anonymized individual \cite{sweeney2002k}.
-\\ ...
-% Please add the following required packages to your document preamble:
-% \usepackage{longtable}
-% Note: It may be necessary to compile the document several times to get a multi-page table to line up properly
+Even tho the data is k-anonimized you can get rid oft he anonymity of the individual by linking the A to B. So if \ensuremath{A \cap B \not \neq \emptyset} it is possible to infer the anonymized individual \cite{sweeney2002k}.
+As a result any attacker who know such data (ZIP Code, Birth date and sex) could easily identify with such an attack his victim. For example Peter see his ex-wife at the doctor, most likely he knows her ZIP-Code, Birth date and sex. Therefore he finds out what she is suffer from. 
 \subsection{Unsorted matching attack against k-anonymity}
-
 There is a possibility of a leak of information, if the release k-anonymity data is in some kind of a sort release. This mean the numerical attributes are descending or ascending sorted and attributes, which be of characters are alphabetical ordered, can give the attacker Information about the sensitive data. To prevent this attack, just get the data into a random order with a pseudo randomized sorting algorithm \cite{sweeney2002k}. As an example take a look at the table 3: matching attack  will give an example on that. If you compare the different release generalized tables you can figure out all quasi identifier of those \cite{sweeney2002k}.
 \\...
 \begin{table}	
