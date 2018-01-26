@@ -14,6 +14,10 @@ Dalenius, T.: {T}owards a methodology for statistical disclosure control.
 Dalenius, T.: Finding a needle in a haystack or identifying anonymous census
   records. Journal of official statistics  2(3),  329 (1986)
 
+\bibitem{dwork2011differential}
+Dwork, C.: Differential privacy. In: Encyclopedia of Cryptography and Security,
+  pp. 338--340. Springer (2011)
+
 \bibitem{kullback1951}
 Kullback, S., Leibler, R.A.: On information and sufficiency. Ann. Math.
   Statist.  22(1),  79--86 (03 1951),
