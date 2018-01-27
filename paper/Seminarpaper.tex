@@ -32,6 +32,7 @@ in a realworld application\\[6pt]
 %
 %\tableofcontents
 \newpage
+\setcounter{page}{1}
 \section{Introduction}
 %
 Nowadays data is a key factor in nearly every domain. It is comparable with the gold rush of the 19. century \cite{datarevo}. Furthermore storage space and network connectivity become affordable \cite{sweeney2002k}. But to use the data for commercial or scientific purposes the privacy of the data holder does not have to be compromised or in other words the data holder need to know how to produce anonymous data otherwise the database can not survive, because if the information of the table get released there will be no need anymore for this data \cite{sweeney2002k}.\\
@@ -59,24 +60,17 @@ First of all it should be clear what microdata is, those data is containing reco
 Even tho though explicit identifier got removed of published data. Such non explicit attribute, which would not uniquely identify the record owner. But if combined (with other non explicit attributes), they become explicit identifier. Which resulting that those can link towards the owner. In such a case those attributes are called quasi-identifier \cite{dalenius1986finding}. Such process is shown in figure \ref{quasiidentifier}. 
 
 
-\section{Barriers of implementation of k-anonymity}
+\section{Implementing of k-anonymity}
 
-Like Dalenius already mentioned it is absolutely necessary that an attacker, under no circumstances, can learn about whatsoever target if he is studying the published database. Not even if the attacker has background knowledge from any other source  \cite{Dalenius1977}. Unfortunately like Dwork showed 2006 that such safty is impossible because of background knowledge. For example if Bob get paid twice as the average german man and the attacker got acccess to a database which publish the average income by german men. The anonymity of Bob is compromised RICHTIGE QUELLE??? DWORK 2006 \cite{}.  
+Like Dalenius already mentioned it is absolutely necessary that an attacker, under no circumstances, can learn about whatsoever target if he is studying the published database. Not even if the attacker has background knowledge from any other source  \cite{Dalenius1977}. Unfortunately like Dwork showed 2006 that such safty is impossible because of background knowledge. For example if the attacker knows that Bob get paid twice as the average german man and the attacker got access to a database which publish the average income by german men. The anonymity of Bob is compromised even if Bobs data is not in the database \cite{dwork2011differential}.  
+\newline \\ Mehr Text? differential privacy erklären/ bzw formalized as a relaxed version of semantic security, cannot be achieved, while semantic security for cryptosystems can be achieved
 
-%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{enumerate}
+%	\item Producing k-anonymity
+%	\item Reidentify dataholders by linking or matching the data to the record owner or by looking at unique characteristics found the released data.
+%\end{enumerate}
+%\cite{maheshwarkar2011privacy}
 
-\begin{enumerate}
-	\item Producing k-anonymity
-	\item Reidentify dataholders by linking or matching the data to the record owner or by looking at unique characteristics found the released data.
-\end{enumerate}
-\cite{maheshwarkar2011privacy}
 \subsection{Linking data}
 A barrier to do the implementation of k-anonymity, the attacker can take another dataset and link both together to get rid off the k-anonymity and infer the real individual. This process is called linking data and was first described by Sweeney\cite{sweeney2002k}. She showed that with a example of health care data from 37 states in the USA. The institute from which she bought the data, insures the anonymity of the individuals. Sweeney purchased the voter registration list for Cambridge Massachusettts and received information of the voters including ZIP code, birth date and gender (non explicit identifier) of each voter. She linked that information with the medical data. It was possible to deanonymize the data  and get ethnicity, visit date, diagnosis, procedure, medication and total charge of some patients \cite{sweeney2002k}. 
 

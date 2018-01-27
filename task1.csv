@@ -1,0 +1,25 @@
+Name;Birthdate;Type;Treatment;We;He;Exp. d.;Telephone
+Daniel Tinker;23.08.1951;Lung;Radiation;83;182;2018-09;04917 4939
+Michael Riem;05.01.1967;Pancreas;Cytostatics;91;182;2018-02;03492 48217
+Claudia Kling;09.07.1961;Gastric;Resection;61;165;Curable;09201 34219
+Kurt Dreyer;17.01.1956;Lung;Radiation;89;179;2019-01;03920 24928
+Sabine Kupfer;17.05.1983;Pancreas;Cytostatics;71;155;2019-05;02389 23471
+Benjamin Reis;23.08.1952;Lung;Radiation;87;177;2018-05;08704 19756
+Richard Kruse;17.05.1971;Pancreas;Cytostatics;98;180;2019-04;04028 50285
+Julia Heim;02.03.1964;Gastric;Cytostatics;65;172;Curable;03721 2391
+Karla Fried;01.10.1965;Pancreas;Resection;68;169;2019-03;01294 42921
+Patrick Steiﬂ;04.03.1969;Gastric;Resection;95;184;2018-08;07293 1057
+;;;;;;;
+;;;;;;;
+Identifier;ID;SD;SD;QI;QI;;Identifier
+Name;Birthdate;Type;Treatment;We;He;Exp. d.;Telephone
+*;<1966;Lung;Radiation;80-89;>180;2018-09;*
+*;>1966;Pancreas;Cytostatics;>90;>180;2018-02;*
+*;<1966;Gastric;Resection;<80;<170;Curable;*
+*;<1966;Lung;Radiation;80-89;170-180;2019-01;*
+*;>1966;Pancreas;Cytostatics;<80;<170;2019-05;*
+*;<1966;Lung;Radiation;80-89;170-180;2018-05;*
+*;>1966;Pancreas;Cytostatics;>90;170-180;2019-04;*
+*;<1966;Gastric;Cytostatics;<80;170-180;Curable;*
+*;<1966;Pancreas;Resection;<80;<170;2019-03;*
+*;>1966;Gastric;Resection;>90;>180;2018-08;*
