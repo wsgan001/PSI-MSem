@@ -9,17 +9,3 @@ Richard Kruse;17.05.1971;Pancreas;Cytostatics;98;180;2019-04;04028 50285
 Julia Heim;02.03.1964;Gastric;Cytostatics;65;172;Curable;03721 2391
 Karla Fried;01.10.1965;Pancreas;Resection;68;169;2019-03;01294 42921
 Patrick Steiﬂ;04.03.1969;Gastric;Resection;95;184;2018-08;07293 1057
-;;;;;;;
-;;;;;;;
-Identifier;ID;SD;SD;QI;QI;;Identifier
-Name;Birthdate;Type;Treatment;We;He;Exp. d.;Telephone
-*;<1966;Lung;Radiation;80-89;>180;2018-09;*
-*;>1966;Pancreas;Cytostatics;>90;>180;2018-02;*
-*;<1966;Gastric;Resection;<80;<170;Curable;*
-*;<1966;Lung;Radiation;80-89;170-180;2019-01;*
-*;>1966;Pancreas;Cytostatics;<80;<170;2019-05;*
-*;<1966;Lung;Radiation;80-89;170-180;2018-05;*
-*;>1966;Pancreas;Cytostatics;>90;170-180;2019-04;*
-*;<1966;Gastric;Cytostatics;<80;170-180;Curable;*
-*;<1966;Pancreas;Resection;<80;<170;2019-03;*
-*;>1966;Gastric;Resection;>90;>180;2018-08;*
