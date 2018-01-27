@@ -116,6 +116,6 @@ def getJulia():
 
 
 # top5servers()
-# getMueller()
-getJulia()
+getMueller()
+# getJulia()
 print("done")
