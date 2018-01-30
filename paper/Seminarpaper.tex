@@ -126,25 +126,16 @@ There is a possibility of a leak of information, if the release k-anonymity data
 	32  & 67*   \\ \hline  
 	\end{tabular}
 \end{table}
-\subsection{Complementary release attack against k-anonymity}
-
-The problem of complementary release attack against k-anonymitym lies by the release of other k-anoymitizet tables from the same dataset. To stop the attack the data holder should consider for each release of data if it's possible to release information with older released data. This is hard to avoid especially when the data can come from different individuals \cite{sweeney2002k}.
-\\...
-\subsection{Temporal attack against k-anonymity}
-
-The data can be change over time. New tuples might be added or persistent ones can be changed. If the GT0 was release at time T=0 and on a later time GT1 will be released at time T = 1 with new tuples of information. Both tables at their time stamp T are k-anonymity, but it will not be checked if they are k-anonymity between them. So their is a possibility of information leaking and a failure oft he k-anonymity in both tables \cite{sweeney2002k}.
-\\...
-\subsection{Homogeneity Attack}
-
-
-\subsection{Background Knowledge Attack}
-
-Taking background knowledge attack from a person and take it into account to derive the sensitive data. In our example of table 1 this could be that we know one person my name, age, and nationality. Additionally we know, because that she is asian, in would be unusual that she got diabetes, because diabetes is a uncommon sickness in japan \cite{ldiversity}.
-\\...
 \subsection{Complexity of producing k-anonymity}
 Till now we only looked at problems of information leaking and privacy problems for individuals. Data is personal-specific information which is structured as a table in rows and columns. Rows a tuple. The columns are attributes with are a set of values which describe the certain attribute. A tuple specify a person. K-anonymity is about protecting the identity of a person not relationships of companies or governments. So the goal of k-anonymity is, not getting more information by linking the data to external data. The bridge between the data and external data is called "quasi-identifier". Examples for that would be ZIP, gender, birth date etc.. \\
 \\
 Generalization mean, replacing a value with a less specific but semantic identical value. For example we got a list of forenames of buys, (Achmed, Achilles, Achim). To generalize this names you can just (Ach*,Ach*, Ach*) delete the last chars of the name. So there is a less specific domain and now more generalize through this mapping. Suppression on the other hand means not releasing the value at all.
+
+\section{Datafly}
+
+\section{Argus}
+
+
 
 \newpage
 \bibliography{literature}
