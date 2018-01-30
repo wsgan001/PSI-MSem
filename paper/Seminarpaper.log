@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.20)  30 JAN 2018 21:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.20)  30 JAN 2018 21:24
 entering extended mode
 **./Seminarpaper.tex
 (Seminarpaper.tex
@@ -259,35 +259,41 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--41
 
  []
 
+
+Overfull \hbox (2.71034pt too wide) in paragraph at lines 42--45
+[]\OT1/cmr/m/n/10 The at-tributes that are used to link the ex-ter-nal data is 
+called quasi-identifiers.
+ []
+
 [1]
-Underfull \hbox (badness 10000) in paragraph at lines 56--61
+Underfull \hbox (badness 10000) in paragraph at lines 48--53
 
  []
 
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no ¤ in font cmr10!
 
-Underfull \hbox (badness 10000) in paragraph at lines 65--67
+Underfull \hbox (badness 10000) in paragraph at lines 57--59
 
  []
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 77.
+               Default added (so using `htbp') on input line 64.
 
 <linkingdata.png, id=19, 440.39531pt x 283.81032pt>
 File: linkingdata.png Graphic file (type png)
  <use linkingdata.png>
-Package pdftex.def Info: linkingdata.png used on input line 79.
+Package pdftex.def Info: linkingdata.png used on input line 66.
 (pdftex.def)             Requested size: 242.98541pt x 156.58983pt.
 
 [2]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 93.
+(Font)              <9> on input line 80.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 93.
+(Font)              <6> on input line 80.
  [3 <./linkingdata.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 148--177
+Underfull \hbox (badness 10000) in paragraph at lines 135--138
 
  []
 
@@ -317,7 +323,7 @@ Here is how much of TeX's memory you used:
  5482 multiletter control sequences out of 15000+200000
  10031 words of font info for 35 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,8n,25p,2049b,224s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,8n,25p,874b,224s stack positions out of 5000i,500n,10000p,200000b,50000s
 <D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
 nts/cm/cmbx10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
 mbx12.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb
@@ -328,7 +334,7 @@ s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/MiKTeX
 /type1/public/amsfonts/cm/cmr7.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/pub
 lic/amsfonts/cm/cmr9.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/cm/cmsy10.pfb>
-Output written on Seminarpaper.pdf (8 pages, 169102 bytes).
+Output written on Seminarpaper.pdf (8 pages, 169104 bytes).
 PDF statistics:
  70 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
