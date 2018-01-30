@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.20)  23 JAN 2018 17:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.20)  30 JAN 2018 21:18
 entering extended mode
 **./Seminarpaper.tex
 (Seminarpaper.tex
@@ -273,40 +273,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 65--67
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 76.
+               Default added (so using `htbp') on input line 77.
 
 <linkingdata.png, id=19, 440.39531pt x 283.81032pt>
 File: linkingdata.png Graphic file (type png)
  <use linkingdata.png>
-Package pdftex.def Info: linkingdata.png used on input line 78.
+Package pdftex.def Info: linkingdata.png used on input line 79.
 (pdftex.def)             Requested size: 242.98541pt x 156.58983pt.
 
 [2]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 92.
+(Font)              <9> on input line 93.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 92.
+(Font)              <6> on input line 93.
  [3 <./linkingdata.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 147--154
+Underfull \hbox (badness 10000) in paragraph at lines 148--177
 
  []
 
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 164--165
-
- []
-
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 166--168
-
- []
-
-<entropy.png, id=35, 201.00093pt x 36.88782pt>
-File: entropy.png Graphic file (type png)
- <use entropy.png>
-Package pdftex.def Info: entropy.png used on input line 173.
-(pdftex.def)             Requested size: 242.98541pt x 44.59271pt.
- [6 <./entropy.png>] (Seminarpaper.bbl
+[4] [5] (Seminarpaper.bbl
 Overfull \hbox (212.38313pt too wide) in paragraph at lines 6--8
 []\OT1/cmr/m/n/9 Ipumsl-confidentiality, https://web.archive.org/web/2007082301
 0133/http://international.ipums.org/international/confidentiality.html 
@@ -324,12 +309,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 42--44
 ntury-2-
  []
 
-) [7] (Seminarpaper.aux) ) 
+) [6] (Seminarpaper.aux) ) 
 Here is how much of TeX's memory you used:
- 1958 strings out of 493323
- 26549 string characters out of 3139062
+ 1953 strings out of 493323
+ 26475 string characters out of 3139062
  99318 words of memory out of 3000000
- 5486 multiletter control sequences out of 15000+200000
+ 5482 multiletter control sequences out of 15000+200000
  10031 words of font info for 35 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,8n,25p,2049b,224s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -343,9 +328,9 @@ s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/MiKTeX
 /type1/public/amsfonts/cm/cmr7.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/pub
 lic/amsfonts/cm/cmr9.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/cm/cmsy10.pfb>
-Output written on Seminarpaper.pdf (9 pages, 178078 bytes).
+Output written on Seminarpaper.pdf (8 pages, 169102 bytes).
 PDF statistics:
- 76 PDF objects out of 1000 (max. 8388607)
+ 70 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
