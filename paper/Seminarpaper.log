@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.1.19)  1 FEB 2018 21:47
-=======
-<<<<<<< HEAD
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.20)  31 JAN 2018 18:24
-=======
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2018.1.19)  1 FEB 2018 21:33
->>>>>>> a4390094a29a3d8a6fa0565596a82eac0e071152
->>>>>>> 74d9fb8d5f5dafe2e9a4c2fa773b7d0a415222a0
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.20)  1 FEB 2018 22:43
 entering extended mode
 **./Seminarpaper.tex
 (Seminarpaper.tex
@@ -167,7 +159,7 @@ Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen125
 \Gin@req@width=\dimen126
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\booktabs\booktabs.sty"
+("D:\Program Files\MiKTeX 2.9\tex\latex\booktabs\booktabs.sty"
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \heavyrulewidth=\dimen127
 \lightrulewidth=\dimen128
@@ -179,43 +171,17 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \cmidrulesep=\dimen134
 \cmidrulekern=\dimen135
 \defaultaddspace=\dimen136
-\@cmidla=\count116
-\@cmidlb=\count117
+\@cmidla=\count117
+\@cmidlb=\count118
 \@aboverulesep=\dimen137
 \@belowrulesep=\dimen138
-\@thisruleclass=\count118
-\@lastruleclass=\count119
+\@thisruleclass=\count119
+\@lastruleclass=\count120
 \@thisrulewidth=\dimen139
 )
 (Seminarpaper.aux)
 \openout1 = `Seminarpaper.aux'.
 
-<<<<<<< HEAD
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
- ("D:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count117
-\scratchdimen=\dimen127
-\scratchbox=\box54
-\nofMPsegments=\count118
-\nofMParguments=\count119
-\everyMPshowfont=\toks19
-\MPscratchCnt=\count120
-\MPscratchDim=\dimen128
-\MPnumerator=\count121
-\makeMPintoPDFobject=\count122
-=======
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
@@ -228,19 +194,18 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
- ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+ ("D:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count120
+\scratchcounter=\count121
 \scratchdimen=\dimen140
 \scratchbox=\box54
-\nofMPsegments=\count121
-\nofMParguments=\count122
+\nofMPsegments=\count122
+\nofMParguments=\count123
 \everyMPshowfont=\toks19
-\MPscratchCnt=\count123
+\MPscratchCnt=\count124
 \MPscratchDim=\dimen141
-\MPnumerator=\count124
-\makeMPintoPDFobject=\count125
->>>>>>> a4390094a29a3d8a6fa0565596a82eac0e071152
+\MPnumerator=\count125
+\makeMPintoPDFobject=\count126
 \everyMPtoPDFconversion=\toks20
 ) ("D:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
 Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
@@ -311,41 +276,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--41
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 44.
+               Default added (so using `htbp') on input line 42.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 48.
+(Font)              <9> on input line 46.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 48.
+(Font)              <6> on input line 46.
 [1]
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no ¶ in font cmr10!
-<<<<<<< HEAD
- [2] [3] (Seminarpaper.bbl
-=======
- [2]
+
+
+LaTeX Warning: Citation ` li2006achieving' on page 2 undefined on input line 81
+.
+
+[2]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 108.
+               Default added (so using `htbp') on input line 99.
 
 <linkingdata.png, id=22, 440.39531pt x 283.81032pt>
 File: linkingdata.png Graphic file (type png)
-<use linkingdata.png>
-Package pdftex.def Info: linkingdata.png  used on input line 110. on input line
- 110.
-Package pdftex.def Info: Requested size: 242.98541pt x 156.58983pt on input lin
-e 110.
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 164--167
+ <use linkingdata.png>
+Package pdftex.def Info: linkingdata.png used on input line 101.
+(pdftex.def)             Requested size: 242.98541pt x 156.58983pt.
+
+[3] [4 <./linkingdata.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 155--158
 
  []
 
-<<<<<<< HEAD
-[4 <./linkingdata.png>] [5] (Seminarpaper.bbl
-=======
-[4] [5] (Seminarpaper.bbl
->>>>>>> a4390094a29a3d8a6fa0565596a82eac0e071152
->>>>>>> 74d9fb8d5f5dafe2e9a4c2fa773b7d0a415222a0
+[5] (Seminarpaper.bbl
 Overfull \hbox (212.38313pt too wide) in paragraph at lines 6--8
 []\OT1/cmr/m/n/9 Ipumsl-confidentiality, https://web.archive.org/web/2007082301
 0133/http://international.ipums.org/international/confidentiality.html 
@@ -363,80 +324,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--39
 ntury-2-
  []
 
-) [4]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 96.
-
-<linkingdata.png, id=34, 440.39531pt x 283.81032pt>
-File: linkingdata.png Graphic file (type png)
- <use linkingdata.png>
-Package pdftex.def Info: linkingdata.png used on input line 98.
-(pdftex.def)             Requested size: 242.98541pt x 156.58983pt.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 112.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 112.
-
-Underfull \hbox (badness 10000) in paragraph at lines 152--155
-
- []
-
-[5 <./linkingdata.png>] [6] (Seminarpaper.aux) ) 
+) [6] (Seminarpaper.aux) ) 
 Here is how much of TeX's memory you used:
-<<<<<<< HEAD
- 1954 strings out of 493323
- 26491 string characters out of 3139062
- 101314 words of memory out of 3000000
- 5482 multiletter control sequences out of 15000+200000
- 10377 words of font info for 36 fonts, out of 3000000 for 9000
+ 2011 strings out of 493323
+ 27257 string characters out of 3139062
+ 98061 words of memory out of 3000000
+ 5536 multiletter control sequences out of 15000+200000
+ 10031 words of font info for 35 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,8n,25p,874b,224s stack positions out of 5000i,500n,10000p,200000b,50000s
-<D:/Program Files/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmbx12.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmbx9.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmex10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi
-10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><D
-:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><D:/Program
- Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Program Files/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmr5.pfb><D:/Program Files/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmr7.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/a
-msfonts/cm/cmr9.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmsy10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.p
-fb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on Seminarpaper.pdf (8 pages, 219372 bytes).
-=======
- 1959 strings out of 493312
- 26931 string characters out of 3138899
- 97857 words of memory out of 3000000
- 5492 multiletter control sequences out of 15000+200000
- 10377 words of font info for 36 fonts, out of 3000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 41i,8n,25p,874b,222s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Pro
-gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C
-:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Progra
-m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-<<<<<<< HEAD
-Output written on Seminarpaper.pdf (8 pages, 222057 bytes).
-=======
-Output written on Seminarpaper.pdf (8 pages, 222314 bytes).
->>>>>>> a4390094a29a3d8a6fa0565596a82eac0e071152
->>>>>>> 74d9fb8d5f5dafe2e9a4c2fa773b7d0a415222a0
+ 39i,8n,25p,877b,224s stack positions out of 5000i,500n,10000p,200000b,50000s
+<D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmbx10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mbx12.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb
+><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><D:/Program Files/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><D:/Program Files/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmr17.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmr5.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mr7.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><D
+:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Progra
+m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb>
+Output written on Seminarpaper.pdf (8 pages, 208481 bytes).
 PDF statistics:
- 90 PDF objects out of 1000 (max. 8388607)
+ 86 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
