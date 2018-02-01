@@ -62,15 +62,28 @@ The adversary knows that his target does know specific details about his target.
 \textbf{Demographic background knowledge}
 Adversary knows e.g P(t[condition] = cancer| t[Age]>=40)
 May use it to interference about records
-
 \textbf{BEISPIELE}
-
 \textbf{K-Anonymity}
 The goal of making a k-anoym table is to have at least (k-1) tuples of each identical tuples \cite{sweeney2002k} \textbf{noch mehr Text und richtige Quelle??}
 \textbf{equivalence class}
 Is a set of all tuples with the identical quasi-identifers of a table \textbf{Quelle?}.
 
 
+\section{Algorithm}
+\subsection{Clustering}
+Needed because data contains categorical values, the methods are not quite effective.
+\cite{li2006achieving}
+For calculating the weighted hierarchical distance of a cell which got generalised from level p to level q following formula is resulting to the solution.\\
+$ WHD (p, q) = \frac{\sum_{j=q+1}^{p} \omega_{j,j-1}}{\sum_{j=2}^{h} \omega_{j,j-1}} $
+\subsection{Datafly}
+
+\subsection{Argus}
+proven that dont give k-anonymity in some cases by \cite{sweeney2002achieving}!! where
+
+
+\newpage
+\bibliography{literature}
+\bibliographystyle{splncs03}
 \section{Implementing of k-anonymity}
 
 Like Dalenius already mentioned it is absolutely necessary that an attacker, under no circumstances, can learn about whatsoever target if he is studying the published database. Not even if the attacker has background knowledge from any other sources  \cite{Dalenius1977}. Unfortunately like Dwork showed 2006 that such safety is impossible because of background knowledge. For example, if the attacker knows that Bob get paid twice as the average German man and the attacker got access to a database which publishes the average income by German men. The anonymity of Bob is compromised even if Bob's data is not in the database \cite{dwork2011differential}.  
@@ -140,19 +153,5 @@ Till now we only looked at problems of information leaking and privacy problems 
 \\
 Generalization mean, replacing a value with a less specific but semantic identical value. For example we got a list of forenames of buys, (Achmed, Achilles, Achim). To generalize this names you can just (Ach*,Ach*, Ach*) delete the last chars of the name. So there is a less specific domain and now more generalize through this mapping. Suppression on the other hand means not releasing the value at all.
 
-\section{Algorithm}
-\subsection{Clustering}
-Needed because data contains categorical values, the methods are not quite effective.
-\cite{li2006achieving}
-For calculating the weighted hierarchical distance of a cell which got generalised from level p to level q following formula is resulting to the solution.\\
-$ WHD (p, q) = \frac{\sum_{j=q+1}^{p} \omega_{j,j-1}}{\sum_{j=2}^{h} \omega_{j,j-1}} $
-\subsection{Datafly}
 
-\subsection{Argus}
-proven that dont give k-anonymity in some cases by \cite{sweeney2002achieving}!! where
-
-
-\newpage
-\bibliography{literature}
-\bibliographystyle{splncs03}
 \end{document}
