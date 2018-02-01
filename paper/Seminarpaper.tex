@@ -82,19 +82,23 @@ Because its unknown what the attackers knows, we have to assume additionally to 
 The adversary knows that his target does know specific details about his target. For example Alice (the adversary) knows that Bob do not suffer from some disease, because he does not show the symptoms. In this case the adversary may can conclude what Bob is really suffers from.\\
 \textbf{Demographic background knowledge}
 Adversary knows e.g P(t[condition] = cancer| t[Age]>=40)
-May use it to interference about records
-
-\textbf{BEISPIELE}
-
+May use it to interference about records \cite{ldiversity}
 \textbf{K-Anonymity}
-The goal of making a k-anonym table is to have at least (k-1) tuples of each identical tuples \cite{sweeney2002k} \textbf{noch mehr Text und richtige Quelle??}
+The goal of making a k-anonymized table, is to have at least (k-1) tuples of each identical tuple taking the corresponding quasi-identifiers into account \cite{sweeney2002k, li2006achieving}. For example the 2-anonymized version of the table \ref{intro_example} of introduction section
+h
 \textbf{equivalence class}
-Is a set of all tuples with the identical quasi-identifers of a table \textbf{Quelle?}.
+Is a set of all tuples with the identical quasi-identifiers of a table \cite{li2006achieving}.
+
 
 \section{theoretical and heuristically implantation of K-Anonymity}
 Another problem we will introduce is, that the producing of k-anonymity of a computational view is an NP-hard problem, like Meyersond and Williams shown.
 \textbf{NP Hard}  
 \section{Underlying Barriers}
+A very basic underlaying barrier of k-anonymity is, how to measure if a implantation has been successful or leads to a satisfying? A simple to calculate and to understand would be the calculation of distortion by Li, Wong, Fu and Pei \cite{li2006achieving}. 
+
+
+
+
 Like Dalenius already mentioned it is absolutely necessary that an attacker, under no circumstances, can learn about whatsoever target if he is studying the published database. Not even if the attacker has background knowledge from any other sources  \cite{Dalenius1977}. Unfortunately like Dwork showed 2006 that such safety is impossible because of background knowledge. For example, if the attacker knows that Bob get paid twice as the average German man and the attacker got access to a database which publishes the average income by German men. The anonymity of Bob is compromised even if Bob's data is not in the database \cite{dwork2011differential}.  
 
 \paragraph{GRAMMAR CHECKED VIA grammarly.com ENDE VON NEUEN ZEUG}
