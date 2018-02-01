@@ -36,13 +36,33 @@ in a realworld application\\[6pt]
 \setcounter{page}{1}
 \section{Introduction}
 %
-Nowadays data is a key factor in nearly every domain. It is comparable to the gold rush of the 19. century \cite{datarevo}. Furthermore, storage space and network connectivity become affordable \cite{sweeney2002k}. But to use the data for commercial or scientific purposes the privacy of the data holder does not have to be compromised or in other words the data holder need to know how to produce anonymous data otherwise the database cannot survive, because if the information of the table gets released there will be no need anymore for this data \cite{sweeney2002k}.\\
+Nowadays data is a key factor in nearly every domain. It is comparable to the gold rush of the \ensuremath{19^{th}.} century \cite{datarevo}. Furthermore, storage space and network increasingly become affordable \cite{sweeney2002k}. 
+This is leading to the situation that the created and stored data is often not only useful to the original data holder, but to other researchers. Also, some data is only useful if its get shared with other data and get together analyzed. But those data may contains some personal or sensitive information. Such that the data should only get releases if the privacy is protected \cite{li2006achieving}.\\
 
-The papers The so-called k-anonymity method, which produces anonymous data, theoretical. But there are practical barriers that will occur in the real world. Those prevent such implementation. The goal of k-anonymity is, to prevent the possibility to get information about the real individual, or at least with k other possible individuals. So if a individual is described by a tuple of \ensuremath{\langle f_1, ... ,f_n \rangle} features and each feature can have \ensuremath{\langle a_1,...,a_n \rangle} attributes. There are at least k another individual with the same attribute for each feature so that there is no possibility to reduce the real individual and there will be at least k individuals with the same tuple\cite{sweeney2002k}.\\
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}[]
+	\centering
+	\caption{Basic example}
+	\label{intro_example}
+	\begin{tabular}{@{}llll@{}}
+		\toprule
+		SSN         & Age & Postcode & Problem         \\ \midrule
+		680-90-2665 & 25  & 4568     & procrastination \\
+		008-07-4179 & 34  & 4567     & stress          \\
+		391-05-7998 & 48  & 4569     & stomach cancer  \\
+		078-36-3853 & 39  & 4568     & obesity         \\
+		411-71-9290 & 42  & 4561     & stomach ulcers  \\
+		527-59-1948 & 27  & 4568     & stress          \\ \bottomrule
+	\end{tabular}
+\end{table}
 
-The attributes that are used to link the external data is called quasi-identifiers. Typical values for them are gender, date of birth and zip code \cite{ldiversity}. 
-We will present techniques that override k-anonymity and get the real individual. Another problem we will introduce is, that the producing of k-anonymity of a computational view is an NP-hard problem, like Meyersond and Williams shown.
-...
+Data like table \ref{intro_example} have to get anonymized before release. A very common technique archive that goal, is the so called k-anonymity. Which goal is to prevent the possibility that information about the individual get leaked.
+This paper is showing the process of implementing k-anonymity into the real world.
+In Section 1 we will explain mandatory basic to understand k-anonymity and its purpose. Which leads to Section 2 the theoretical and heuristically implementation of k-anonymity. Section 3 will be discuss the underlying barriers of k-anonymity. 
+In Section 4 we will explain to the reader multiply algorithms to implement k-anonymity and its barriers. A summary over the whole paper will be section 4
+
+
 
 \newpage
 \section{Basics}
@@ -65,10 +85,11 @@ Adversary knows e.g P(t[condition] = cancer| t[Age]>=40)
 May use it to interference about records
 \textbf{BEISPIELE}
 \textbf{K-Anonymity}
-The goal of making a k-anoym table is to have at least (k-1) tuples of each identical tuples \cite{sweeney2002k} \textbf{noch mehr Text und richtige Quelle??}
+The goal of making a k-anonym table is to have at least (k-1) tuples of each identical tuples \cite{sweeney2002k} \textbf{noch mehr Text und richtige Quelle??}
 \textbf{equivalence class}
 Is a set of all tuples with the identical quasi-identifers of a table \textbf{Quelle?}.
 
+<<<<<<< HEAD
 
 \section{Algorithm}
 \subsection{Clustering}
@@ -87,6 +108,12 @@ proven that dont give k-anonymity in some cases by \cite{sweeney2002achieving}!!
 \bibliographystyle{splncs03}
 \section{Implementing of k-anonymity}
 
+=======
+\section{theoretical and heuristically implantation of K-Anonymity}
+Another problem we will introduce is, that the producing of k-anonymity of a computational view is an NP-hard problem, like Meyersond and Williams shown.
+\textbf{NP Hard}  
+\section{Underlying Barriers}
+>>>>>>> a4390094a29a3d8a6fa0565596a82eac0e071152
 Like Dalenius already mentioned it is absolutely necessary that an attacker, under no circumstances, can learn about whatsoever target if he is studying the published database. Not even if the attacker has background knowledge from any other sources  \cite{Dalenius1977}. Unfortunately like Dwork showed 2006 that such safety is impossible because of background knowledge. For example, if the attacker knows that Bob get paid twice as the average German man and the attacker got access to a database which publishes the average income by German men. The anonymity of Bob is compromised even if Bob's data is not in the database \cite{dwork2011differential}.  
 
 \paragraph{GRAMMAR CHECKED VIA grammarly.com ENDE VON NEUEN ZEUG}
@@ -154,5 +181,19 @@ Till now we only looked at problems of information leaking and privacy problems 
 \\
 Generalization mean, replacing a value with a less specific but semantic identical value. For example we got a list of forenames of buys, (Achmed, Achilles, Achim). To generalize this names you can just (Ach*,Ach*, Ach*) delete the last chars of the name. So there is a less specific domain and now more generalize through this mapping. Suppression on the other hand means not releasing the value at all.
 
+<<<<<<< HEAD
+=======
+\section{Algorithm}
+\subsection{Clustering}
+Needed because data contains categorical values, the methods are not quite effective.
+\cite{li2006achieving}
+For calculating the weighted hierarchical distance of a cell which got generalized from level p to level q following formula is resulting to the solution.\\
+$ WHD (p, q) = \frac{\sum_{j=q+1}^{p} \omega_{j,j-1}}{\sum_{j=2}^{h} \omega_{j,j-1}} $
+\textbf{Distortions of generalization of tuples}
+\textbf{Distortions of generalization of tables}
+
+
+\subsection{Datafly}
+>>>>>>> a4390094a29a3d8a6fa0565596a82eac0e071152
 
 \end{document}
