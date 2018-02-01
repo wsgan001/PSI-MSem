@@ -166,24 +166,12 @@ There is a possibility of a leak of information, if the release k-anonymity data
 Till now we only looked at problems of information leaking and privacy problems for individuals. Data is personal-specific information which is structured as a table in rows and columns. Rows a tuple. The columns are attributes with are a set of values which describe the certain attribute. A tuple specify a person. K-anonymity is about protecting the identity of a person not relationships of companies or governments. So the goal of k-anonymity is, not getting more information by linking the data to external data. The bridge between the data and external data is called "quasi-identifier". Examples for that would be ZIP, gender, birth date etc.. \\
 \\
 Generalization mean, replacing a value with a less specific but semantic identical value. For example we got a list of forenames of buys, (Achmed, Achilles, Achim). To generalize this names you can just (Ach*,Ach*, Ach*) delete the last chars of the name. So there is a less specific domain and now more generalize through this mapping. Suppression on the other hand means not releasing the value at all.
-
 \section{Algorithm}
 \subsection{Clustering}
 Needed because data contains categorical values, the methods are not quite effective.
 \cite{li2006achieving}
-For calculating the weighted hierarchical distance of a cell which got generalized from level p to level q following formula is resulting to the solution.\\
-$ WHD (p, q) = \frac{\sum_{j=q+1}^{p} \omega_{j,j-1}}{\sum_{j=2}^{h} \omega_{j,j-1}} $
-\textbf{Distortions of generalization of tuples}
-\textbf{Distortions of generalization of tables}
 
 
 \subsection{Datafly}
 
-\subsection{Argus}
-proven that dont give k-anonymity in some cases by \cite{sweeney2002achieving}!! where
-
-
-\newpage
-\bibliography{literature}
-\bibliographystyle{splncs03}
 \end{document}
