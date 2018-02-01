@@ -82,20 +82,44 @@ Because its unknown what the attackers knows, we have to assume additionally to 
 The adversary knows that his target does know specific details about his target. For example Alice (the adversary) knows that Bob do not suffer from some disease, because he does not show the symptoms. In this case the adversary may can conclude what Bob is really suffers from.\\
 \textbf{Demographic background knowledge}
 Adversary knows e.g P(t[condition] = cancer| t[Age]>=40)
-<<<<<<< HEAD
 May use it to interference about records \cite{ldiversity}
+
+\textbf{BEISPIELE}
 \textbf{K-Anonymity}
 The goal of making a k-anonymized table, is to have at least (k-1) tuples of each identical tuple taking the corresponding quasi-identifiers into account \cite{sweeney2002k, li2006achieving}. For example the 2-anonymized version of the table \ref{intro_example} of introduction section
-h
 \textbf{equivalence class}
 Is a set of all tuples with the identical quasi-identifiers of a table \cite{li2006achieving}.
 
 
+<<<<<<< HEAD
+
+\section{Algorithm}
+\subsection{Clustering}
+Needed because data contains categorical values, the methods are not quite effective.
+\cite{li2006achieving}
+For calculating the weighted hierarchical distance of a cell which got generalised from level p to level q following formula is resulting to the solution.\\
+$ WHD (p, q) = \frac{\sum_{j=q+1}^{p} \omega_{j,j-1}}{\sum_{j=2}^{h} \omega_{j,j-1}} $
+\subsection{Datafly}
+
+\subsection{Argus}
+proven that dont give k-anonymity in some cases by \cite{sweeney2002achieving}!! where
+
+
+\newpage
+\bibliography{literature}
+\bibliographystyle{splncs03}
+\section{Implementing of k-anonymity}
+
+=======
 \section{theoretical and heuristically implantation of K-Anonymity}
 Another problem we will introduce is, that the producing of k-anonymity of a computational view is an NP-hard problem, like Meyersond and Williams shown.
 \textbf{NP Hard}  
 \section{Underlying Barriers}
 A very basic underlaying barrier of k-anonymity is, how to measure if a implantation has been successful or leads to a satisfying? A simple to calculate and to understand would be the calculation of distortion by Li, Wong, Fu and Pei \cite{li2006achieving}. 
+For calculating the weighted hierarchical distance of a cell which got generalized from level p to level q following formula is resulting to the solution.\\
+$ WHD (p, q) = \frac{\sum_{j=q+1}^{p} \omega_{j,j-1}}{\sum_{j=2}^{h} \omega_{j,j-1}} $
+\textbf{Distortions of generalization of tuples}
+\textbf{Distortions of generalization of tables}
 
 
 
