@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.20)  2 FEB 2018 11:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.20)  7 FEB 2018 12:15
 entering extended mode
 **./Seminarpaper.tex
 (Seminarpaper.tex
@@ -270,38 +270,49 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 32.
  [2]
-Underfull \hbox (badness 10000) in paragraph at lines 39--41
-
- []
-
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 42.
+               Default added (so using `htbp') on input line 41.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 46.
+(Font)              <9> on input line 45.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 46.
+(Font)              <6> on input line 45.
 [1]
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no ¶ in font cmr10!
  [2]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 99.
+               Default added (so using `htbp') on input line 103.
 
-<linkingdata.png, id=22, 440.39531pt x 283.81032pt>
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `htbp') on input line 120.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `htbp') on input line 137.
+
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no ¼ in font cmr10!
+[3]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `htbp') on input line 167.
+
+<linkingdata.png, id=30, 440.39531pt x 283.81032pt>
 File: linkingdata.png Graphic file (type png)
  <use linkingdata.png>
-Package pdftex.def Info: linkingdata.png used on input line 101.
+Package pdftex.def Info: linkingdata.png used on input line 169.
 (pdftex.def)             Requested size: 242.98541pt x 156.58983pt.
 
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 155--159
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 223--227
 
  []
 
-[4 <./linkingdata.png>] [5] (Seminarpaper.bbl
+[5 <./linkingdata.png>] [6] (Seminarpaper.bbl
 Overfull \hbox (212.38313pt too wide) in paragraph at lines 6--8
 []\OT1/cmr/m/n/9 Ipumsl-confidentiality, https://web.archive.org/web/2007082301
 0133/http://international.ipums.org/international/confidentiality.html 
@@ -319,12 +330,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--39
 ntury-2-
  []
 
-) [6] (Seminarpaper.aux) ) 
+) [7] (Seminarpaper.aux) ) 
 Here is how much of TeX's memory you used:
- 2010 strings out of 493323
- 27239 string characters out of 3139062
- 101061 words of memory out of 3000000
- 5535 multiletter control sequences out of 15000+200000
+ 2013 strings out of 493323
+ 27263 string characters out of 3139062
+ 101085 words of memory out of 3000000
+ 5538 multiletter control sequences out of 15000+200000
  10031 words of font info for 35 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,8n,25p,877b,224s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -341,9 +352,9 @@ fonts/cm/cmr5.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
 mr7.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><D
 :/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Progra
 m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb>
-Output written on Seminarpaper.pdf (8 pages, 208261 bytes).
+Output written on Seminarpaper.pdf (9 pages, 211481 bytes).
 PDF statistics:
- 86 PDF objects out of 1000 (max. 8388607)
+ 89 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

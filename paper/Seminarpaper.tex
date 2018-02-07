@@ -37,8 +37,7 @@ in a realworld application\\[6pt]
 \section{Introduction}
 %
 Nowadays data is a key factor in nearly every domain. It is comparable to the gold rush of the \ensuremath{19^{th}.} century \cite{datarevo}. Furthermore, storage space and network increasingly become affordable \cite{sweeney2002k}. 
-This is leading to the situation that the created and stored data is often not only useful to the original data holder, but to other researchers. Also, some data is only useful if its get shared with other data and get together analyzed. But those data may contains some personal or sensitive information. Such that the data should only get releases if the privacy is protected \cite{li2006achieving}.\\
-
+This is leading to the situation that the created and stored data is often not only useful to the original data holder, but to other researchers. Also, some data is only useful if its get shared with other data and get together analyzed. But those data may contain some personal or sensitive information. Such that the data should only get releases if the privacy is protected \cite{li2006achieving}.\\
 \begin{table}[]
 	\centering
 	\caption{Basic example}
@@ -55,10 +54,15 @@ This is leading to the situation that the created and stored data is often not o
 	\end{tabular}
 \end{table}
 
-Data like table \ref{intro_example} have to get anonymized before release. A very common technique archive that goal, is the so called k-anonymity. Which goal is to prevent the possibility that information about the individual get leaked.
-This paper is showing the process of implementing k-anonymity into the real world.
-In Section 1 we will explain mandatory basic to understand k-anonymity and its purpose. Which leads to Section 2 the theoretical and heuristically implementation of k-anonymity. Section 3 will be discuss the underlying barriers of k-anonymity. 
-In Section 4 we will explain to the reader multiply algorithms to implement k-anonymity and its barriers. A summary over the whole paper will be section 4
+Data like table \ref{intro_example} have to get anonymized before release. A very common
+technique archive that goal is the so-called k-anonymity. Which goal is to prevent
+the possibility that information about the individual gets leaked. This paper is
+showing the process of implementing k-anonymity into the real world. In Section
+1 we will explain mandatory basic to understand k-anonymity and its purpose.
+Which leads to Section 2 the theoretical and heuristically implementation of
+k-anonymity. Section 3 will discuss the underlying barriers of k-anonymity.
+In Section 4 we will explain to the reader multiple algorithms to implement
+k-anonymity and its barriers. A summary of the whole paper will be in the last section
 \newpage
 \section{Basics}
 \subsubsection{Microdata:}
@@ -74,25 +78,82 @@ Because its unknown what the attackers knows, we have to assume additionally to 
 \textbf{Instance-level background knowledge}
 The adversary knows that his target does know specific details about his target. For example Alice (the adversary) knows that Bob do not suffer from some disease, because he does not show the symptoms. In this case the adversary may can conclude what Bob is really suffers from.\\
 \textbf{Demographic background knowledge}
-Adversary knows e.g P(t[condition] = cancer| t[Age]>=40)
-May use it to interference about records \cite{ldiversity}
+Adversary knows for example more general fact for example P(t[condition] = cancer| t[Age] $\geq$ 40). The attacker may use it to interference about records \cite{ldiversity}
 
 \subsubsection{K-Anonymity}
 The goal of making a k-anonymized table, is to have at least (k-1) tuples of each identical tuple taking the corresponding quasi-identifiers into account \cite{sweeney2002k,li2006achieving}. For example the 2-anonyminized version of the table \ref{intro_example} of introduction section
 \subsubsection{Equivalence class}
 Is a set of all tuples with the identical quasi-identifiers of a table \cite{li2006achieving}.
+\subsubsection{local recording}
+Error 404: Definition not found
+\subsubsection{global recording}
+Error 404: Definition not found
 \section{Theoretical and heuristically implantation of K-Anonymity}
 Another problem we will introduce is, that the producing of k-anonymity of a computational view is an NP-hard problem, like Meyersond and Williams shown.
-\textbf{NP Hard}  
+ 
 \section{Underlying Barriers}
-A very basic underlaying barrier of k-anonymity is, how to measure if a implantation has been successful or leads to a satisfying? A simple to calculate and to understand would be the calculation of distortion by Li, Wong, Fu and Pei \cite{li2006achieving}. 
+
+In the following section, we will show the basic and most challenging barriers to the implementation of k-Anonymity. First, we will show the barrier which appears if you k-anonymize the data, the so-called \textbf{distortion} of data, in some papers it also mentioned as data loss. 
+%checked
+\subsection{Distortion} 
+A basic underlying barrier of k-anonymity is, how to measure if a implantation has been successful or leads to a satisfying result. This can be measured by a simple calculation. The \textbf{modification rate} is representing the fraction of cells which got modified within the attribute set of the quasi-identifier. The example of table 2 will be following through the whole section, to guarantee an easy understanding the different approaches. 
+\begin{table}[]
+	\centering
+	\caption{table 2: starting table}
+	\label{table2}
+	\begin{tabular}{@{}llll@{}}
+		\toprule
+		Gender & Age    & Pcode & Problem \\ \midrule
+		male   & middle & 4350  & stress  \\
+		male   & middle & 4350  & obesity \\
+		male   & young  & 4351  & stress  \\
+		female & young  & 4352  & obesity \\
+		female & old    & 4353  & stress  \\
+		female & old    & 4353  & obesity \\ \bottomrule
+	\end{tabular}
+\end{table}
+\begin{table}[]
+	\centering
+	\caption{table 4: 2-anoymization with local recording}
+	\label{table3}
+	\begin{tabular}{@{}llll@{}}
+		\toprule
+		Gender & Age    & Pcode & Problem \\ \midrule
+		male   & middle & 4350  & stress  \\
+		male   & middle & 4350  & obesity \\
+		*      & young  & 435*  & stress  \\
+		*      & young  & 435*  & obesity \\
+		female & old    & 4353  & stress  \\
+		female & old    & 4353  & obesity
+	\end{tabular}
+\end{table}
+\begin{table}[]
+	\centering
+	\caption{table 5: 2-anoymization with global recording}
+	\label{table4}
+	\begin{tabular}{@{}llll@{}}
+		\toprule
+		Gender & Age    & Pcode & Problem \\ \midrule
+		*      & middle & 435*  & stress  \\
+		*      & middle & 435*  & obesity \\
+		*      & young  & 435*  & stress  \\
+		*      & young  & 435*  & obesity \\
+		*      & old    & 435*  & stress  \\
+		*      & old    & 435*  & obesity
+	\end{tabular}
+\end{table} 
+and to understand would be the calculation of distortion by Li, Wong, Fu, and Pei \cite{li2006achieving}. 
 For calculating the weighted hierarchical distance of a cell which got generalized from level p to level q following formula is resulting to the solution.\\
 $ WHD (p, q) = \frac{\sum_{j=q+1}^{p} \omega_{j,j-1}}{\sum_{j=2}^{h} \omega_{j,j-1}} $
 \subsubsection{Distortions of generalization of tuples}
 \subsubsection{Distortions of generalization of tables}
 
+\subsection{NP Hard}
+
 \subsection{Attacks}
+
 Like Dalenius already mentioned it is absolutely necessary that an attacker, under no circumstances, can learn about whatsoever target if he is studying the published database. Not even if the attacker has background knowledge from any other sources  \cite{Dalenius1977}. Unfortunately like Dwork showed 2006 that such safety is impossible because of background knowledge. For example, if the attacker knows that Bob get paid twice as the average German man and the attacker got access to a database which publishes the average income by German men. The anonymity of Bob is compromised even if Bob's data is not in the database \cite{dwork2011differential}.  
+Ab hier noch mal komplett die Attacken überarbeiten, da noch im orginal ursprung!
 \subsubsection{Linking data}
 A barrier to do the implementation of k-anonymity, the attacker can take another dataset and link both together to get rid off the k-anonymity and infer the real individual. This process is called linking data and was first described by Sweeney\cite{sweeney2002k}. She showed that with a example of health care data from 37 states in the USA. The institute from which she bought the data, insures the anonymity of the individuals. Sweeney purchased the voter registration list for Cambridge Massachusettts and received information of the voters including ZIP code, birth date and gender (non explicit identifier) of each voter. She linked that information with the medical data. It was possible to deanonymize the data  and get ethnicity, visit date, diagnosis, procedure, medication and total charge of some patients \cite{sweeney2002k}. 
 
@@ -162,6 +223,7 @@ Needed because data contains categorical values, the methods are not quite effec
 \cite{li2006achieving}
 \subsection{Datafly}
 \subsection{Argus}
+\section{Releated techniques}
 \section{Summary}
 
 \newpage
