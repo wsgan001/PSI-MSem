@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.20)  7 FEB 2018 12:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.20)  7 FEB 2018 18:21
 entering extended mode
 **./Seminarpaper.tex
 (Seminarpaper.tex
@@ -286,29 +286,22 @@ Missing character: There is no ¶ in font cmr10!
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `htbp') on input line 103.
 
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 120.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 137.
-
+[3]
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no ¼ in font cmr10!
-[3]
+
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 167.
+               Default added (so using `htbp') on input line 136.
 
-<linkingdata.png, id=30, 440.39531pt x 283.81032pt>
+<linkingdata.png, id=26, 440.39531pt x 283.81032pt>
 File: linkingdata.png Graphic file (type png)
  <use linkingdata.png>
-Package pdftex.def Info: linkingdata.png used on input line 169.
+Package pdftex.def Info: linkingdata.png used on input line 138.
 (pdftex.def)             Requested size: 242.98541pt x 156.58983pt.
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 223--227
+Underfull \hbox (badness 10000) in paragraph at lines 192--196
 
  []
 
@@ -319,23 +312,23 @@ Overfull \hbox (212.38313pt too wide) in paragraph at lines 6--8
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--39
+Underfull \hbox (badness 10000) in paragraph at lines 42--44
 []\OT1/cmr/m/n/9 Rossi, B.: Data rev-o-lu-tion: the gold rush of the 21st cen-t
 ury,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--39
+Underfull \hbox (badness 10000) in paragraph at lines 42--44
 \OT1/cmr/m/n/9 http://www.information-age.com/data-revolution-gold-rush-21st-ce
 ntury-2-
  []
 
 ) [7] (Seminarpaper.aux) ) 
 Here is how much of TeX's memory you used:
- 2013 strings out of 493323
- 27263 string characters out of 3139062
- 101085 words of memory out of 3000000
- 5538 multiletter control sequences out of 15000+200000
+ 2012 strings out of 493323
+ 27260 string characters out of 3139062
+ 102075 words of memory out of 3000000
+ 5537 multiletter control sequences out of 15000+200000
  10031 words of font info for 35 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,8n,25p,877b,224s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -352,7 +345,7 @@ fonts/cm/cmr5.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
 mr7.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><D
 :/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Progra
 m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb>
-Output written on Seminarpaper.pdf (9 pages, 211481 bytes).
+Output written on Seminarpaper.pdf (9 pages, 211535 bytes).
 PDF statistics:
  89 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

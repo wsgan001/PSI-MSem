@@ -23,6 +23,11 @@ Domingo-Ferrer, J., Torra, V.: A critique of k-anonymity and some of its
 Dwork, C.: Differential privacy. In: Encyclopedia of Cryptography and Security,
   pp. 338--340. Springer (2011)
 
+\bibitem{incognito}
+LeFevre, K., DeWitt, D.J., Ramakrishnan, R.: Incognito: Efficient full-domain
+  k-anonymity. In: Proceedings of the 2005 ACM SIGMOD international conference
+  on Management of data. pp. 49--60. ACM (2005)
+
 \bibitem{li2006achieving}
 Li, J., Wong, R.C.W., Fu, A.W.C., Pei, J.: Achieving k-anonymity by clustering
   in attribute hierarchical structures. In: International Conference on Data
