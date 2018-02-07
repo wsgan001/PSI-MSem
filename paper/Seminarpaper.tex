@@ -6,6 +6,9 @@
 \usepackage{llncsdoc}
 \usepackage{graphicx} 
 \usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\newcommand{\R}{\mathbb{R}}
 %
 \begin{document}
 \thispagestyle{empty}
@@ -97,12 +100,12 @@ Another problem we will introduce is, that the producing of k-anonymity of a com
 In the following section, we will show the basic and most challenging barriers to the implementation of k-Anonymity. First, we will show the barrier which appears if you k-anonymize the data, the so-called \textbf{distortion} of data, in some papers it also mentioned as data loss. 
 %checked
 \subsection{Distortion} 
-A basic underlying barrier of k-anonymity is, how to measure if a implantation has been successful or leads to a satisfying result. This can be measured by a simple calculation. The \textbf{modification rate} is representing the fraction of cells which got modified within the attribute set of the quasi-identifier. The example of table 2 will be following through the whole section, to guarantee an easy understanding the different approaches. \\
-% Please add the following required packages to your document preamble:
-% \usepackage{booktabs}
+A basic underlying barrier of k-anonymity is, how to measure if a implantation has been successful or leads to a satisfying result. This can be measured by a simple calculation.
+ The \textbf{modification rate} is representing the fraction of cells which got modified within the attribute set of the quasi-identifier \cite{li2006achieving}.
 \begin{table}[]
 	\centering
 	\label{table2}
+		\caption{a: original table,b: example for local recording, c: example for domain generalization }
 	\begin{tabular}{lllllllllll}
 		\cline{1-3} \cline{5-7} \cline{9-11}
 		Gender & Birthday   & Problem &  & Gender & Birthday   & Problem &  & Gender & Birthday & Problem \\ \cline{1-3} \cline{5-7} \cline{9-11} 
@@ -112,16 +115,19 @@ A basic underlying barrier of k-anonymity is, how to measure if a implantation h
 		female & 15.09.1973 & obesity &  & *      & 197*       & obesity &  & *      & 197*     & obesity \\
 		female & 15.03.1985 & stress  &  & female & 15.03.1985 & stress  &  & *      & 198*     & stress  \\
 		female & 28.05.1986 & obesity &  & female & 28.05.1986 & obesity &  & *      & 198*     & obesity \\ \cline{1-3} \cline{5-7} \cline{9-11}
-		
-	\end{tabular}
-	\caption{Left original table, middle: example for local recording, right: example for domain generalization }
-\end{table}
-and to understand would be the calculation of distortion by Li, Wong, Fu, and Pei \cite{li2006achieving}. 
-For calculating the weighted hierarchical distance of a cell which got generalized from level p to level q following formula is resulting to the solution.\\
-$ WHD (p, q) = \frac{\sum_{j=q+1}^{p} \omega_{j,j-1}}{\sum_{j=2}^{h} \omega_{j,j-1}} $
+		\end{tabular}
 
-\subsubsection{Distortions of generalization of tuples}
-\subsubsection{Distortions of generalization of tables}
+\end{table}\\
+\textbf{Example:} for table2 a, the modification rate is  33,$\overline{33}$\% (4 out of 12 quasi-identifier got changed) for table 2c: its is 100\% (12 out of 12 quasi-identifier got changed). Like this simple example shows the modification rate calculation is a unsatisfying procedure. Because of that the \textbf{weighted hierarchical distance} got introduced by Li, Wong, Fu and Pei. 
+To calculate the \textbf{weighted hierarchical distance} of a cell, which got generalized from level p to level q, following formula is used \cite{li2006achieving}.\\
+$ WHD (p, q) = \frac{\sum_{j=q+1}^{p} \omega_{j,j-1}}{\sum_{j=2}^{h} \omega_{j,j-1}} $\\
+The WHD for the Age, let the hierarchy of birth date be \{D/M/Y, M/Y, Y, 10Y, C/T/G/P, *\}. Where D/M/Y  would be day.month.year, 10Y a 10 years interval and C/T/G/R for Child/Teen/Grownup/Pensioner.\\
+
+\textbf{Example with uniformed weight $w_{j,j-1} = 1$ where $2\leq j \leq h$:} For the above example Birthday gets generalized from D/M/Y to 10Y, which corresponds into $WHD_{age}(6,3) = \frac{3}{5} = 0,6$. For the Gender generalization it would be $WHD_{gender}(2,1) = \frac{1}{1} = 1$. Which means for generalize 5 cells of age from D/M/Y to 10Y one will have the same data distortion as if one generalize 3 cells of Gender from Male/Female to *. This calculation shows a much better way to address the distortion of data than the \textbf{modification rate} but it does not take how near a generalization is to the root (which would be *). BEISPIEL??? \\
+
+\textbf{Example with height weight: $w_{j,j-1} = 1 / (j-1)^{\beta}$ where 2 $\leq$ j $\leq$ h and $\beta = \R \geq$ 1:}
+ß would be chosen by the user. For example $\beta = 1$. For $WHD_{age}(6,3) = \frac{0,\overline{33}+0,25+0,20}{1+0.5+0,\overline{33}+0,25+0,20} \sim 0,3431$. For $WHD_{gender}(2,1) = \frac{1}{1} = 1$. The distortion  
+
 \subsubsection{Conclusion}
 
 \subsection{NP Hard}

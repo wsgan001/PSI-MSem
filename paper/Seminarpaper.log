@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.20)  7 FEB 2018 18:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.20)  7 FEB 2018 21:43
 entering extended mode
 **./Seminarpaper.tex
 (Seminarpaper.tex
@@ -179,34 +179,105 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \@lastruleclass=\count120
 \@thisrulewidth=\dimen139
 )
+("D:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2016/11/05 v2.16a AMS math features
+\@mathmargin=\skip45
+
+For additional information on amsmath, use the `?' option.
+("D:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01 AMS text
+
+("D:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks19
+\ex@=\dimen140
+))
+("D:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen141
+)
+("D:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count121
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count122
+\leftroot@=\count123
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count124
+\DOTSCASE@=\count125
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box54
+\strutbox@=\box55
+\big@size=\dimen142
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+
+
+Package amsmath Warning: Unable to redefine math accent \vec.
+
+\macc@depth=\count126
+\c@MaxMatrixCols=\count127
+\dotsspace@=\muskip10
+\c@parentequation=\count128
+\dspbrk@lvl=\count129
+\tag@help=\toks20
+\row@=\count130
+\column@=\count131
+\maxfields@=\count132
+\andhelp@=\toks21
+\eqnshift@=\dimen143
+\alignsep@=\dimen144
+\tagshift@=\dimen145
+\tagwidth@=\dimen146
+\totwidth@=\dimen147
+\lineht@=\dimen148
+\@envbody=\toks22
+\multlinegap=\skip46
+\multlinetaggap=\skip47
+\mathdisplay@stack=\toks23
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
+) ("D:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+("D:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
 (Seminarpaper.aux)
 \openout1 = `Seminarpaper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
  ("D:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count121
-\scratchdimen=\dimen140
-\scratchbox=\box54
-\nofMPsegments=\count122
-\nofMParguments=\count123
-\everyMPshowfont=\toks19
-\MPscratchCnt=\count124
-\MPscratchDim=\dimen141
-\MPnumerator=\count125
-\makeMPintoPDFobject=\count126
-\everyMPtoPDFconversion=\toks20
+\scratchcounter=\count133
+\scratchdimen=\dimen149
+\scratchbox=\box56
+\nofMPsegments=\count134
+\nofMParguments=\count135
+\everyMPshowfont=\toks24
+\MPscratchCnt=\count136
+\MPscratchDim=\dimen150
+\MPnumerator=\count137
+\makeMPintoPDFobject=\count138
+\everyMPtoPDFconversion=\toks25
 ) ("D:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
 Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -252,56 +323,66 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-Overfull \hbox (15.0pt too wide) in paragraph at lines 12--14
+Overfull \hbox (15.0pt too wide) in paragraph at lines 15--17
 [][]
  []
 
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <24.88> on input line 16.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <20.74> on input line 16.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <17.28> on input line 16.
-[1
+LaTeX Font Info:    Try loading font information for U+msa on input line 19.
+("D:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 19.
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 32.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 32.
- [2]
+("D:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1
+
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 41.
+               Default added (so using `htbp') on input line 44.
 
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 45.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 45.
 [1]
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no ¶ in font cmr10!
  [2]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 103.
+               Default added (so using `htbp') on input line 105.
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 124.
+
+("D:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 124.
+
+Underfull \hbox (badness 10000) in paragraph at lines 103--125
+
+ []
 
 [3]
+Underfull \hbox (badness 10000) in paragraph at lines 126--127
+
+ []
+
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no Ÿ in font cmr10!
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no ¼ in font cmr10!
-
+[4]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 136.
+               Default added (so using `htbp') on input line 142.
 
-<linkingdata.png, id=26, 440.39531pt x 283.81032pt>
+<linkingdata.png, id=36, 440.39531pt x 283.81032pt>
 File: linkingdata.png Graphic file (type png)
  <use linkingdata.png>
-Package pdftex.def Info: linkingdata.png used on input line 138.
+Package pdftex.def Info: linkingdata.png used on input line 144.
 (pdftex.def)             Requested size: 242.98541pt x 156.58983pt.
 
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 192--196
+Underfull \hbox (badness 10000) in paragraph at lines 198--202
 
  []
 
@@ -325,29 +406,31 @@ ntury-2-
 
 ) [7] (Seminarpaper.aux) ) 
 Here is how much of TeX's memory you used:
- 2012 strings out of 493323
- 27260 string characters out of 3139062
- 102075 words of memory out of 3000000
- 5537 multiletter control sequences out of 15000+200000
- 10031 words of font info for 35 fonts, out of 3000000 for 9000
+ 2934 strings out of 493323
+ 37735 string characters out of 3139062
+ 113005 words of memory out of 3000000
+ 6419 multiletter control sequences out of 15000+200000
+ 14905 words of font info for 58 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,8n,25p,877b,224s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,8n,26p,877b,229s stack positions out of 5000i,500n,10000p,200000b,50000s
 <D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
 nts/cm/cmbx10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
 mbx12.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb
-><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Pro
-gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><D:/Program Files/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><D:/Program Files/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmr17.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmr5.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mr7.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><D
-:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Progra
-m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb>
-Output written on Seminarpaper.pdf (9 pages, 211535 bytes).
+><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><D:
+/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program
+ Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><D:/Program Files/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><D:/Program Files/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmr17.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmr5.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmr7.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pf
+b><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><D:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><D:/Program Files/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Seminarpaper.pdf (9 pages, 229216 bytes).
 PDF statistics:
- 89 PDF objects out of 1000 (max. 8388607)
+ 97 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
