@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.20)  7 FEB 2018 21:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.20)  9 FEB 2018 10:32
 entering extended mode
 **./Seminarpaper.tex
 (Seminarpaper.tex
@@ -374,19 +374,42 @@ Missing character: There is no º in font cmr10!
 [4]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 142.
+               Default added (so using `htbp') on input line 146.
 
 <linkingdata.png, id=36, 440.39531pt x 283.81032pt>
 File: linkingdata.png Graphic file (type png)
  <use linkingdata.png>
-Package pdftex.def Info: linkingdata.png used on input line 144.
+Package pdftex.def Info: linkingdata.png used on input line 148.
 (pdftex.def)             Requested size: 242.98541pt x 156.58983pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 198--202
+Underfull \vbox (badness 1142) has occurred while \output is active []
+
+ [5 <./linkingdata.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 202--206
 
  []
 
-[5 <./linkingdata.png>] [6] (Seminarpaper.bbl
+
+Underfull \vbox (badness 6691) has occurred while \output is active []
+
+ [6]
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no à in font cmr10!
+Missing character: There is no í in font cmr10!
+Missing character: There is no Ô in font cmr10!
+Missing character: There is no ¨ in font cmr10!
+Missing character: There is no Å in font cmr10!
+Missing character: There is no Ô in font cmr10!
+Missing character: There is no ¨ in font cmr10!
+Missing character: There is no Å in font cmr10!
+
+[7]
+Missing character: There is no ¬ in font cmr10!
+Missing character: There is no ¥ in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ì in font cmr10!
+ [8] (Seminarpaper.bbl
 Overfull \hbox (212.38313pt too wide) in paragraph at lines 6--8
 []\OT1/cmr/m/n/9 Ipumsl-confidentiality, https://web.archive.org/web/2007082301
 0133/http://international.ipums.org/international/confidentiality.html 
@@ -404,15 +427,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 42--44
 ntury-2-
  []
 
-) [7] (Seminarpaper.aux) ) 
+) [9] (Seminarpaper.aux) ) 
 Here is how much of TeX's memory you used:
  2934 strings out of 493323
  37735 string characters out of 3139062
- 113005 words of memory out of 3000000
+ 112003 words of memory out of 3000000
  6419 multiletter control sequences out of 15000+200000
  14905 words of font info for 58 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,8n,26p,877b,229s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,8n,26p,877b,231s stack positions out of 5000i,500n,10000p,200000b,50000s
 <D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
 nts/cm/cmbx10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
 mbx12.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb
@@ -428,9 +451,9 @@ b><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><D:/Program Fil
 es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><D:/Program Files/MiKTeX
  2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Seminarpaper.pdf (9 pages, 229216 bytes).
+Output written on Seminarpaper.pdf (11 pages, 235609 bytes).
 PDF statistics:
- 97 PDF objects out of 1000 (max. 8388607)
+ 103 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

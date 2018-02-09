@@ -99,13 +99,13 @@ Another problem we will introduce is, that the producing of k-anonymity of a com
 
 In the following section, we will show the basic and most challenging barriers to the implementation of k-Anonymity. First, we will show the barrier which appears if you k-anonymize the data, the so-called \textbf{distortion} of data, in some papers it also mentioned as data loss. 
 %checked
-\subsection{Distortion} 
+\section{Distortion of data as Barrier} 
 A basic underlying barrier of k-anonymity is, how to measure if a implantation has been successful or leads to a satisfying result. This can be measured by a simple calculation.
- The \textbf{modification rate} is representing the fraction of cells which got modified within the attribute set of the quasi-identifier \cite{li2006achieving}.
+The \textbf{modification rate} is representing the fraction of cells which got modified within the attribute set of the quasi-identifier \cite{li2006achieving}.
 \begin{table}[]
 	\centering
 	\label{table2}
-		\caption{a: original table,b: example for local recording, c: example for domain generalization }
+	\caption{a: original table,b: example for local recording, c: example for domain generalization }
 	\begin{tabular}{lllllllllll}
 		\cline{1-3} \cline{5-7} \cline{9-11}
 		Gender & Birthday   & Problem &  & Gender & Birthday   & Problem &  & Gender & Birthday & Problem \\ \cline{1-3} \cline{5-7} \cline{9-11} 
@@ -115,27 +115,31 @@ A basic underlying barrier of k-anonymity is, how to measure if a implantation h
 		female & 15.09.1973 & obesity &  & *      & 197*       & obesity &  & *      & 197*     & obesity \\
 		female & 15.03.1985 & stress  &  & female & 15.03.1985 & stress  &  & *      & 198*     & stress  \\
 		female & 28.05.1986 & obesity &  & female & 28.05.1986 & obesity &  & *      & 198*     & obesity \\ \cline{1-3} \cline{5-7} \cline{9-11}
-		\end{tabular}
-
+	\end{tabular}
+	
 \end{table}\\
 \textbf{Example:} for table2 a, the modification rate is  33,$\overline{33}$\% (4 out of 12 quasi-identifier got changed) for table 2c: its is 100\% (12 out of 12 quasi-identifier got changed). Like this simple example shows the modification rate calculation is a unsatisfying procedure. Because of that the \textbf{weighted hierarchical distance} got introduced by Li, Wong, Fu and Pei. 
 To calculate the \textbf{weighted hierarchical distance} of a cell, which got generalized from level p to level q, following formula is used \cite{li2006achieving}.\\
-$ WHD (p, q) = \frac{\sum_{j=q+1}^{p} \omega_{j,j-1}}{\sum_{j=2}^{h} \omega_{j,j-1}} $\\
+\scalebox{1.5}{$ WHD (p, q) = \frac{\sum_{j=q+1}^{p} \omega_{j,j-1}}{\sum_{j=2}^{h} \omega_{j,j-1}} $}\\
 The WHD for the Age, let the hierarchy of birth date be \{D/M/Y, M/Y, Y, 10Y, C/T/G/P, *\}. Where D/M/Y  would be day.month.year, 10Y a 10 years interval and C/T/G/R for Child/Teen/Grownup/Pensioner.\\
 
-\textbf{Example with uniformed weight $w_{j,j-1} = 1$ where $2\leq j \leq h$:} For the above example Birthday gets generalized from D/M/Y to 10Y, which corresponds into $WHD_{age}(6,3) = \frac{3}{5} = 0,6$. For the Gender generalization it would be $WHD_{gender}(2,1) = \frac{1}{1} = 1$. Which means for generalize 5 cells of age from D/M/Y to 10Y one will have the same data distortion as if one generalize 3 cells of Gender from Male/Female to *. This calculation shows a much better way to address the distortion of data than the \textbf{modification rate} but it does not take how near a generalization is to the root (which would be *). BEISPIEL??? \\
+\textbf{Example with uniformed weight $w_{j,j-1} = 1$ where $2\leq j \leq h$} \cite{li2006achieving}: For the above example Birthday gets generalized from D/M/Y to 10Y, which corresponds into $WHD_{age}(6,3) = \frac{3}{5} = 0,6$. For the Gender generalization it would be $WHD_{gender}(2,1) = \frac{1}{1} = 1$. Which means for generalize 5 cells of age from D/M/Y to 10Y one will have the same data distortion as if one generalize 3 cells of Gender from Male/Female to *. This calculation shows a much better way to address the distortion of data than the \textbf{modification rate} but it does not take how near a generalization is to the root (which would be *). BEISPIEL??? \\
 
-\textbf{Example with height weight: $w_{j,j-1} = 1 / (j-1)^{\beta}$ where 2 $\leq$ j $\leq$ h and $\beta = \R \geq$ 1:}
-ß would be chosen by the user. For example $\beta = 1$. For $WHD_{age}(6,3) = \frac{0,\overline{33}+0,25+0,20}{1+0.5+0,\overline{33}+0,25+0,20} \sim 0,3431$. For $WHD_{gender}(2,1) = \frac{1}{1} = 1$. The distortion  
+\textbf{Example with height weight: $w_{j,j-1} = 1 / (j-1)^{\beta}$ where 2 $\leq$ j $\leq$ h and $\beta = \R \geq$ 1} \cite{li2006achieving}:
+ß would be chosen by the user. For example $\beta = 1$. For $WHD_{age}(6,3) = \frac{0,\overline{33}+0,25+0,20}{1+0.5+0,\overline{33}+0,25+0,20} \sim 0,3431$. For $WHD_{gender}(2,1) = \frac{1}{1} = 1$. The distortion of nearly 3 changed cell of Age from D/M/Y to  10Y have the same amout as if one changed one cell of Gender from Female/Male to *. 
 
 \subsubsection{Conclusion}
 
+Because research need the information out of the tables, like of the examples. Its very important that as less as necessary information gets lost during the anonymization process. To show the importance  of this an additionally example, consider a table with surviver of a \textbf{idiom disaster beyond all expectations}. Researchers trying to find out the long-time effects of this disaster. Thats why the want to find out if victims get more likely to life a long and happy life if the live far away or close to the disasters location 
+.  The algorithm of Ling, Wong, Fu, and Pei which goal is to arrive exactly this will be shown in section <Section einfügen>.
+
+
 \subsection{NP Hard}
 
-\subsection{Attacks}
+\subsection{Attacks as Barrier}
+Furthermore, also attacks have to be considered as barriers for the implementation, because if the implementation ignores the weaknesses which the attacks use, k-anonymity is useless. 
+It is absolutely necessary that an attacker, under no circumstances, can learn about whatsoever target if he is studying the published database. Not even if the attacker has background knowledge from any other sources  \cite{Dalenius1977}. Unfortunately like Dwork showed 2006 that such safety is impossible because of impossibility of predict what the attacker may know through archiving background knowledge. For example, if the adversary knows that Bob get paid twice as the average German man and the attacker got access to a database which publishes the average income by German men. The anonymity of Bob is compromised even if Bob's data is not in the database \cite{dwork2011differential}.  
 
-Like Dalenius already mentioned it is absolutely necessary that an attacker, under no circumstances, can learn about whatsoever target if he is studying the published database. Not even if the attacker has background knowledge from any other sources  \cite{Dalenius1977}. Unfortunately like Dwork showed 2006 that such safety is impossible because of background knowledge. For example, if the attacker knows that Bob get paid twice as the average German man and the attacker got access to a database which publishes the average income by German men. The anonymity of Bob is compromised even if Bob's data is not in the database \cite{dwork2011differential}.  
-Ab hier noch mal komplett die Attacken überarbeiten, da noch im orginal ursprung!
 \subsubsection{Linking data}
 A barrier to do the implementation of k-anonymity, the attacker can take another dataset and link both together to get rid off the k-anonymity and infer the real individual. This process is called linking data and was first described by Sweeney\cite{sweeney2002k}. She showed that with a example of health care data from 37 states in the USA. The institute from which she bought the data, insures the anonymity of the individuals. Sweeney purchased the voter registration list for Cambridge Massachusettts and received information of the voters including ZIP code, birth date and gender (non explicit identifier) of each voter. She linked that information with the medical data. It was possible to deanonymize the data  and get ethnicity, visit date, diagnosis, procedure, medication and total charge of some patients \cite{sweeney2002k}. 
 
