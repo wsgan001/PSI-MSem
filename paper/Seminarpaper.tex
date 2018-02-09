@@ -40,14 +40,14 @@ in a realworld application\\[6pt]
 \maketitle
 %
 %\tableofcontents
-\section{Abstract}
+\section*{Abstract}
 Bla BLA BLA WIR SIND TOLL!
 \newpage
 \setcounter{page}{1}
 
 \section{Introduction}
 %
-Nowadays data is a key factor in nearly every domain. It is comparable to the gold rush of the \ensuremath{19^{th}.} century \cite{datarevo}. Furthermore, storage space and network increasingly become affordable \cite{sweeney2002k}. 
+Nowadays data is a key factor in nearly every domain. It is comparable to the gold rush of the \ensuremath{19^{th}.} century \cite{datarevo}. Furthermore, storage space and network ability increasingly become affordable \cite{sweeney2002k}. 
 This is leading to the situation that the created and stored data is often not only useful to the original data holder, but to other researchers. Also, some data is only useful if its get shared with other data and get together analyzed. But those data may contain some personal or sensitive information. Such that the data should only get releases if the privacy is protected \cite{li2006achieving}.\\
 \begin{table}[]
 	\centering
@@ -65,50 +65,73 @@ This is leading to the situation that the created and stored data is often not o
 	\end{tabular}
 \end{table}
 
-Data like table \ref{intro_example} have to get anonymized before release. A very common
-technique archive that goal is the so-called k-anonymity. Which goal is to prevent
-the possibility that information about the individual gets leaked. This paper is
-showing the process of implementing k-anonymity into the real world. In Section
-1 we will explain mandatory basic to understand k-anonymity and its purpose.
-Which leads to Section 2 the theoretical and heuristically implementation of
-k-anonymity. Section 3 will discuss the underlying barriers of k-anonymity.
-In Section 4 we will explain to the reader multiple algorithms to implement
-k-anonymity and its barriers. A summary of the whole paper will be in the last section
+Data like in table \ref{intro_example} have to get anonymized before it gets released. A very common
+technique archive this goal is the so-called k-anonymity, which will prevent
+the possibility that information about the individual gets leaked. This paper will
+show the barriers to implementing k-anonymity. In Section
+1 explains the mandatory basic to understand k-anonymity and its purpose.
+Section 2 will discuss the underlying barriers of k-anonymity.
+In Section 3 we will explain, possible attacks which also have to be considered as barriers for k-anonymity. Section 4 will show multiple algorithms to implement
+k-anonymity. A summary of the whole paper will be in the last section
 \newpage
 \section{Basics}
+In the following subsections basics will be explained. 
 \subsubsection{Microdata:}
-First of all, it should be clear what microdata is, those data is containing records of information about individuals. The upside versus the more known summary or aggregate data is, that microdata is naturally flexible. Everyone who has this data can perform own statistics from that data \cite{microdataweb}.
+First of all, those data is containing records of information about individuals. The upside versus the more known summary or aggregate data is, that microdata is naturally flexible. Everyone who has this data can perform own statistics from that data \cite{microdataweb}.
 \subsubsection{Identifier:}
-Attributes which can identify the record owner explicitly without any other attribute, for example full name (name and surname), telephone number, social security number. nicht sicher ob noch mehr möglich is\cite{domingo2008critique}
+They are attributes which can identify the record owner explicitly without any other attribute. For example the full name (first name and last name), telephone number, social security number, and more \cite{domingo2008critique}.
 \subsubsection{Quasi-identifier:}
-Even though explicit identifier got removed from published data. Attributes which non-explicitly identify the record owner are left. But if they get combined with other non-explicit attributes or other tables, they can reidentify the record owner. In such a case those combination of attributes are called quasi-identifier. For example Gender, Age, Postcode, weight and height \cite{dalenius1986finding}. Such process is shown in figure \ref{quasiidentifier}.
+Even though explicit identifier got removed from published data (to anonymize the data). Attributes which non-explicitly identify the record owner are left. But if they get combined with other non-explicit attributes or other tables, they can reidentify the record owner. In such a case those combination of attributes are called quasi-identifier. For example Gender, Age, Postcode, weight and height \cite{dalenius1986finding}. Such process is shown in figure (the quasi-identifier would be the ZIP, birth date and sex) \ref{quasiidentifier}.
+\begin{figure}[]
+	\centering
+	\includegraphics[width=0.6\textwidth]{linkingdata.png}
+	\caption{Quasi-identifiers}%
+	\label{quasiidentifier}
+\end{figure}
 \subsubsection{Sensitive data:}
-Data which is useful for example researchers but are private and should be known publicly nor be accessible for outsiders \cite{ldiversity}
+Data which is useful for example researchers but are too private and should not be known publicly nor be accessible for outsiders. This is the data which the record owner do not want to get linked to.\cite{ldiversity}.
+
 \subsubsection{Background-knowledge:}
-Because its unknown what the attackers knows, we have to assume additionally to that he have access to table, the attackers knows that the table is generalized (to guarantee k-anonymity). Furthermore the attacks is aware of the domain of the attributes.\\
-\textbf{Instance-level background knowledge}
-The adversary knows that his target does know specific details about his target. For example Alice (the adversary) knows that Bob do not suffer from some disease, because he does not show the symptoms. In this case the adversary may can conclude what Bob is really suffers from.\\
-\textbf{Demographic background knowledge}
-Adversary knows for example more general fact for example P(t[condition] = cancer| t[Age] $\geq$ 40). The attacker may use it to interference about records \cite{ldiversity}
+Because its unknown what the attackers knows, we have to assume additionally to that he have access to table, the attackers knows that the table is generalized (to guarantee k-anonymity). Furthermore, the attacks is aware of the domain of the attributes.\\
+\textbf{Instance-level background knowledge:}
+The adversary knows about specific details about his target. For example Alice (the adversary) knows that Bob do not suffer from a disease, because he does not show the symptoms. In this case Alice may can conclude what Bob is really suffers from.\\
+\textbf{Demographic background knowledge:}
+The Adversary knows more general fact, for example P(t[condition] = cancer| t[Age] $\geq$ 40). With this information the attacker may use it to interference about records \cite{ldiversity}
 
-\subsubsection{K-Anonymity}
-The goal of making a k-anonymized table, is to have at least (k-1) tuples of each identical tuple taking the corresponding quasi-identifiers into account \cite{sweeney2002k,li2006achieving}. For example the 2-anonyminized version of the table \ref{intro_example} in the introduction section.
-\subsubsection{Equivalence class}
+\subsubsection{K-Anonymity:}
+The goal of making a k-anonymized table, is to have at least (k-1) tuples of each identical tuple taking the corresponding quasi-identifiers into account \cite{sweeney2002k,li2006achieving}. For example the 2-anonyminized version of the table \ref{intro_example} in the introduction section would be the following table:
+\begin{table}[]
+	\centering
+	\caption{Basic example 2-anonymized}
+	\label{intro_example_sol}
+	\begin{tabular}{@{}llll@{}}
+		\toprule
+		SSN         & Age & Postcode & Problem         \\ \midrule
+		* & 2*  & 456*     & stress \\
+		* & 3*  & 456*     & stress          \\
+		* & 4*  & 456*     & stomach cancer  \\
+		* & 3*  & 456*     & obesity         \\
+		* & 4*  & 456*     & stomach ulcers  \\
+		* & 2*  & 456*     & stress          \\ \bottomrule
+	\end{tabular}
+\end{table}\\
+\textbf{Disclosure:} There are two kinds, \textbf{identity disclosure} if this is happening an individual gets linked to a particular record. Because of that \textbf{attribute disclosure} may happens, this is if new information about an individual gets reveled. For example, Bob gets linked to his record in \ref{intro_example_sol}, because of some attack (see Section 3.3). The adversary learns that he is suffering from stress \cite{sweeney2002k}.  
+\subsubsection{Equivalence class:}
 Is a set of all tuples with the identical quasi-identifiers of a table \cite{li2006achieving}.
-\subsubsection{global recoding/domain generalisation}
+\subsubsection{Global recoding/domain generalisation:}
 This generalization technique is very common, if a attribute value get generalized then all occourences of that value gets replaced by the generalized one \cite{sweeney2002k,sweeney2002achieving,li2006achieving,incognito}. 
-\subsubsection{local recoding}
-This coding strategies works differently from the above described one. Local recording generalizes attribute values in cells. Because of that this strategies doenst over generalize the table and the data distortion is significantly lower \cite{li2006achieving}. 
+\subsubsection{Local recoding:}
+This coding strategies works differently from the above described one. Local recording generalizes attribute values in cells. Because of that this strategies doesn't over generalize the table and the data distortion is significantly lower \cite{li2006achieving}. 
 
-\section{Theoretical and heuristically implantation of K-Anonymity}
-Another problem we will introduce is, that the producing of k-anonymity of a computational view is an NP-hard problem, like Meyersond and Williams shown.
+%\section{Theoretical and heuristically implantation of K-Anonymity}
+%Another problem we will introduce is, that the producing of k-anonymity of a computational view is an NP-hard problem, like Meyersond and Williams shown.
  
 \section{Underlying Barriers}
 
 In the following section, we will show the basic and most challenging barriers to the implementation of k-Anonymity. First, we will show the barrier which appears if you k-anonymize the data, the so-called \textbf{distortion} of data, in some papers it also mentioned as data loss. 
 %checked
-\section{Distortion of data as Barrier} 
-A basic underlying barrier of k-anonymity is, how to measure if a implantation has been successful or leads to a satisfying result. This can be measured by a simple calculation.
+\subsection{Distortion of data as Barrier} 
+A basic underlying barrier of k-anonymity is, how to measure if a implementation has been successful or leads to a satisfying result. This can be measured by a simple calculation.
 The \textbf{modification rate} is representing the fraction of cells which got modified within the attribute set of the quasi-identifier \cite{li2006achieving}.
 \begin{table}[]
 	\centering
@@ -128,108 +151,116 @@ The \textbf{modification rate} is representing the fraction of cells which got m
 \end{table}\\
 \textbf{Example:} for table2 a, the modification rate is  33,$\overline{33}$\% (4 out of 12 quasi-identifier got changed) for table 2c: its is 100\% (12 out of 12 quasi-identifier got changed). Like this simple example shows the modification rate calculation is a unsatisfying procedure. Because of that the \textbf{weighted hierarchical distance} got introduced by Li, Wong, Fu and Pei. 
 To calculate the \textbf{weighted hierarchical distance} of a cell, which got generalized from level p to level q, following formula is used \cite{li2006achieving}.\\
-\scalebox{1.5}{$ WHD (p, q) = \frac{\sum_{j=q+1}^{p} \omega_{j,j-1}}{\sum_{j=2}^{h} \omega_{j,j-1}} $}\\
-The WHD for the Age, let the hierarchy of birth date be \{D/M/Y, M/Y, Y, 10Y, C/T/G/P, *\}. Where D/M/Y  would be day.month.year, 10Y a 10 years interval and C/T/G/R for Child/Teen/Grownup/Pensioner.\\
+\scalebox{1.5}{$ WHD (p, q) = \frac{\sum_{j=q+1}^{p} \omega_{j,j-1}}{\sum_{j=2}^{h} \omega_{j,j-1}} $}\cite{li2006achieving}\\
+Let the hierarchy of birth date be \{D/M/Y, M/Y, Y, 10Y, C/T/G/P, *\}. Where D/M/Y  would be day.month.year, 10Y a 10 years interval and C/T/G/R for Child/Teen/Grownup/Pensioner.\\
 
-\textbf{Example with uniformed weight $w_{j,j-1} = 1$ where $2\leq j \leq h$} \cite{li2006achieving}: For the above example Birthday gets generalized from D/M/Y to 10Y, which corresponds into $WHD_{age}(6,3) = \frac{3}{5} = 0,6$. For the Gender generalization it would be $WHD_{gender}(2,1) = \frac{1}{1} = 1$. Which means for generalize 5 cells of age from D/M/Y to 10Y one will have the same data distortion as if one generalize 3 cells of Gender from Male/Female to *. This calculation shows a much better way to address the distortion of data than the \textbf{modification rate} but it does not take how near a generalization is to the root (which would be *). BEISPIEL??? \\
+\textbf{Example with uniformed weight $w_{j,j-1} = 1$ where $2\leq j \leq h$} \cite{li2006achieving}: For the above example Birthday gets generalized from D/M/Y to 10Y, which corresponds into $WHD_{Birthday}(6,3) = \frac{3}{5} = 0,6$. For the Gender generalization it would be $WHD_{gender}(2,1) = \frac{1}{1} = 1$. Which means for generalize 5 cells of age from D/M/Y to 10Y one will have the same data distortion as if 3 cells of gender gets generalized from Male/Female to *. This calculation shows a much better way to address the distortion of data than the \textbf{modification rate} but it does not take how near a generalization is to the root (which would be *).\\
 
 \textbf{Example with height weight: $w_{j,j-1} = 1 / (j-1)^{\beta}$ where 2 $\leq$ j $\leq$ h and $\beta = \R \geq$ 1} \cite{li2006achieving}:
-ß would be chosen by the user. For example $\beta = 1$. For $WHD_{age}(6,3) = \frac{0,\overline{33}+0,25+0,20}{1+0.5+0,\overline{33}+0,25+0,20} \sim 0,3431$. For $WHD_{gender}(2,1) = \frac{1}{1} = 1$. The distortion of nearly 3 changed cell of Age from D/M/Y to  10Y have the same amout as if one changed one cell of Gender from Female/Male to *. 
+$\beta$ would be chosen by the user. For example $\beta = 1$. For $WHD_{Birthday}(6,3) = \frac{0,\overline{33}+0,25+0,20}{1+0.5+0,\overline{33}+0,25+0,20} \sim 0,3431$. For $WHD_{gender}(2,1) = \frac{1}{1} = 1$. The distortion of nearly 3 changed cell of birthday from D/M/Y to  10Y have the same amount as if one cell of gender, from Female/Male to *, gets generalized. 
 
 \subsubsection{Conclusion}
 
-Because research need the information out of the tables, like of the examples. Its very important that as less as necessary information gets lost during the anonymization process. To show the importance  of this an additionally example, consider a table with surviver of a \textbf{idiom disaster beyond all expectations}. Researchers trying to find out the long-time effects of this disaster. Thats why the want to find out if victims get more likely to life a long and happy life if the live far away or close to the disasters location 
-.  The algorithm of Ling, Wong, Fu, and Pei which goal is to arrive exactly this will be shown in section <Section einfügen>.
+Because research need the information out of the tables, like of the examples. Its very important that as less as necessary information gets lost during the anonymization process. To show the importance  of this an additionally example, consider a table with surviver of a \textbf{idiom disaster beyond all expectations}. Researchers trying to find out the long-time effects of this disaster. Thats why the want to find out if victims get more likely to life a long and happy life if the live far away or close to the disasters location. If the data gets to much generalized by location its maybe useless for researchers to work with.
 
 
 \subsection{NP Hard}
 
 \subsection{Attacks as Barrier}
-Furthermore, also attacks have to be considered as barriers for the implementation, because if the implementation ignores the weaknesses which the attacks use, k-anonymity is useless. 
-It is absolutely necessary that an attacker, under no circumstances, can learn about whatsoever target if he is studying the published database. Not even if the attacker has background knowledge from any other sources  \cite{Dalenius1977}. Unfortunately like Dwork showed 2006 that such safety is impossible because of impossibility of predict what the attacker may know through archiving background knowledge. For example, if the adversary knows that Bob get paid twice as the average German man and the attacker got access to a database which publishes the average income by German men. The anonymity of Bob is compromised even if Bob's data is not in the database \cite{dwork2011differential}.  
 
-\subsubsection{Linking data}
-A barrier to do the implementation of k-anonymity, the attacker can take another dataset and link both together to get rid off the k-anonymity and infer the real individual. This process is called linking data and was first described by Sweeney\cite{sweeney2002k}. She showed that with a example of health care data from 37 states in the USA. The institute from which she bought the data, insures the anonymity of the individuals. Sweeney purchased the voter registration list for Cambridge Massachusettts and received information of the voters including ZIP code, birth date and gender (non explicit identifier) of each voter. She linked that information with the medical data. It was possible to deanonymize the data  and get ethnicity, visit date, diagnosis, procedure, medication and total charge of some patients \cite{sweeney2002k}. 
+Furthermore, also attacks have to be considered as barriers for the implementation, because if the implementation ignores the weaknesses which the attacks use, k-anonymity will be useless. 
+It is absolutely necessary that an attacker, under no circumstances, can learn about whatsoever target if he is studying the published database. Not even if the attacker has background knowledge from any other sources  \cite{Dalenius1977}. Unfortunately like Dwork showed 2006 that such safety is impossible because of impossibility of predict what the attacker may know. For example, if the adversary knows that Bob get paid twice as the average German man and the attacker got access to a database which publishes the average income by German men. The anonymity of Bob is compromised even if Bob's data is not in the database \cite{dwork2011differential}. Therefore its important and necessary that the implementation takes possible attacks into account and implement countermeasures, but because attacks are not the main part of this paper it will be only a short introduction. 
 
-\begin{figure}[]
+\subsubsection{Homogeneity attack}
+
+As an example, let Alice be the adversary and let be Bob her target. They are neighbors, some day Bob get transported with an ambulance to an hospital. Assume the hospital published the table \ref{4ktable}, where all current patients with them Nationality, Age, ZIP, and Problem are listed, but this table got 4-anonymized before release. Alice knows that Bob is a 31 old, American who lives in ZIP Code 02239. She can conclude that either he is entry 3, 5,6, or 11. Furthermore, all of these entry have the same Problem, Cancer. Alice can conclude Bob is suffering from Cancer even if the table the table got 4-anonymized \cite{sweeney2002k,ldiversity}. To counter such attacker \textbf{diversity} is needed \cite{ldiversity}. Such method is the so-called l-diversity which will not addressed further in this paper.  
+
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}[]
 	\centering
-	\includegraphics[width=0.7\textwidth]{linkingdata.png}
-	\caption{linking data}%
-	\label{quasiidentifier}
-\end{figure}
-You got two datasets A and B. Each dataset got \ensuremath{\langle f_1, ... ,f_n \rangle} features and \ensuremath{\langle r_1, ... ,r_n \rangle} rows.
-Each row is then a tuple \ensuremath{r_i} with n features \ensuremath{\langle f_1, ... ,f_n \rangle} describing the individual.
-Even tho the data is k-anonimized you can get rid oft he anonymity of the individual by linking the A to B. So if \ensuremath{A \cap B \not \neq \emptyset} it is possible to infer the anonymized individual \cite{sweeney2002k}.
-As a result any attacker who know such data (ZIP Code, Birth date and sex) could easily identify with such an attack his victim. For example Peter see his ex-wife at the doctor, most likely he knows her ZIP-Code, Birth date and sex. Therefore he finds out what she is suffer from. 
-\subsubsection{Unsorted matching attack against k-anonymity}
-There is a possibility of a leak of information, if the release k-anonymity data is in some kind of a sort release. This mean the numerical attributes are descending or ascending sorted and attributes, which be of characters are alphabetical ordered, can give the attacker Information about the sensitive data. To prevent this attack, just get the data into a random order with a pseudo randomized sorting algorithm \cite{sweeney2002k}. As an example take a look at the table 3: matching attack  will give an example on that. If you compare the different release generalized tables you can figure out all quasi identifier of those \cite{sweeney2002k}.
-\\...
-\begin{table}	
-	\caption{matching attack}
-	\centering
-	\begin{tabular}[t]{|l|l|}		
-	\hline
-	Age & ZIP   \\ \hline
-	2   & 91058 \\ 
-	4   & 91058 \\ 
-	50  & 27785 \\ 
-	52  & 27785 \\ 
-	20  & 32105 \\ 
-	21  & 32105 \\ 
-	31  & 67676 \\ 
-	32  & 67676 \\ \hline
-		\end{tabular}
-	\hfill
-	\begin{tabular}[t]{|l|l|}
-	\hline
-	Age & ZIP   \\ \hline
-	*   & 91058 \\
-	**   & 91058 \\
-	5*  & 27785 \\
-	5*  & 27785 \\
-	2*  & 32105 \\
-	2*  & 32105 \\
-	3*  & 67676 \\
-	3*  & 67676 \\ \hline  
-	\end{tabular}
-	\hfill
-	\begin{tabular}[t]{|l|l|}
-	\hline
-	Age & ZIP   \\	\hline
-	2   & 91*   \\
-	4   & 91*   \\
-	50  & 27*   \\
-	52  & 27*   \\
-	20  & 32*   \\
-	21  & 32*   \\
-	31  & 67*   \\
-	32  & 67*   \\ \hline  
+	\caption{My caption}
+	\label{my-label}
+	\begin{tabular}{@{}llllllllll@{}}
+		\cmidrule(lr){2-5} \cmidrule(l){7-10}
+		& Nationality     & Age & ZIP   & Problem         &  & Nationality & Age      & ZIP   & Problem         \\ \cmidrule(lr){2-5} \cmidrule(l){7-10} 
+		1  & American        & 42  & 02135 & Viral Infect    &  & *           & $\geq$40 & 021** & Viral Infect    \\
+		2  & Japanese        & 41  & 02133 & Hearth disease  &  & *           & $\geq$40 & 021** & Hearth disease  \\
+		3  & Germany         & 38  & 02238 & Hearth disease  &  & *           & 3*       & 0223* & Cancer          \\
+		4  & Japanese        & 29  & 02139 & Fever           &  & *           & $\leq$30 & 021** & Fever           \\
+		5  & Indina          & 37  & 02232 & Viral Infection &  & *           & 3*       & 0223* & Cancer          \\
+		6  & Native-american & 34  & 02236 & Cancer          &  & *           & 3*       & 0223* & Cancer          \\
+		7  & Russia          & 53  & 02138 & Viral Infection &  & *           & $\geq$40 & 021** & Viral Infection \\
+		8  & China           & 23  & 02139 & Cancer          &  & *           & $\leq$30 & 021** & Cancer          \\
+		9  & American        & 23  & 02141 & Short of breath &  & *           & $\leq$30 & 021** & Short of breath \\
+		10 & Indian          & 46  & 02139 & Viral Infection &  & *           & $\geq$40 & 021** & Viral Infection \\
+		11 & American        & 31  & 02239 & Vomiting        &  & *           & 3*       & 0223* & Cancer          \\
+		12 & American        & 28  & 02130 & Viral Infection &  & *           & $\leq$30 & 021** & Viral Infection \\ \cmidrule(lr){2-5} \cmidrule(l){7-10} 
 	\end{tabular}
 \end{table}
-\subsubsection{Complexity of producing k-anonymity}
-BRauchen wir das????
-Till now we only looked at problems of information leaking and privacy problems for individuals. Data is personal-specific information which is structured as a table in rows and columns. Rows a tuple. The columns are attributes with are a set of values which describe the certain attribute. A tuple specify a person. K-anonymity is about protecting the identity of a person not relationships of companies or governments. So the goal of k-anonymity is, not getting more information by linking the data to external data. The bridge between the data and external data is called "quasi-identifier". Examples for that would be ZIP, gender, birth date etc.. \\
-\\
-Generalization mean, replacing a value with a less specific but semantic identical value. For example we got a list of forenames of buys, (Achmed, Achilles, Achim). To generalize this names you can just (Ach*,Ach*, Ach*) delete the last chars of the name. So there is a less specific domain and now more generalize through this mapping. Suppression on the other hand means not releasing the value at all.
+
+\subsubsection{Background Knowledge Attack}
+This attack use the demographic background knowledge, which got explained in the basics, of an adversary. Assume Alice have a college, which get also to the same hospital. This college is 32 years old, Japanese and have the ZIP 93607. Everyone with the same quasi-identifiers (Age = 3* and ZIP = 936**) have a cancer or a hearth disease. Because she knows that Japanese have a very low risk of a hearth disease she conclude her college has cancer \cite{ldiversity}.
+\begin{table}[]
+	\centering
+	\caption{Background Knowledge Attack}
+	\label{tablebackground}
+	\begin{tabular}{@{}llllllll@{}}
+		\cmidrule(r){1-4} \cmidrule(l){6-8}
+		& ZIP Code & Age & Disease        &  & ZIP Code & Age      & Disease        \\ \cmidrule(r){1-4} \cmidrule(l){6-8} 
+		1 & 93677    & 29  & Liver Disease   &  & 936**    & $\leq$30 & Liver Disease   \\
+		2 & 93602    & 22  & Liver Disease   &  & 936**    & $\leq$30 & Liver Disease   \\
+		3 & 93909    & 52  & Cancer         &  & 9390*    & $\geq$40 & Cancer         \\
+		4 & 93906    & 47  & Flu            &  & 9390*    & $\geq$40 & Flu            \\
+		5 & 93673    & 36  & Hearth Disease &  & 936**    & 3*       & Hearth Disease \\
+		6 & 93607    & 32  & Cancer         &  & 936**    & 3*       & Cancer         \\ \cmidrule(r){1-4} \cmidrule(l){6-8} 
+	\end{tabular}
+\end{table}
+
+\subsubsection{Unsorted matching attack against k-anonymity}
+This attacks is based on the very common strategy to release 2 tables separately  
+
+There is a possibility of a leak of information, if the release k-anonymity data is in some kind of a sort release. This mean the numerical attributes are descending or ascending sorted and attributes, which be of characters are alphabetical ordered, can give the attacker Information about the sensitive data. To prevent this attack, just get the data into a random order with a pseudo randomized sorting algorithm \cite{sweeney2002k}. As an example take a look at the table 3: matching attack  will give an example on that. If you compare the different release generalized tables you can figure out all quasi identifier of those \cite{sweeney2002k}.
+
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}[]
+	\centering
+	\caption{My caption}
+	\label{my-label}
+	\begin{tabular}{@{}cccccccc@{}}
+		\cmidrule(r){1-2} \cmidrule(lr){4-5} \cmidrule(l){7-8}
+		Age & ZIP   &  & Age & ZIP   &  & Age & ZIP   \\ \cmidrule(r){1-2} \cmidrule(lr){4-5} \cmidrule(l){7-8} 
+		42  & 91058 &  & *   & 91058 &  & 42  & 91050 \\
+		44  & 91058 &  & *   & 91058 &  & 44  & 91050 \\
+		50  & 27785 &  & *   & 27785 &  & 50  & 27780 \\
+		52  & 27785 &  & *   & 27785 &  & 52  & 27780 \\
+		20  & 32105 &  & *   & 32105 &  & 20  & 32100 \\
+		21  & 32105 &  & *   & 32105 &  & 21  & 32100 \\
+		31  & 67676 &  & *   & 67676 &  & 31  & 67670 \\
+		32  & 67676 &  & *   & 67676 &  & 32  & 67670 \\ \cmidrule(r){1-2} \cmidrule(lr){4-5} \cmidrule(l){7-8} 
+	\end{tabular}
+\end{table}
+%\subsubsection{Complexity of producing k-anonymity}
+%Till now we only looked at problems of information leaking and privacy problems for individuals. Data is personal-specific information which is structured as a table in rows and columns. Rows a tuple. The columns are attributes with are a set of values which describe the certain attribute. A tuple specify a person. K-anonymity is about protecting the identity of a person not relationships of companies or governments. So the goal of k-anonymity is, not getting more information by linking the data to external data. The bridge between the data and external data is called "quasi-identifier". Examples for that would be ZIP, gender, birth date etc.. \\
+%\\
+%Generalization mean, replacing a value with a less specific but semantic identical value. For example we got a list of forenames of buys, (Achmed, Achilles, Achim). To generalize this names you can just (Ach*,Ach*, Ach*) delete the last chars of the name. So there is a less specific domain and now more generalize through this mapping. Suppression on the other hand means not releasing the value at all.
 \section{Algorithm}
-\subsection{Clustering}
-Needed because data contains categorical values, the methods are not quite effective.
-\cite{li2006achieving}.\\
+This section will show some algorithms which goals is to archive k-anonymity through generalization. 
+
+\subsection{The KACA Algorithm}
+This algorithm idea is to archive k-anonymity by clustering attribute hierarchical structures. The algorithm choose a random equivalent class, which is smaller than k. The next step is to form a lager equivalent class by merging the chosen  one with the closest equivalent class. Which is resulting in a larger combined equivalent class. Through repeating this process the final result is that each equivalent class consists of at least k tuples  \cite{li2006achieving}.\\
 \begin{algorithm}[H]
-	\caption{K-Anonymisation by Clustering in Attribute hierarchies (KACA)}
+	\caption{K-Anonymization by Clustering in Attribute hierarchies (KACA) \cite{li2006achieving}}
 	form equivalence classes from the data set\\
 	\While{there exists an equivalence class of size $<$ k}{
 	randomly choose an equivalence class $C$ of size $k$ k\\
 	evaluate the pairwise distance of $C$ and all other equivalence classes\\
 	find the equivalence class $C'$ with the smallest distance to $C$\\
 	generalise the equivalence classes $C$ and $C'$
-	}
-	
+	}	
 \end{algorithm}
-
-
-
-
+This algorithm has a runtime of $O(nlogn + |E|^{2})$. Li, Wong, Fu, and Pei have shown that their KACA-Algorithm is resulting in a 5.57 times smaller amount of distortion as the well known Incognito algorithm. The reason is lying in the technique which Incognito is using. Its a global recoding algorithm, which is resulting in a over-generalized table \cite{li2006achieving}.
 \subsection{The OlA Algorithm }
 The OLA Algorithm works in 3 Steps that will now be explained.
 1.	For every generalization strategy build a binary search to find all k-anonymous nodes in the different strategies.
