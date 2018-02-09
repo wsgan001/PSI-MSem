@@ -203,10 +203,26 @@ Generalization mean, replacing a value with a less specific but semantic identic
 \subsection{Clustering}
 Needed because data contains categorical values, the methods are not quite effective.
 \cite{li2006achieving}
-\subsection{Datafly}
-\subsection{Argus}
+\subsection{The OlA Algorithm }
+The OLA Algorithm works in 3 Steps that will now be explained.
+1.	For every generalization strategy build a binary search to find all k-anonymous nodes in the different strategies.
+2.	For every generalization strategy that includes k-anonymous nodes save the one with the least Information loss in the hole generalization strategy this is referet to an local optimon k-anonymous solution.
+3.	Now compare the local optimum solutions to respect of ther information loss. The one with the lowest Information loss of all local optimum solutions is  the global optimum solution.
+
+The most time consuming operation is finding the all the K-anonymous notes with and compare them to each other with respect to their information loss.  To get a better performance at the Programm step 1) the OLA algorithm works with Predictive Tagging that boost the process.  This Tagging take advandage of 2 Theorems of the generalization Latice. That every k-anonymous note in the same generalization lattice on hight n. All notes above n and in the same generalization strategy are also k-anonymous. So the algorithm only have to find the first k-anonymous note in the strategy and tag all above as k-anonymous. 
+
+\subsection{Cloaking Algorithm}
+The Cloacking Alortihm tries to produce Anonymity on locasen based data for users of Location Bases Services like Pokemon Go Google Maps and so on. The Cloacking Algorithm is installed on a Trusted thiert Party Server and is the linkig between the User and the Lokation based Service Provider. The Goal of the Alortitgh is to produce K-anonymity of locased based data the definition: k-anonymity prevents such a privacy breach by ensuring that each individual record can only be released if there is at least k − 1 other (distinct) individuals whose associated records are indistinguishable from the former in terms of their quasi-identifier values.
+
+The Attacks to gain Information about the User of Sended the massenges give Inside on the reason for the implementation. Restricted Space Identiﬁcation and Observation Identiﬁcation. Restriced Space Identification happens if you are the only on in at a location and the attack good the background knowlwege after receiving the transmitted messange with the location data he can contuct that you are the one. To prefend this leaking of information the cloacking algorthim works with Spatial Cloaking and Temporal Cloacking. Spatial cloackign refers to the Idee that the coordinates will be boxes and the temporal cloacking refers to the function of dislimit the possibility that someone can infere that you are their at that time. With sending the message with a time interval which is bigger than we thought it would be. 
+
 \section{Releated techniques}
 \section{Summary}
+Like we saw in Chapter OLA Algorithm. There are possibilities of choosen between different Information Loss metrices which all compute different values to the same k-anonymous node. So the implemenatior have to choose which one fits the most on his data. Different Matrics have pros and contras and have to be compared. Another Problem with Information loss is that you can measure the information loss on your dataset but what would be more interesting the information loss compared to upcoming data mining tool or machine learning application. The information loss metrics can´t know which information is important for the upcoming dataminging step. Like we saw  suppression can also harm the quality of the data and should be choosen waisley. 
+The production of k-anonymity is NP – Hard, which ould be shown by balbal and balla in babalbala and .
+High Dimensonal Data like at Transposition Data with more than thousand of attributes are in practice not cababale to produce k-anonymity for all attributes. The reason for that is the so called Curse of High Dimensonality which produce this problem.  Possiblites are bounded background knowledge that a User decite which attribute like in Risk Management can be stayes as it is. 
+The Attacks are also Barrries because the goal of k-anonymity is to provide anonymity. The attacks get ride of the goal and provide the capability for the attack to gain the indentiy of the user. And the end could be said that there a solutions regarding these kind of attack we proposed in this paper. L-Diversity and T-Closeness will help against the these attacks.
+The cloaking algorithm shoves a good example of the connection between anonymity and userbility . On AREA Code examples. The anonmitation of the data let suffer the userbility of the apps. Which comes from the contruction of the Spatial Cloaking and Temporal Cloacking to have enough messages to contrain them and let the be k-anonymous. The Software gives the option that a user of the client can deciede  how much Temporal Cloacking he wants to sacrifice to get anonymity. So the user is at least under the control of how much utility he wants to give up. 
 
 \newpage
 \bibliography{literature}
