@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.20)  9 FEB 2018 19:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.20)  9 FEB 2018 19:47
 entering extended mode
 **./Seminarpaper.tex
 (Seminarpaper.tex
@@ -455,36 +455,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 159--160
 
  []
 
-[4]
-
-LaTeX Warning: Reference `4ktable' on page 5 undefined on input line 175.
-
-[5]
+[4] [5]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 179.
+               Default added (so using `htbp') on input line 181.
 
 
-Overfull \hbox (1.17078pt too wide) in paragraph at lines 183--199
+Overfull \hbox (1.17078pt too wide) in paragraph at lines 185--201
  [][] 
  []
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 203.
+               Default added (so using `htbp') on input line 205.
 
 [6]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 222.
+               Default added (so using `htbp') on input line 224.
 
 
-Overfull \hbox (2.79387pt too wide) in paragraph at lines 241--242
+Overfull \hbox (2.79387pt too wide) in paragraph at lines 243--244
 \OT1/cmr/m/n/10 that be-fore im-ple-men-ta-tion an ap-pli-ca-tion with k-anonym
 ity, these at-tacks should
  []
 
 [7]
+Overfull \hbox (10.68268pt too wide) in paragraph at lines 266--267
+[]\OT1/cmr/m/n/10 For ev-ery gen-er-al-iza-tion, strat-egy builds a bi-nary sea
+rch to find all k-anonymous
+ []
+
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no à in font cmr10!
 Missing character: There is no í in font cmr10!
@@ -494,7 +495,7 @@ Missing character: There is no Å in font cmr10!
 Missing character: There is no Ô in font cmr10!
 Missing character: There is no ¨ in font cmr10!
 Missing character: There is no Å in font cmr10!
- [8]
+[8]
 Missing character: There is no ¬ in font cmr10!
 Missing character: There is no ¥ in font cmr10!
 Missing character: There is no ¬ in font cmr10!
@@ -517,38 +518,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 42--44
 ntury-2-
  []
 
-) [11] (Seminarpaper.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+) [11] (Seminarpaper.aux) ) 
 Here is how much of TeX's memory you used:
- 4374 strings out of 493323
- 60244 string characters out of 3139062
+ 4373 strings out of 493323
+ 60235 string characters out of 3139062
  147875 words of memory out of 3000000
- 7833 multiletter control sequences out of 15000+200000
+ 7832 multiletter control sequences out of 15000+200000
  15561 words of font info for 60 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,12n,26p,2416b,373s stack positions out of 5000i,500n,10000p,200000b,50000s
-<D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx7.pfb><D:/Program Files/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><D:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cmextra/cmex7.pfb><D:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmmi10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmmi5.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmmi7.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-r10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><
-D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><D:/Program
- Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><D:/Program Files/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><D:/Program Files/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmsy5.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmsy7.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmsy9.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10
-.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pf
-b>
-Output written on Seminarpaper.pdf (13 pages, 268609 bytes).
+ 39i,12n,26p,2406b,373s stack positions out of 5000i,500n,10000p,200000b,50000s
+<D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmbx10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmbx12.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx7.pf
+b><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><D:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><D:/Program
+ Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program Files/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><D:/Program Files/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmmi7.pfb><D:/Program Files/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmr10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmr17.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmr5.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.
+pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><D:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><D:/Program Files/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><D:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmsy9.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmti10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/a
+msfonts/symbols/msbm10.pfb>
+Output written on Seminarpaper.pdf (13 pages, 268427 bytes).
 PDF statistics:
  122 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
