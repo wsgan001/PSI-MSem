@@ -133,25 +133,27 @@ In the following section, we will show the basic and most challenging barriers t
 \subsection{Distortion of data as Barrier} 
 A basic underlying barrier of k-anonymity is, how to measure if a implementation has been successful or leads to a satisfying result. This can be measured by a simple calculation.
 The \textbf{modification rate} is representing the fraction of cells which got modified within the attribute set of the quasi-identifier \cite{li2006achieving}.
+
+	
 \begin{table}[]
 	\centering
-	\label{table2}
-	\caption{a: original table,b: example for local recording, c: example for domain generalization }
-	\begin{tabular}{lllllllllll}
-		\cline{1-3} \cline{5-7} \cline{9-11}
-		Gender & Birthday   & Problem &  & Gender & Birthday   & Problem &  & Gender & Birthday & Problem \\ \cline{1-3} \cline{5-7} \cline{9-11} 
-		male   & 13.08.1962 & stress  &  & male   & 13.08.1962 & stress  &  & *      & 196*     & stress  \\
-		male   & 28.10.1967 & obesity &  & male   & 28.10.1967 & obesity &  & *      & 196*     & obesity \\
-		male   & 20.01.1977 & stress  &  & *      & 197*       & stress  &  & *      & 197*     & stress  \\
-		female & 15.09.1973 & obesity &  & *      & 197*       & obesity &  & *      & 197*     & obesity \\
-		female & 15.03.1985 & stress  &  & female & 15.03.1985 & stress  &  & *      & 198*     & stress  \\
-		female & 28.05.1986 & obesity &  & female & 28.05.1986 & obesity &  & *      & 198*     & obesity \\ \cline{1-3} \cline{5-7} \cline{9-11}
+	\caption{a: original table, b: example for local recording, c: example for domain generalization }
+	\label{table_distortion}
+	\begin{tabular}{@{}lllllllllll@{}}
+		\multicolumn{3}{c}{\textbf{a}} &           & \multicolumn{3}{c}{\textbf{b}} &  & \multicolumn{3}{c}{\textbf{c}} \\ \midrule
+		Gender  & Birthday   & Problem & \textbf{} & Gender  & Birthday   & Problem &  & Gender  & Birthday  & Problem  \\ \midrule
+		male    & 13.08.1962 & stress  &           & male    & 13.08.1962 & stress  &  & *       & 196*      & stress   \\
+		male    & 28.10.1967 & obesity &           & male    & 28.10.1967 & obesity &  & *       & 196*      & obesity  \\
+		male    & 20.01.1977 & stress  &           & *       & 197*       & stress  &  & *       & 197*      & stress   \\
+		female  & 15.09.1973 & obesity &           & *       & 197*       & obesity &  & *       & 197*      & obesity  \\
+		female  & 15.03.1985 & stress  &           & female  & 15.03.1985 & stress  &  & *       & 198*      & stress   \\
+		female  & 28.05.1986 & obesity &           & female  & 28.05.1986 & obesity &  & *       & 198*      & obesity  \\ \bottomrule
 	\end{tabular}
-	
-\end{table}\\
-\textbf{Example:} for table2 a, the modification rate is  33,$\overline{33}$\% (4 out of 12 quasi-identifier got changed) for table 2c: its is 100\% (12 out of 12 quasi-identifier got changed). Like this simple example shows the modification rate calculation is a unsatisfying procedure. Because of that the \textbf{weighted hierarchical distance} got introduced by Li, Wong, Fu and Pei. 
+\end{table}
+
+\textbf{Example:} for table \ref{table_distortion}b, the modification rate is  33,$\overline{33}$\% (4 out of 12 quasi-identifier got changed) for table \ref{table_distortion}c: its is 100\% (12 out of 12 quasi-identifier got changed). Like this simple example shows the modification rate calculation is a unsatisfying procedure. Because of that the \textbf{weighted hierarchical distance} got introduced by Li, Wong, Fu and Pei. 
 To calculate the \textbf{weighted hierarchical distance} of a cell, which got generalized from level p to level q, following formula is used \cite{li2006achieving}.\\
-\scalebox{1.5}{$ WHD (p, q) = \frac{\sum_{j=q+1}^{p} \omega_{j,j-1}}{\sum_{j=2}^{h} \omega_{j,j-1}} $}\cite{li2006achieving}\\
+\scalebox{1.25}{$ WHD (p, q) = \frac{\sum_{j=q+1}^{p} \omega_{j,j-1}}{\sum_{j=2}^{h} \omega_{j,j-1}} $}\cite{li2006achieving}\\
 Let the hierarchy of birth date be \{D/M/Y, M/Y, Y, 10Y, C/T/G/P, *\}. Where D/M/Y  would be day.month.year, 10Y a 10 years interval and C/T/G/R for Child/Teen/Grownup/Pensioner.\\
 
 \textbf{Example with uniformed weight $w_{j,j-1} = 1$ where $2\leq j \leq h$} \cite{li2006achieving}: For the above example Birthday gets generalized from D/M/Y to 10Y, which corresponds into $WHD_{Birthday}(6,3) = \frac{3}{5} = 0,6$. For the Gender generalization it would be $WHD_{gender}(2,1) = \frac{1}{1} = 1$. Which means for generalize 5 cells of age from D/M/Y to 10Y one will have the same data distortion as if 3 cells of gender gets generalized from Male/Female to *. This calculation shows a much better way to address the distortion of data than the \textbf{modification rate} but it does not take how near a generalization is to the root (which would be *).\\
@@ -163,13 +165,10 @@ $\beta$ would be chosen by the user. For example $\beta = 1$. For $WHD_{Birthday
 
 Because research need the information out of the tables, like of the examples. Its very important that as less as necessary information gets lost during the anonymization process. To show the importance  of this an additionally example, consider a table with surviver of a \textbf{idiom disaster beyond all expectations}. Researchers trying to find out the long-time effects of this disaster. Thats why the want to find out if victims get more likely to life a long and happy life if the live far away or close to the disasters location. If the data gets to much generalized by location its maybe useless for researchers to work with.
 
-
-\subsection{NP Hard}
-
 \subsection{Attacks as Barrier}
 
 Furthermore, also attacks have to be considered as barriers for the implementation, because if the implementation ignores the weaknesses which the attacks use, k-anonymity will be useless. 
-It is absolutely necessary that an attacker, under no circumstances, can learn about whatsoever target if he is studying the published database. Not even if the attacker has background knowledge from any other sources  \cite{Dalenius1977}. Unfortunately like Dwork showed 2006 that such safety is impossible because of impossibility of predict what the attacker may know. For example, if the adversary knows that Bob get paid twice as the average German man and the attacker got access to a database which publishes the average income by German men. The anonymity of Bob is compromised even if Bob's data is not in the database \cite{dwork2011differential}. Therefore its important and necessary that the implementation takes possible attacks into account and implement countermeasures, but because attacks are not the main part of this paper it will be only a short introduction. 
+It is absolutely necessary that an attacker, under no circumstances, can learn about whatsoever target if he is studying the published database. Not even if the attacker has background knowledge from any other sources  \cite{Dalenius1977}. Unfortunately like Dwork showed 2006 that such safety is impossible because of the impossibility to predict what the attacker may know. Therefore its important and necessary that the implementation takes possible attacks into account and implement countermeasures, but because attacks are not the main part of this paper it will be only a short introduction. 
 
 \subsubsection{Homogeneity attack}
 
@@ -179,8 +178,8 @@ As an example, let Alice be the adversary and let be Bob her target. They are ne
 % \usepackage{booktabs}
 \begin{table}[]
 	\centering
-	\caption{My caption}
-	\label{my-label}
+	\caption{Homogeneity attack}
+	\label{homogenityattack}
 	\begin{tabular}{@{}llllllllll@{}}
 		\cmidrule(lr){2-5} \cmidrule(l){7-10}
 		& Nationality     & Age & ZIP   & Problem         &  & Nationality & Age      & ZIP   & Problem         \\ \cmidrule(lr){2-5} \cmidrule(l){7-10} 
@@ -199,7 +198,7 @@ As an example, let Alice be the adversary and let be Bob her target. They are ne
 	\end{tabular}
 \end{table}
 
-\subsubsection{Background Knowledge Attack}
+\subsubsection{Background knowledge attack}
 This attack use the demographic background knowledge, which got explained in the basics, of an adversary. Assume Alice have a college, which get also to the same hospital. This college is 32 years old, Japanese and have the ZIP 93607. Everyone with the same quasi-identifiers (Age = 3* and ZIP = 936**) have a cancer or a hearth disease. Because she knows that Japanese have a very low risk of a hearth disease she conclude her college has cancer \cite{ldiversity}.
 \begin{table}[]
 	\centering
@@ -218,33 +217,31 @@ This attack use the demographic background knowledge, which got explained in the
 \end{table}
 
 \subsubsection{Unsorted matching attack against k-anonymity}
-This attacks is based on the very common strategy to release 2 tables separately  
+This attacks is based on the very common strategy to release two tables separately. For example assume a two column weight table (a). This table get separated in two tables (b, c). Table b will contain Age completely generalized but ZIP ungeneralized, table c will have Age ungeneralized but Zip Generalized. The adversary just will merge both tables and will get table (a), and get access to sensitive information. This weakness can be fix via random sorting. \cite{sweeney2002k}.
 
-There is a possibility of a leak of information, if the release k-anonymity data is in some kind of a sort release. This mean the numerical attributes are descending or ascending sorted and attributes, which be of characters are alphabetical ordered, can give the attacker Information about the sensitive data. To prevent this attack, just get the data into a random order with a pseudo randomized sorting algorithm \cite{sweeney2002k}. As an example take a look at the table 3: matching attack  will give an example on that. If you compare the different release generalized tables you can figure out all quasi identifier of those \cite{sweeney2002k}.
-
-% Please add the following required packages to your document preamble:
-% \usepackage{booktabs}
 \begin{table}[]
 	\centering
 	\caption{My caption}
 	\label{my-label}
 	\begin{tabular}{@{}cccccccc@{}}
-		\cmidrule(r){1-2} \cmidrule(lr){4-5} \cmidrule(l){7-8}
-		Age & ZIP   &  & Age & ZIP   &  & Age & ZIP   \\ \cmidrule(r){1-2} \cmidrule(lr){4-5} \cmidrule(l){7-8} 
-		42  & 91058 &  & *   & 91058 &  & 42  & 91050 \\
-		44  & 91058 &  & *   & 91058 &  & 44  & 91050 \\
-		50  & 27785 &  & *   & 27785 &  & 50  & 27780 \\
-		52  & 27785 &  & *   & 27785 &  & 52  & 27780 \\
-		20  & 32105 &  & *   & 32105 &  & 20  & 32100 \\
-		21  & 32105 &  & *   & 32105 &  & 21  & 32100 \\
-		31  & 67676 &  & *   & 67676 &  & 31  & 67670 \\
-		32  & 67676 &  & *   & 67676 &  & 32  & 67670 \\ \cmidrule(r){1-2} \cmidrule(lr){4-5} \cmidrule(l){7-8} 
+		\multicolumn{2}{c}{\textbf{a}} & \multicolumn{1}{l}{} & \multicolumn{2}{c}{\textbf{b}} & \multicolumn{1}{l}{} & \multicolumn{2}{c}{\textbf{c}} \\ \cline{1-2} \cline{4-5} \cline{7-8} 
+		Age           & ZIP            &                      & Age           & ZIP            &                      & Age           & ZIP            \\ \cline{1-2} \cline{4-5} \cline{7-8} 
+		42            & 91058          &                      & *             & 91058          &                      & 42            & 91050          \\
+		44            & 91058          &                      & *             & 91058          &                      & 44            & 91050          \\
+		50            & 27785          &                      & *             & 27785          &                      & 50            & 27780          \\
+		52            & 27785          &                      & *             & 27785          &                      & 52            & 27780          \\
+		20            & 32105          &                      & *             & 32105          &                      & 20            & 32100          \\
+		21            & 32105          &                      & *             & 32105          &                      & 21            & 32100          \\
+		31            & 67676          &                      & *             & 67676          &                      & 31            & 67670          \\
+		32            & 67676          &                      & *             & 67676          &                      & 32            & 67670          \\ \cline{1-2} \cline{4-5} \cline{7-8} 
 	\end{tabular}
 \end{table}
-%\subsubsection{Complexity of producing k-anonymity}
-%Till now we only looked at problems of information leaking and privacy problems for individuals. Data is personal-specific information which is structured as a table in rows and columns. Rows a tuple. The columns are attributes with are a set of values which describe the certain attribute. A tuple specify a person. K-anonymity is about protecting the identity of a person not relationships of companies or governments. So the goal of k-anonymity is, not getting more information by linking the data to external data. The bridge between the data and external data is called "quasi-identifier". Examples for that would be ZIP, gender, birth date etc.. \\
-%\\
-%Generalization mean, replacing a value with a less specific but semantic identical value. For example we got a list of forenames of buys, (Achmed, Achilles, Achim). To generalize this names you can just (Ach*,Ach*, Ach*) delete the last chars of the name. So there is a less specific domain and now more generalize through this mapping. Suppression on the other hand means not releasing the value at all.
+
+\subsubsection{Conclusion}
+After showing possible attacks on k-anonymity it should be clear that before implementation an application with k-anonymity, these attacks should be tested and the application should be secure against any possible attack. 
+
+\subsection{NP Hard}
+Non polynomial hardness
 \section{Algorithm}
 This section will show some algorithms which goals is to archive k-anonymity through generalization. 
 
@@ -276,7 +273,7 @@ Moving object data poses new challenges to a traditional database, data mining, 
 
 %\section{Releated techniques}
 \section{Summary}
-Like we saw in Chapter OLA Algorithm. There are possibilities of choose between different Information Loss metrics which all compute different values to the same k-anonymous node. So the implementer has to choose which one fits the most in his data. Different Metrics have pros and contras and have to be compared. Another Problem with Information loss is that you can measure the information loss on your dataset but what would be more is interesting the information loss compared to upcoming data mining tool or machine learning application. The information loss metrics can´t know which information is important for the upcoming data mining step.suppression can also harm the quality of the data and should be chosen wisely.The production of k-anonymity is NP-Hard which results in a difficult implementation in real-time applications like the Cloaking - Algorithm had shown. This Complexity can result in problems of finding an optimal solution in real-world data sets and can make a practical implementation difficult. High Dimensional Data like transaction data with more than thousand of attributes are in practice not capable to produce k-anonymity for all attributes. The reason for that is the so called Curse of High Dimensionality which produces a metric space which is too large to produce k-anonymity solutions for all attributes. A  Possibility is so called, bounded background knowledge that some attributes can´t be used as a quasi-identifier because the effort of getting background knowledge which can be linked to the attributes is estimated too high. Like shown i chapter {Attacks as Barrier} attacks against k-anonymity are a threat for the anonymity of the user and can result in identity disclosure.There solutions regarding these kind of attacks we proposed in this paper. L-Diversity and T-Closeness will help against them. The cloaking algorithm shoves a good example of the connection between anonymity and usability. The anonymization of the data reduces the usability of location-based services. Which comes from the construction of the Spatial cloaking and Temporal cloaking boxes to have enough messages to constrain them and let the be k-anonymous. The Software gives the option that a user of the client can decide how much usability he wants to sacrifice to get anonymity. So the user is at least under the control of how much utility he wants to give up. 
+Like we saw in section OLA algorithm there are possibilities of choosing between different information loss metrics which all compute different values to the same k-anonymous node. So the implementer has to choose which one fits the most in his data. Different Metrics have pros and contras and have to be compared. Another problem with Information loss is that you can measure the information loss on your dataset but what would be more is interesting the information loss compared to upcoming data mining tool or machine learning application. The information loss metrics can´t know which information is important for the upcoming data mining step.suppression can also harm the quality of the data and should be chosen wisely.The production of k-anonymity is NP-Hard which results in a difficult implementation in real-time applications like the Cloaking - Algorithm had shown. This Complexity can result in problems of finding an optimal solution in real-world data sets and can make a practical implementation difficult. High Dimensional Data like transaction data with more than thousand of attributes are in practice not capable to produce k-anonymity for all attributes. The reason for that is the so called Curse of High Dimensionality which produces a metric space which is too large to produce k-anonymity solutions for all attributes. A  Possibility is so called, bounded background knowledge that some attributes can´t be used as a quasi-identifier because the effort of getting background knowledge which can be linked to the attributes is estimated too high. Like shown i chapter {Attacks as Barrier} attacks against k-anonymity are a threat for the anonymity of the user and can result in identity disclosure.There solutions regarding these kind of attacks we proposed in this paper. L-Diversity and T-Closeness will help against them. The cloaking algorithm shoves a good example of the connection between anonymity and usability. The anonymization of the data reduces the usability of location-based services. Which comes from the construction of the Spatial cloaking and Temporal cloaking boxes to have enough messages to constrain them and let the be k-anonymous. The Software gives the option that a user of the client can decide how much usability he wants to sacrifice to get anonymity. So the user is at least under the control of how much utility he wants to give up. 
 
 \newpage
 \bibliography{literature}
