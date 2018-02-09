@@ -9,7 +9,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 
-\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+\usepackage[linesnumbered,ruled]{algorithm2e}
 
 \usepackage[noend]{algpseudocode}
 
@@ -216,19 +216,15 @@ Generalization mean, replacing a value with a less specific but semantic identic
 Needed because data contains categorical values, the methods are not quite effective.
 \cite{li2006achieving}.\\
 \begin{algorithm}[H]
-	\KwData{this text}
-	\KwResult{how to write algorithm with \LaTeX2e }
-	initialization\;
-	\While{not at end of this document}{
-		read current\;
-		\eIf{understand}{
-			go to next section\;
-			current section becomes this one\;
-		}{
-			go back to the beginning of current section\;
-		}
+	\caption{K-Anonymisation by Clustering in Attribute hierarchies (KACA)}
+	form equivalence classes from the data set\\
+	\While{there exists an equivalence class of size $<$ k}{
+	randomly choose an equivalence class $C$ of size $k$ k\\
+	evaluate the pairwise distance of $C$ and all other equivalence classes\\
+	find the equivalence class $C'$ with the smallest distance to $C$\\
+	generalise the equivalence classes $C$ and $C'$
 	}
-	\caption{How to write algorithms}
+	
 \end{algorithm}
 
 
