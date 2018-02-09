@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.20)  9 FEB 2018 19:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.20)  9 FEB 2018 19:49
 entering extended mode
 **./Seminarpaper.tex
 (Seminarpaper.tex
@@ -481,7 +481,7 @@ ity, these at-tacks should
  []
 
 [7]
-Overfull \hbox (10.68268pt too wide) in paragraph at lines 266--267
+Overfull \hbox (10.68268pt too wide) in paragraph at lines 271--272
 []\OT1/cmr/m/n/10 For ev-ery gen-er-al-iza-tion, strat-egy builds a bi-nary sea
 rch to find all k-anonymous
  []
@@ -545,7 +545,7 @@ X 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><D:/Program Files/MiKTeX 2.9/fon
 ts/type1/public/amsfonts/cm/cmsy9.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/
 public/amsfonts/cm/cmti10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/a
 msfonts/symbols/msbm10.pfb>
-Output written on Seminarpaper.pdf (13 pages, 268427 bytes).
+Output written on Seminarpaper.pdf (13 pages, 269255 bytes).
 PDF statistics:
  122 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
