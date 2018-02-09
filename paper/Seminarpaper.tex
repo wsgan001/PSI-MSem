@@ -227,30 +227,18 @@ Needed because data contains categorical values, the methods are not quite effec
 	
 \end{algorithm}
 
-
-
-
 \subsection{The OlA Algorithm }
 The OLA Algorithm works in 3 Steps that will now be explained.
 
-1.	For every generalization strategy build a binary search to find all k-anonymous nodes in the different strategies.
-2.	For every generalization strategy that includes k-anonymous nodes save the one with the least Information loss in the hole generalization strategy this is referet to an local optimon k-anonymous solution.
-3.	Now compare the local optimum solutions to respect of ther information loss. The one with the lowest Information loss of all local optimum solutions is  the global optimum solution.
+1.    For every generalization, strategy builds a binary search to find all k-anonymous nodes in the different strategies.
+2.    For every generalization strategy that includes k-anonymous nodes save the one with the least Information loss in the hole generalization strategy, this is referred to a local option k-anonymous solution.
+3.    Now compare the local optimum solutions to respect of the information loss. The one with the lowest Information loss of all local optimum solutions is the global optimum solution.
 
-The most time consuming operation is finding the all the K-anonymous notes with and compare them to each other with respect to their information loss.  To get a better performance at the Programm step 1) the OLA algorithm works with Predictive Tagging that boost the process.  This Tagging take advandage of 2 Theorems of the generalization Latice. That every k-anonymous note in the same generalization lattice on hight n. All notes above n and in the same generalization strategy are also k-anonymous. So the algorithm only have to find the first k-anonymous note in the strategy and tag all above as k-anonymous. 
+The most time consuming operation is finding the all the K-anonymous notes with and compare them to each other with respect to their information loss.  To get a better performance at the Programm step 1) the OLA algorithm works with Predictive Tagging that boost the process.  This Tagging take advantage of 2 Theorems of the generalization Lattice. That every k-anonymous note in the same generalization lattice on hight n. All notes above n and in the same generalization strategy are also k-anonymous. So the algorithm only has to find the first k-anonymous note in the strategy and tag all above as k-anonymous.   
 
 \subsection{Cloaking Algorithm}
-Moving object data poses new challenges to traditional database, data mining, and privacy-preserving technologies due to its unique characteristics: it is time-dependent, location-dependent, and is generated in large volumes of highdimensional stream data. The following algorithm shows the a example of privacy production.The Cloacking Alortihm tries to produce Anonymity on location based data for users of Location Bases Services(LBS). The Cloacking Algorithm is installed on a location protection broker on a trusted server and anonymise messages which will afterwards send to the LBS. K-anonymity prevents such a privacy breach by ensuring that each individual record can only be released if there is at least k − 1 other (distinct) individuals whose associated records are indistinguishable from the former in terms of their quasi-identifier values.
+Moving object data poses new challenges to a traditional database, data mining, and privacy-preserving technologies due to its unique characteristics: it is time-dependent, location-dependent, and is generated in large volumes of high-dimensional stream data. The following algorithm shows an example of privacy production.The Cloaking Algorithm tries to produce Anonymity on location-based data for users of Location Bases Services(LBS). The Cloaking Algorithm is installed on a location protection broker on a trusted server and anonymize messages which will afterward send the LBS. K-anonymity prevents such a privacy breach by ensuring that each individual record can only be released if there is at least k − 1 other (distinct) individuals whose associated records are indistinguishable from the former in terms of their quasi-identifier values. there a two possible attacks to get the identity of a sender of a message. At the  Restricted Space Identification, the attacker A observes that message M is sent from location L afterward he gets the background knowledge that L belongs to someone specific. For example, if Mr. Bob the owner of a flat sends a message and the attacker observes this message. He can re-link the identity of Bob. Another Attack is  Observation Identiﬁcation. If A has observed the current location L of subject S and ﬁnds a message M from L then A learns that S has sent M.  To prevent this leaking of information the cloaking algorithm works with Spatial Cloaking and Temporal Cloaking. Spatial Cloakings goal is to increase the location of m in such a way that there are more messages in it. So that there is not only one message at a time in an area. Temporal Cloaking extends the sending time until more messages are in one area. 
 
-there a two possible attacks to get the identity of a sender of a message. At the  Restricted Space Identification the attacker A observes that message M is sended from location L afterwards he gets the background knowledge  that L belongs to someone specific. For example if Mr. Bob the owner of a flat sends a message and the attacker observes this message. He can re link the identity of Bob. 
-Another Attack is  Observation Identiﬁcation. If A has observed the current location L of subject S and ﬁnds a message M from L then A learns that S has sent M. 
-
-To prevent this leaking of information the cloacking algorthim works with Spatial Cloaking and Temporal Cloaking. 
-
-Spatial Cloakings goal is to increase the location of m in such a way that there are more messages in it. So that there is not only one message at a time in an areal. Temporal Cloaking extend the sending time until more messages are in one area.  A user can give 
-
-
-Spatial cloackign refers to the Idee that the coordinates will be boxes and the temporal cloacking refers to the function of dislimit the possibility that someone can infere that you are their at that time. With sending the message with a time interval which is bigger than we thought it would be. 
 
 %\section{Releated techniques}
 \section{Summary}
