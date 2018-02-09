@@ -8,6 +8,11 @@
 \usepackage{booktabs}
 \usepackage{amsmath}
 \usepackage{amssymb}
+
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+
+\usepackage[noend]{algpseudocode}
+
 \newcommand{\R}{\mathbb{R}}
 %
 \begin{document}
@@ -35,8 +40,11 @@ in a realworld application\\[6pt]
 \maketitle
 %
 %\tableofcontents
+\section{Abstract}
+Bla BLA BLA WIR SIND TOLL!
 \newpage
 \setcounter{page}{1}
+
 \section{Introduction}
 %
 Nowadays data is a key factor in nearly every domain. It is comparable to the gold rush of the \ensuremath{19^{th}.} century \cite{datarevo}. Furthermore, storage space and network increasingly become affordable \cite{sweeney2002k}. 
@@ -84,7 +92,7 @@ The adversary knows that his target does know specific details about his target.
 Adversary knows for example more general fact for example P(t[condition] = cancer| t[Age] $\geq$ 40). The attacker may use it to interference about records \cite{ldiversity}
 
 \subsubsection{K-Anonymity}
-The goal of making a k-anonymized table, is to have at least (k-1) tuples of each identical tuple taking the corresponding quasi-identifiers into account \cite{sweeney2002k,li2006achieving}. For example the 2-anonyminized version of the table \ref{intro_example} of introduction section
+The goal of making a k-anonymized table, is to have at least (k-1) tuples of each identical tuple taking the corresponding quasi-identifiers into account \cite{sweeney2002k,li2006achieving}. For example the 2-anonyminized version of the table \ref{intro_example} in the introduction section.
 \subsubsection{Equivalence class}
 Is a set of all tuples with the identical quasi-identifiers of a table \cite{li2006achieving}.
 \subsubsection{global recoding/domain generalisation}
@@ -206,7 +214,26 @@ Generalization mean, replacing a value with a less specific but semantic identic
 \section{Algorithm}
 \subsection{Clustering}
 Needed because data contains categorical values, the methods are not quite effective.
-\cite{li2006achieving}
+\cite{li2006achieving}.\\
+\begin{algorithm}[H]
+	\KwData{this text}
+	\KwResult{how to write algorithm with \LaTeX2e }
+	initialization\;
+	\While{not at end of this document}{
+		read current\;
+		\eIf{understand}{
+			go to next section\;
+			current section becomes this one\;
+		}{
+			go back to the beginning of current section\;
+		}
+	}
+	\caption{How to write algorithms}
+\end{algorithm}
+
+
+
+
 \subsection{The OlA Algorithm }
 The OLA Algorithm works in 3 Steps that will now be explained.
 1.	For every generalization strategy build a binary search to find all k-anonymous nodes in the different strategies.
@@ -220,7 +247,7 @@ The Cloacking Alortihm tries to produce Anonymity on locasen based data for user
 
 The Attacks to gain Information about the User of Sended the massenges give Inside on the reason for the implementation. Restricted Space Identiﬁcation and Observation Identiﬁcation. Restriced Space Identification happens if you are the only on in at a location and the attack good the background knowlwege after receiving the transmitted messange with the location data he can contuct that you are the one. To prefend this leaking of information the cloacking algorthim works with Spatial Cloaking and Temporal Cloacking. Spatial cloackign refers to the Idee that the coordinates will be boxes and the temporal cloacking refers to the function of dislimit the possibility that someone can infere that you are their at that time. With sending the message with a time interval which is bigger than we thought it would be. 
 
-\section{Releated techniques}
+%\section{Releated techniques}
 \section{Summary}
 Like we saw in Chapter OLA Algorithm. There are possibilities of choosen between different Information Loss metrices which all compute different values to the same k-anonymous node. So the implemenatior have to choose which one fits the most on his data. Different Matrics have pros and contras and have to be compared. Another Problem with Information loss is that you can measure the information loss on your dataset but what would be more interesting the information loss compared to upcoming data mining tool or machine learning application. The information loss metrics can´t know which information is important for the upcoming dataminging step. Like we saw  suppression can also harm the quality of the data and should be choosen waisley. 
 The production of k-anonymity is NP – Hard, which ould be shown by balbal and balla in babalbala and .
