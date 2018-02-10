@@ -261,6 +261,13 @@ This algorithm idea is to archive k-anonymity by clustering attribute hierarchic
 This algorithm has a runtime of $O(nlogn + |E|^{2})$. Li, Wong, Fu, and Pei have shown that their KACA-Algorithm is resulting in a 5.57 times smaller amount of distortion as the well known Incognito algorithm. The reason is lying in the technique which Incognito is using. Its a global recoding algorithm, which is resulting in a over-generalized table \cite{li2006achieving}.
 \subsection{The OLA Algorithm }
 
+The OLA Algortihm was original produced for the field of health data anonymization. Also he wants to prodcue optimal k-anonymity. That means producing the usual definition of k-anonymity with the differents to produce less information loss as possible. In LUDWIG KAPITEL was shown one possibilty of measuring the information loss. The Algortihm can use 3 different Kind of Information loss metrices which result in different anonymization result. Information loss can result in loss of statistical power, inaccurate analysis result and inefficient use of data. 
+
+ The alogrithem works with supression and generalization of the data. Supression can result in drastical information loss due to the fact that a hole attribute gets raced.  generalization will performed on all potential Quasi identifiers. For different kind of data their a different kind of genralization techniks. So for string the rightmost char can be deleted. For numerical data we can produce intervals which will include the generalicate attribute. For date we can reduce the specifikation from days to months till years. Generalization includes Supression. The hightes attribute on each generalication lattice is the supressed version of the attribute in includes no information at all. 
+
+
+
+
 To produce an optimal k-anonymity solution 
 
 
