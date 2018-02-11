@@ -24,12 +24,20 @@ Domingo-Ferrer, J., Torra, V.: A critique of k-anonymity and some of its
   enhancements. In: Availability, Reliability and Security, 2008. ARES 08.
   Third International Conference on. pp. 990--993. IEEE (2008)
 
+\bibitem{dwork2011differential}
+Dwork, C.: Differential privacy. In: Encyclopedia of Cryptography and Security,
+  pp. 338--340. Springer (2011)
+
 \bibitem{el2009globally}
 El~Emam, K., Dankar, F.K., Issa, R., Jonker, E., Amyot, D., Cogo, E.,
   Corriveau, J.P., Walker, M., Chowdhury, S., Vaillancourt, R., et~al.: A
   globally optimal k-anonymity method for the de-identification of health data.
   Journal of the American Medical Informatics Association  16(5),  670--682
   (2009)
+
+\bibitem{gedik2004customizable}
+Gedik, B., Liu, L.: A customizable k-anonymity model for protecting location
+  privacy. Tech. rep., Georgia Institute of Technology (2004)
 
 \bibitem{incognito}
 LeFevre, K., DeWitt, D.J., Ramakrishnan, R.: Incognito: Efficient full-domain

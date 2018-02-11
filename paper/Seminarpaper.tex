@@ -141,12 +141,13 @@ Coming to a conclusion the researcher demands the information provided in the ta
 %%%%%%%%%%%%%
 \subsection{Attacks as Barrier}
 
-Furthermore, also attacks have to be considered as barriers for the implementation, because if the implementation ignores the weaknesses which the attacks use, k-anonymity will be useless. 
-It is absolutely necessary that an attacker, under no circumstances, can learn about whatsoever target if he is studying the published database. Not even if the attacker has background knowledge from any other sources  \cite{Dalenius1977}. Unfortunately like Dwork showed 2006 that such safety is impossible because of the impossibility to predict what the attacker may know. Therefore its important and necessary that the implementation takes possible attacks into account and implement countermeasures, but because attacks are not the main part of this paper it will be only a short introduction. 
+Attacks can be considered as another barrier to k-anonymization implementations. If the implementation ignores the deficiencies which the attacks can make use of, k-anonymity has then no value. It is absolutely necessary that an attacker, under no circumstances, discovers information about the target while he/she is reading the published database. This should also be feasible even if the attacker has background knowledge of other sources   \cite{Dalenius1977}. Unfortunately, as shown by Dwork such safety parameters are impossible, because of the unfeasibility to predict what the attacker might know \cite{dwork2011differential}. Therefore, it is important and necessary that the implementation takes possible attacks into account and implements countermeasures. However, since attacks are not the main focus of this paper, a rather short introduction will be provided. 
 
 \subsubsection{Homogeneity attack}
 
-As an example, let Alice be the adversary and let be Bob her target. They are neighbors, some day Bob get transported with an ambulance to an hospital. Assume the hospital published the table \ref{4ktable}, where all current patients with them Nationality, Age, ZIP, and Problem are listed, but this table got 4-anonymized before release. Alice knows that Bob is a 31 old, American who lives in ZIP Code 02239. She can conclude that either he is entry 3, 5,6, or 11. Furthermore, all of these entry have the same Problem, Cancer. Alice can conclude Bob is suffering from Cancer even if the table the table got 4-anonymized \cite{sweeney2002k,ldiversity}. To counter such attacker \textbf{diversity} is needed \cite{ldiversity}. Such method is the so-called l-diversity which will not addressed further in this paper.  
+One type of an attack is the so-called \textit{Homogeneity Attack}. Let Alice be the adversary and let be Bob her target. They are neighbours and one day Bob is transported with an ambulance to the hospital. Let us assume that the hospital published the \textit{Table \ref{4ktable}}, where all current patients including their \textit{Nationality, Age, ZIP,} and \textit{Problem}, are listed, is already k-anonymized before its release. Alice knows that Bob is a 31 years old, American who lives in 02239 (ZIP Code). Thus, she can conclude that he is entry 3, 5,6, or 11.
+
+Furthermore, all of these entries have the same Problem: Cancer. Alice can conclude that Bob suffers from cancer even if the table the table has already been k- anonymized  \cite{sweeney2002k,ldiversity}. To counteract such attacks diversity is needed \textbf{diversity}. One method which is worth mentioning, but will not be further discussed in this paper is the so-called l-diversity.  
 
 % Please add the following required packages to your document preamble:
 % \usepackage{booktabs}
@@ -172,8 +173,7 @@ As an example, let Alice be the adversary and let be Bob her target. They are ne
 	\end{tabular}
 \end{table}
 
-\subsubsection{Background knowledge attack}
-This attack use the demographic background knowledge, which got explained in the basics, of an adversary. Assume Alice have a college, which get also to the same hospital. This college is 32 years old, Japanese and have the ZIP 93607. Everyone with the same quasi-identifiers (Age = 3* and ZIP = 936**) have a cancer or a hearth disease. Because she knows that Japanese have a very low risk of a hearth disease she conclude her college has cancer \cite{ldiversity}.
+Another type of an attack is the \textit{Background Knowledge Attack}. This type of an attack uses demographic background knowledge, which is stored in the ground information of an adversary. Let us assume that Alice has a colleague, who enters also to the same hospital. This colleague is a 32 years old, Japanese and lives in 93607 (ZIP). Everyone with the same quasi-identifiers, i.e. Age = 3* and ZIP = 936**) have cancer or a heart disease. However, she knows that Japanese have a very low risk of a heart disease and, thus, she concludes that her college has cancer \cite{ldiversity}.
 \begin{table}[]
 	\centering
 	\caption{Background Knowledge Attack}
@@ -190,13 +190,12 @@ This attack use the demographic background knowledge, which got explained in the
 	\end{tabular}
 \end{table}
 
-\subsubsection{Unsorted matching attack against k-anonymity}
-This attacks is based on the very common strategy to release two tables separately. For example assume a two column weight table (a). This table get separated in two tables (b, c). Table b will contain Age completely generalized but ZIP ungeneralized, table c will have Age ungeneralized but Zip Generalized. The adversary just will merge both tables and will get table (a), and get access to sensitive information. This weakness can be fix via random sorting. \cite{meyerson2004complexity}.
+The last type of attack that will be shown in this table is the Unsorted Matching Attack against k-anonymity. This type of attack is based on the very common strategy to release two tables separately. For example, let us assume a two column weight \textit{Table \ref{MatchingAttack}a}. This table can then be separated into two tables (6b, 6c). \textit{Table \ref{MatchingAttack}b} will contain \textit{Age} completely generalized but ZIP ungeneralized, and \textit{Table \ref{MatchingAttack}c} will have \textit{Age} ungeneralized but ZIP is generalized. The adversary can simply merge both tables and obtain \textit{Table \ref{MatchingAttack}a}, and have access to sensitive information. This weakness can be solved through random sorting \cite{meyerson2004complexity}.
 
 \begin{table}[]
 	\centering
-	\caption{My caption}
-	\label{my-label}
+	\caption{Unsorted Matching Attack example}
+	\label{MatchingAttack}
 	\begin{tabular}{@{}cccccccc@{}}
 		\multicolumn{2}{c}{\textbf{a}} & \multicolumn{1}{l}{} & \multicolumn{2}{c}{\textbf{b}} & \multicolumn{1}{l}{} & \multicolumn{2}{c}{\textbf{c}} \\ \cline{1-2} \cline{4-5} \cline{7-8} 
 		Age           & ZIP            &                      & Age           & ZIP            &                      & Age           & ZIP            \\ \cline{1-2} \cline{4-5} \cline{7-8} 
@@ -211,8 +210,7 @@ This attacks is based on the very common strategy to release two tables separate
 	\end{tabular}
 \end{table}
 
-\subsubsection{Conclusion}
-After showing possible attacks on k-anonymity it should be clear that before implementation an application with k-anonymity, these attacks should be tested and the application should be secure against any possible attack. 
+Drawing a conclusion from the possible attacks on \textit{k-anonymity}, it should be clear that before the implementation of \textit{k-anonymity} the application has to be tested for such attacks it should also be secured against any other possible attacks.
 
 \subsection{NP Hard}
 Meyerson and Williams analyze the production of an optimal K-anonymity solution in their complexity and found out that it is an NP-Hard Problem. Which means that the problem is at least NP-Complete but maybe harder. That can result that the Algorithm which should produce optimal K-anonymity will maybe not find a solution. For the real world application, this means that we are not sampled of producing a k-anonymity solution with less information loss as possible which results in worse datamining and maschine Learning Applications.  However the show an approximation algorithm for k-anonymizing, which will take polynomial time and will use suppression the most O(k log k)  \cite{sweeney2002k}. The problem with suppression is the high information loss. So someone had to choose between time complexity and information loss as a barrier for the implemenation of k-anonymity \cite{el2009globally}. 
@@ -220,7 +218,7 @@ Meyerson and Williams analyze the production of an optimal K-anonymity solution 
 
 
 \section{Algorithm}
-This section will show some algorithms which goals is to archive k-anonymity through generalization. 
+This section will show some algorithms which goals is to archive \textit{k-anonymity} through generalization. 
 
 \subsection{The KACA Algorithm}
 This algorithm idea is to archive k-anonymity by clustering attribute hierarchical structures. The algorithm choose a random equivalent class, which is smaller than k. The next step is to form a lager equivalent class by merging the chosen  one with the closest equivalent class. Which is resulting in a larger combined equivalent class. Through repeating this process the final result is that each equivalent class consists of at least k tuples  \cite{li2006achieving}.\\
