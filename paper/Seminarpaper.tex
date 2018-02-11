@@ -221,7 +221,7 @@ Meyerson and Williams analyze the production of an optimal K-anonymity solution 
 This section will show some algorithms which goals is to archive \textit{k-anonymity} through generalization. 
 
 \subsection{The KACA Algorithm}
-This algorithm idea is to archive k-anonymity by clustering attribute hierarchical structures. The algorithm choose a random equivalent class, which is smaller than k. The next step is to form a lager equivalent class by merging the chosen  one with the closest equivalent class. Which is resulting in a larger combined equivalent class. Through repeating this process the final result is that each equivalent class consists of at least k tuples  \cite{li2006achieving}.\\
+The idea behind this algorithm idea is to achieve \textit{k-anonymity} by clustering attribute hierarchical structures. The algorithm chooses a random \textit{equivalent class}, which is smaller than k. The next step is to form a lager \textit{equivalent class} by merging the chosen one with the closest \textit{equivalent class}. This is resulting in a larger combined \textit{equivalent class}. Through repeating this process the end result is that each \textit{equivalent class} consists of at least k-tuples \cite{li2006achieving}.\\
 \begin{algorithm}[H]
 	\caption{K-Anonymization by Clustering in Attribute hierarchies (KACA) \cite{li2006achieving}}
 	form equivalence classes from the data set\\
@@ -232,7 +232,7 @@ This algorithm idea is to archive k-anonymity by clustering attribute hierarchic
 	generalise the equivalence classes $C$ and $C'$
 	}	
 \end{algorithm}
-This algorithm has a runtime of $O(nlogn + |E|^{2})$. Li, Wong, Fu, and Pei have shown that their KACA-Algorithm is resulting in a 5.57 times smaller amount of distortion as the well known Incognito algorithm. The reason is lying in the technique which Incognito is using. Its a global recoding algorithm, which is resulting in a over-generalized table \cite{li2006achieving}.
+This algorithm has a runtime of $O(nlogn + |E|^{2})$. Li, Wong, Fu, and Pei have shown that their \textit{KACA-Algorithm} is resulting in a 5.57 times smaller amount of distortion as the well known \textit{Incognito Algorithm}. The reason is lying in the technique which \textit{Incognito} is using. Its a global recoding algorithm, which is resulting in a over-generalized table \cite{li2006achieving}.
 
 
 \subsection{The OLA Algorithm }
