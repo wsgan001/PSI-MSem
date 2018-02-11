@@ -65,34 +65,20 @@ This is leading to an open-source community where the created and stored data ar
 	\end{tabular}
 \end{table}
 
-The data presented \textit{Table \ref{intro_example}} must first be anonymized before their release is approved. A very common technique to achieve this goal is the so-called k-anonymity process, which prevents the danger of private data leakage. This paper aims to show the barriers to the implementation of k-anonymity. Section 1 will present the required theoretical background to understand k-anonymity and its purpose. Section 2 will discuss the underlying barriers of k-anonymity, while Section 3 takes into consideration the possible attacks of k-anonymity, which might function as barriers to this process. Section 4 explains how multiple algorithms can be implemented to k-anonymity. A summary of the implementations of this process and its possible barriers  will be provided in the last section of this paper.
+The data presented \textit{Table \ref{intro_example}} must first be anonymized before their release is approved. A very common technique to achieve this goal is the so-called k-anonymity process, which prevents the danger of private data leakage. This paper aims to show the barriers to the implementation of k-anonymity. Section 1 will present the required theoretical background to understand k-anonymity and its purpose. Section 2 will discuss the underlying barriers of k-anonymity, while Section 3 takes into consideration the possible attacks of k-anonymity, which might function as barriers to this process. Section 4 explains how multiple algorithms can be implemented k-anonymity. A summary of the implementations of this process and its possible barriers  will be provided in the last section of this paper.
 \newpage
 \section{Basics}
-In the following subsections basics will be explained. 
-\subsubsection{Microdata:}
-First of all, those data is containing records of information about individuals. The upside versus the more known summary or aggregate data is, that microdata is naturally flexible. Everyone who has this data can perform own statistics from that data \cite{microdataweb}.
-\subsubsection{Identifier:}
-They are attributes which can identify the record owner explicitly without any other attribute. For example the full name (first name and last name), telephone number, social security number, and more \cite{domingo2008critique}.
-\subsubsection{Quasi-identifier:}
-Even though explicit identifier got removed from published data (to anonymize the data). Attributes which non-explicitly identify the record owner are left. But if they get combined with other non-explicit attributes or other tables, they can reidentify the record owner. In such a case those combination of attributes are called quasi-identifier. For example Gender, Age, Postcode, weight and height \cite{dalenius1986finding}. Such process is shown in figure (the quasi-identifier would be the ZIP, birth date and sex) \ref{quasiidentifier}.
+In order to understand the process of k-anonymity one should be familiar with its basic concepts. This is possible by presenting and explaining in detail the theoretical background.  The first term to be introduced is \textit{microdata}. The data being processed contain records of information about individuals. Microdata is much more aggregate than usual data. These microdata are naturally accessible, as that everyone who has these data can run his/her own statistics from them  \cite{microdataweb}. 
+Another important term is \textit{Identifier}. These are attributes which can detect explicitly the record owner without any other attribute. For example, the owner’s full name (first and last name), telephone number, social security number, and even more specific private data \cite{domingo2008critique}.\\\\
+In order to anonymize the data, \textit{identifier} is removed from the published data. However, there is another process that are retained are the so-called \textit{Quasi-identifier}. These are attributes which non-explicitly identify the record owner. When they are combined with other non-explicit attributes or other tables, they can re-identify the record owner. In such cases these combinations of attributes are called quasi-identifier, such as \textit{gender}, \textit{age}, \textit{postcode}, \textit{weight} and \textit{height} \cite{dalenius1986finding}. An example of this process is to be found in figure \ref{quasiidentifier} (the quasi-identifier of figure would be ZIP (postal code), birth date and sex).\\
 \begin{figure}[]
 	\centering
 	\includegraphics[width=0.6\textwidth]{linkingdata.png}
 	\caption{Quasi-identifiers}%
 	\label{quasiidentifier}
-\end{figure}
-\subsubsection{Sensitive data:}
-Data which is useful for example researchers but are too private and should not be known publicly nor be accessible for outsiders. This is the data which the record owner do not want to get linked to.\cite{ldiversity}.
-
-\subsubsection{Background-knowledge:}
-Because its unknown what the attackers knows, we have to assume additionally to that he have access to table, the attackers knows that the table is generalized (to guarantee k-anonymity). Furthermore, the attacks is aware of the domain of the attributes.\\
-\textbf{Instance-level background knowledge:}
-The adversary knows about specific details about his target. For example Alice (the adversary) knows that Bob do not suffer from a disease, because he does not show the symptoms. In this case Alice may can conclude what Bob is really suffers from.\\
-\textbf{Demographic background knowledge:}
-The Adversary knows more general fact, for example P(t[condition] = cancer| t[Age] $\geq$ 40). With this information the attacker may use it to interference about records \cite{ldiversity}
-
-\subsubsection{K-Anonymity:}
-The goal of making a k-anonymized table, is to have at least (k-1) tuples of each identical tuple taking the corresponding quasi-identifiers into account \cite{sweeney2002k,li2006achieving}. For example the 2-anonyminized version of the table \ref{intro_example} in the introduction section would be the following table:
+\end{figure}\\
+The most important type of data worth mentioning is \textit{sensitive data}. This type of data is useful to researchers but they contain private information and should not be publicized or be accessible to strangers. Record owners do not want to be linked to these type of data. Next to data types there are 3 ground knowledge types: \textit{Background knowledge}, \textit{Instance-level background knowledge}, \textit{Demographic background knowledge}. \textit{Background knowledge} deals with the uncertainty of the amount of data access the attackers has. The developer has to consider that the attackers might have access to a table, since they know that in order to achieve k-anonymity tables are generalized. Furthermore, the attackers are aware of the domain attributes. Instance-level background knowledge, then, reveals that the adversary possesses comprehensive knowledge of the target’s specific details. For example, Alice (the adversary) knows that Bob does not suffer from a disease, because he has no symptoms. In this case, Alice can conclude of what actually Bob suffers from. Lastly, in the demographic background knowledge the adversary is informed about general facts, for example P (t[condition] = cancer| t[Age] 40). With these information the attackers can access and interference the records \cite{ldiversity}.\\\\
+Considering \textit{K-Anonymity}, the main goal of making a k-anonymized table is to have at least (k-1) tuples of each identical tuple by taking the corresponding quasi-identifiers into account  \cite{sweeney2002k,li2006achieving}. For example, the k-anonymized version of \textit{Table  \ref{intro_example}} in the introduction section would be the following table:
 \begin{table}[]
 	\centering
 	\caption{Basic example 2-anonymized}
@@ -108,24 +94,15 @@ The goal of making a k-anonymized table, is to have at least (k-1) tuples of eac
 		* & 2*  & 456*     & stress          \\ \bottomrule
 	\end{tabular}
 \end{table}\\
-\textbf{Disclosure:} There are two kinds, \textbf{identity disclosure} if this is happening an individual gets linked to a particular record. Because of that \textbf{attribute disclosure} may happens, this is if new information about an individual gets reveled. For example, Bob gets linked to his record in \ref{intro_example_sol}, because of some attack (see Section 3.3). The adversary learns that he is suffering from stress \cite{sweeney2002k}.  
-\subsubsection{Equivalence class:}
-Is a set of all tuples with the identical quasi-identifiers of a table \cite{li2006achieving}.
-\subsubsection{Global recoding/domain generalisation:}
-This generalization technique is very common, if a attribute value get generalized then all occourences of that value gets replaced by the generalized one \cite{sweeney2002k,sweeney2002achieving,li2006achieving,incognito}. 
-\subsubsection{Local recoding:}
-This coding strategies works differently from the above described one. Local recording generalizes attribute values in cells. Because of that this strategies doesn't over generalize the table and the data distortion is significantly lower \cite{li2006achieving}. 
-
-%\section{Theoretical and heuristically implantation of K-Anonymity}
-%Another problem we will introduce is, that the producing of k-anonymity of a computational view is an NP-hard problem, like Meyersond and Williams shown.
+The set of all tuples with the identical quasi-identifiers of a table are referred as equivalence class \cite{li2006achieving}.\\ \\
+It is also important to note that there are two kinds of disclosure, \textit{ identity disclosure}, during which an individual is linked to a particular record. Due to this \textit{attribute disclosure} might occur, once new information about an individual are revealed. For example, Bob is linked to his record in \textit{Table \ref{intro_example_sol}}, because of some attack (see Section 3.2). The adversary discovers that he suffers from stress \cite{sweeney2002k}.\\\\
+The last two terms concerning the basic concepts of k-anonymity are \textit{Global recoding/domain generalisation} and \textit{local recording}. The first refers to a very common generalization technique during which once an attribute value is generalized then all occurrences of that value are replaced by the generalized one  \cite{sweeney2002k,sweeney2002achieving,li2006achieving,incognito}. The later entails coding strategies, which work differently from the ones described above. \textit{Local recording} generalizes the attribute values in cells. Consequently, these types of strategies do not over generalize the table and the data distortion is significantly lower \cite{li2006achieving}. 
  
 \section{Underlying Barriers}
 
-In the following section, we will show the basic and most challenging barriers to the implementation of k-Anonymity. First, we will show the barrier which appears if you k-anonymize the data, the so-called \textbf{distortion} of data, in some papers it also mentioned as data loss. 
-%checked
+In the following section, the paper will present the basic and most challenging barriers to the implementation of k-anonymity. The barriers, which can emerge during the implementation of k-anonymity, will be explained further. These are the so-called \textit{distortion of data}, or as mentioned in some papers \textit{data loss}. 
 \subsection{Distortion of data as Barrier} 
-A basic underlying barrier of k-anonymity is, how to measure if a implementation has been successful or leads to a satisfying result. This can be measured by a simple calculation.
-The \textbf{modification rate} is representing the fraction of cells which got modified within the attribute set of the quasi-identifier \cite{li2006achieving}.
+A basic underlying barrier of k-anonymity is the process of measuring whether an implementation has been successful or whether it leads to a satisfying result. This can be measured by a simple calculation. The \textit{modification rate} denotes the fraction of cells which are modified within the attribute set of the quasi-identifier \cite{li2006achieving}.
 
 	
 \begin{table}[]
@@ -144,20 +121,24 @@ The \textbf{modification rate} is representing the fraction of cells which got m
 	\end{tabular}
 \end{table}
 
-\textbf{Example:} for table \ref{table_distortion}b, the modification rate is  33,$\overline{33}$\% (4 out of 12 quasi-identifier got changed) for table \ref{table_distortion}c: its is 100\% (12 out of 12 quasi-identifier got changed). Like this simple example shows the modification rate calculation is a unsatisfying procedure. Because of that the \textbf{weighted hierarchical distance} got introduced by Li, Wong, Fu and Pei. 
-To calculate the \textbf{weighted hierarchical distance} of a cell, which got generalized from level p to level q, following formula is used \cite{li2006achieving}.\\
-\scalebox{1.25}{$ WHD (p, q) = \frac{\sum_{j=q+1}^{p} \omega_{j,j-1}}{\sum_{j=2}^{h} \omega_{j,j-1}} $}\cite{li2006achieving}\\
-Let the hierarchy of birth date be \{D/M/Y, M/Y, Y, 10Y, C/T/G/P, *\}. Where D/M/Y  would be day.month.year, 10Y a 10 years interval and C/T/G/R for Child/Teen/Grownup/Pensioner.\\
-
-\textbf{Example with uniformed weight $w_{j,j-1} = 1$ where $2\leq j \leq h$} \cite{li2006achieving}: For the above example Birthday gets generalized from D/M/Y to 10Y, which corresponds into $WHD_{Birthday}(6,3) = \frac{3}{5} = 0,6$. For the Gender generalization it would be $WHD_{gender}(2,1) = \frac{1}{1} = 1$. Which means for generalize 5 cells of age from D/M/Y to 10Y one will have the same data distortion as if 3 cells of gender gets generalized from Male/Female to *. This calculation shows a much better way to address the distortion of data than the \textbf{modification rate} but it does not take how near a generalization is to the root (which would be *).\\
-
-\textbf{Example with height weight: $w_{j,j-1} = 1 / (j-1)^{\beta}$ where 2 $\leq$ j $\leq$ h and $\beta = \R \geq$ 1} \cite{li2006achieving}:
-$\beta$ would be chosen by the user. For example $\beta = 1$. For $WHD_{Birthday}(6,3) = \frac{0,\overline{33}+0,25+0,20}{1+0.5+0,\overline{33}+0,25+0,20} \sim 0,3431$. For $WHD_{gender}(2,1) = \frac{1}{1} = 1$. The distortion of nearly 3 changed cell of birthday from D/M/Y to  10Y have the same amount as if one cell of gender, from Female/Male to *, gets generalized. 
-
-\subsubsection{Conclusion}
-
-Because research need the information out of the tables, like of the examples. Its very important that as less as necessary information gets lost during the anonymization process. To show the importance  of this an additionally example, consider a table with surviver of a \textbf{idiom disaster beyond all expectations}. Researchers trying to find out the long-time effects of this disaster. Thats why the want to find out if victims get more likely to life a long and happy life if the live far away or close to the disasters location. If the data gets to much generalized by location its maybe useless for researchers to work with.
-
+As can be observed in \textit{Table \ref{table_distortion}b}, the modification rate is  33,$\overline{33}$\% (4 out of 12 quasi-identifier are changed) but for \textit{Table \ref{table_distortion}c} the rate is 100\% (12 out of 12 quasi-identifier got changed). As it can be seen in this simple example, the modification rate calculation is an unsatisfying procedure. Due to this, Li, Wong, Fu and Pei introduced the \textbf{weighted hierarchical distance}. In order to calculate the weighted hierarchical distance of a cell which is generalized from level p to level q, the following formula is used\\
+%%%%%%%%%%%%%%%%%%
+%%%FORMEL%%%%%%%%%
+%%%%%%%%%%%%%%%%%%
+\scalebox{1.25}{$ WHD (p, q) = \frac{\sum_{j=q+1}^{p} \omega_{j,j-1}}{\sum_{j=2}^{h} \omega_{j,j-1}} $}\cite{li2006achieving}.\\
+%%%%%%%%%%%%%%%%%%
+%%%FORMEL%%%%%%%%%
+%%%%%%%%%%%%%%%%%%
+Let the hierarchy of birth date be \{D/M/Y, M/Y, Y, 10Y, C/T/G/P, *\}. Where D/M/Y  stands for day.month.year, 10Y a 10 years interval and C/T/G/R for Child/Teen/Grownup/Pensioner.
+\\\\
+Another example can be shown by having a uniformed weight $w_{j,j-1} = 1$ where $2\leq j \leq h$ \cite{li2006achieving}. By Using the aforementioned example Birthday is generalized from D/M/Y to 10Y, which corresponds into $WHD_{Birthday}(6,3) = \frac{3}{5} = 0,6$. 
+The Gender generalization would be $WHD_{gender}(2,1) = \frac{1}{1} = 1$. In such, in order to generalize 5 cells of age from D/M/Y to 10Y, one has to do the same data distortion as when 3 cells of gender are generalized from Male/Female to *. This calculation presents a much better way to address the distortion of data than the modification rate. However, this does not take into account how close is the generalization to the root (which would be *).\\\\
+A last example can be shown with height weight $w_{j,j-1} = 1 / (j-1)^{\beta}$ where 2 $\leq$ j $\leq$ h and $\beta = \R \geq$ 1 \cite{li2006achieving}:
+$\beta$ can be chosen by the user. For example $\beta = 1$. For $WHD_{Birthday}(6,3) = \frac{0,\overline{33}+0,25+0,20}{1+0.5+0,\overline{33}+0,25+0,20} \sim 0,3431$. For $WHD_{gender}(2,1) = \frac{1}{1} = 1$. The distortion of almost 3 changed cell of birthday from D/M/Y to 10Y have the impact on the distortion as only one cell from Female/Male to * gets generalized.\\\\
+Coming to a conclusion the researcher demands the information provided in the tables, as shown in these examples. Therefore, it is very important that the least possible information are lost during the anonymization process. In order to understand the importance of this aspect, consider another example. You a table with survivors from a disaster beyond all expectations. Researchers will try to discover the long-term effects of this disasters and whether the victims are more likely to live a long and happy life by measuring their distance from disaster’s location. If there is a mass generalization of by the location (ZIP), it might be useless or non-significant for researchers to work with this information.
+%%%%%%
+%% DONE %%%
+%%%%%%%%%%%%%
 \subsection{Attacks as Barrier}
 
 Furthermore, also attacks have to be considered as barriers for the implementation, because if the implementation ignores the weaknesses which the attacks use, k-anonymity will be useless. 

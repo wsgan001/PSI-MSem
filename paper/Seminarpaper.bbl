@@ -6,6 +6,11 @@
 Ipumsl-confidentiality,
   \url{https://web.archive.org/web/20070823010133/http://international.ipums.org/international/confidentiality.html}
 
+\bibitem{aggarwal2005k}
+Aggarwal, C.C.: On k-anonymity and the curse of dimensionality. In: Proceedings
+  of the 31st international conference on Very large data bases. pp. 901--909.
+  VLDB Endowment (2005)
+
 \bibitem{Dalenius1977}
 Dalenius, T.: {T}owards a methodology for statistical disclosure control.
   Statistik Tidskrift  15,  429--444 (1977)
@@ -19,9 +24,12 @@ Domingo-Ferrer, J., Torra, V.: A critique of k-anonymity and some of its
   enhancements. In: Availability, Reliability and Security, 2008. ARES 08.
   Third International Conference on. pp. 990--993. IEEE (2008)
 
-\bibitem{dwork2011differential}
-Dwork, C.: Differential privacy. In: Encyclopedia of Cryptography and Security,
-  pp. 338--340. Springer (2011)
+\bibitem{el2009globally}
+El~Emam, K., Dankar, F.K., Issa, R., Jonker, E., Amyot, D., Cogo, E.,
+  Corriveau, J.P., Walker, M., Chowdhury, S., Vaillancourt, R., et~al.: A
+  globally optimal k-anonymity method for the de-identification of health data.
+  Journal of the American Medical Informatics Association  16(5),  670--682
+  (2009)
 
 \bibitem{incognito}
 LeFevre, K., DeWitt, D.J., Ramakrishnan, R.: Incognito: Efficient full-domain
@@ -38,6 +46,11 @@ Machanavajjhala, A., Gehrke, J., Kifer, D., Venkitasubramaniam, M.:
   l-diversity: Privacy beyond k-anonymity. In: Data Engineering, 2006. ICDE'06.
   Proceedings of the 22nd International Conference on. pp. 24--24. IEEE (2006)
 
+\bibitem{meyerson2004complexity}
+Meyerson, A., Williams, R.: On the complexity of optimal k-anonymity. In:
+  Proceedings of the twenty-third ACM SIGMOD-SIGACT-SIGART symposium on
+  Principles of database systems. pp. 223--228. ACM (2004)
+
 \bibitem{datarevo}
 Rossi, B.: Data revolution: the gold rush of the 21st century,
   \url{http://www.information-age.com/data-revolution-gold-rush-21st-century-2-123460039/}
@@ -51,5 +64,14 @@ Sweeney, L.: Achieving k-anonymity privacy protection using generalization and
 Sweeney, L.: k-anonymity: A model for protecting privacy. International Journal
   of Uncertainty, Fuzziness and Knowledge-Based Systems  10(05),  557--570
   (2002)
+
+\bibitem{wang2010privacy}
+Wang, K., Chen, R., Fung, B., Yu, P.: Privacy-preserving data publishing: A
+  survey on recent developments. ACM Computing Surveys  (2010)
+
+\bibitem{xu2008publishing}
+Xu, Y., Fung, B.C., Wang, K., Fu, A.W., Pei, J.: Publishing sensitive
+  transactions for itemset utility. In: Data Mining, 2008. ICDM'08. Eighth IEEE
+  International Conference on. pp. 1109--1114. IEEE (2008)
 
 \end{thebibliography}
