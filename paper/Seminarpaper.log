@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.20)  12 FEB 2018 20:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.20)  12 FEB 2018 20:58
 entering extended mode
 **./Seminarpaper.tex
 (Seminarpaper.tex
@@ -576,51 +576,61 @@ Missing character: There is no ¥ in font cmr10!
 <lattice.png, id=54, 649.67719pt x 461.47406pt>
 File: lattice.png Graphic file (type png)
  <use lattice.png>
-Package pdftex.def Info: lattice.png used on input line 259.
+Package pdftex.def Info: lattice.png used on input line 258.
 (pdftex.def)             Requested size: 347.12354pt x 246.57283pt.
- [9 <./general1.png> <./lattice.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 277--278
+Missing character: There is no ¬ in font cmr10!
+Missing character: There is no ¥ in font cmr10!
+
+Underfull \hbox (badness 10000) in paragraph at lines 274--275
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 277--278
+Underfull \hbox (badness 10000) in paragraph at lines 274--275
 
  []
 
+
+Underfull \vbox (badness 1048) has occurred while \output is active []
+
+ [9 <./general1.png>]
 Missing character: There is no Ô in font cmr10!
 Missing character: There is no ¨ in font cmr10!
 Missing character: There is no Å in font cmr10!
 Missing character: There is no Ô in font cmr10!
 Missing character: There is no ¨ in font cmr10!
 Missing character: There is no Å in font cmr10!
-[10]
+
+Underfull \vbox (badness 1297) has occurred while \output is active []
+
+ [10 <./lattice.png>]
+! Too many }'s.
+l.288 009globally}
+                  . Although the implementer can measure the information los...
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 286--291
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 286--291
+
+ []
+
+[11]
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
 
-Underfull \hbox (badness 10000) in paragraph at lines 293--299
+Underfull \hbox (badness 10000) in paragraph at lines 292--293
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 293--299
-
- []
-
-
-Underfull \vbox (badness 5985) has occurred while \output is active []
-
- [11]
-Underfull \hbox (badness 10000) in paragraph at lines 300--301
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 300--301
+Underfull \hbox (badness 10000) in paragraph at lines 292--293
 
  []
 
@@ -640,11 +650,11 @@ ntury-2-
 Here is how much of TeX's memory you used:
  4937 strings out of 493323
  70211 string characters out of 3139062
- 161202 words of memory out of 3000000
+ 161203 words of memory out of 3000000
  8384 multiletter control sequences out of 15000+200000
  15561 words of font info for 60 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,12n,26p,2315b,397s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,12n,26p,3181b,397s stack positions out of 5000i,500n,10000p,200000b,50000s
 <D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
 onts/cm/cmbx10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
 cmbx12.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx7.pf
@@ -663,7 +673,7 @@ X 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><D:/Program Files/MiKTeX 2.9/fon
 ts/type1/public/amsfonts/cm/cmsy9.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/
 public/amsfonts/cm/cmti10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/a
 msfonts/symbols/msbm10.pfb>
-Output written on Seminarpaper.pdf (16 pages, 594700 bytes).
+Output written on Seminarpaper.pdf (16 pages, 594430 bytes).
 PDF statistics:
  136 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
