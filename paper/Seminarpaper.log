@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.20)  12 FEB 2018 10:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.20)  12 FEB 2018 12:33
 entering extended mode
 **./Seminarpaper.tex
 (Seminarpaper.tex
@@ -465,87 +465,99 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [3]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 108.
+               Default added (so using `htbp') on input line 109.
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 132.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 133.
 
 ("D:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 132.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 133.
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
 
-Underfull \hbox (badness 10000) in paragraph at lines 124--142
+Underfull \hbox (badness 10000) in paragraph at lines 125--143
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 124--142
+Underfull \hbox (badness 10000) in paragraph at lines 125--143
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 124--142
+Underfull \hbox (badness 10000) in paragraph at lines 125--143
 
  []
 
-[4]
-
-LaTeX Warning: Reference `4ktable' on page 5 undefined on input line 148.
-
-[5]
+[4] [5]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 154.
+               Default added (so using `htbp') on input line 153.
 
 
-Overfull \hbox (1.17078pt too wide) in paragraph at lines 158--174
+Overfull \hbox (1.17078pt too wide) in paragraph at lines 157--173
  [][] 
  []
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 177.
+               Default added (so using `htbp') on input line 176.
 
 [6]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 195.
+               Default added (so using `htbp') on input line 194.
 
 [7]
-Overfull \hbox (0.95938pt too wide) in paragraph at lines 240--244
+Overfull \hbox (0.95938pt too wide) in paragraph at lines 239--241
 \OT1/cmr/m/n/10 The OLA Al-go-r-tihm was orig-i-nal pro-duced for the field of 
 health data anonymiza-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 239--241
+
  []
 
 <general1.png, id=49, 316.93407pt x 115.18031pt>
 File: general1.png Graphic file (type png)
  <use general1.png>
-Package pdftex.def Info: general1.png used on input line 248.
+Package pdftex.def Info: general1.png used on input line 244.
 (pdftex.def)             Requested size: 208.27623pt x 75.69408pt.
-
-Underfull \vbox (badness 2318) has occurred while \output is active []
-
  [8]
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no à in font cmr10!
-Missing character: There is no í in font cmr10!
-Missing character: There is no Ô in font cmr10!
-Missing character: There is no ¨ in font cmr10!
-Missing character: There is no Å in font cmr10!
-Missing character: There is no Ô in font cmr10!
-Missing character: There is no ¨ in font cmr10!
-Missing character: There is no Å in font cmr10!
+<lattice.png, id=54, 649.67719pt x 461.47406pt>
+File: lattice.png Graphic file (type png)
+ <use lattice.png>
+Package pdftex.def Info: lattice.png used on input line 256.
+(pdftex.def)             Requested size: 347.12354pt x 246.57283pt.
 
-[9 <./general1.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9 <./general1.png> <./lattice.png>]
 Missing character: There is no ¬ in font cmr10!
 Missing character: There is no ¥ in font cmr10!
 Missing character: There is no ¬ in font cmr10!
 Missing character: There is no ¥ in font cmr10!
- [10] [11] (Seminarpaper.bbl
+
+Overfull \hbox (11.90489pt too wide) in paragraph at lines 273--275
+\OT1/cmr/m/n/10 this for-mula []/[]
+ []
+
+Missing character: There is no Ô in font cmr10!
+Missing character: There is no ¨ in font cmr10!
+Missing character: There is no Å in font cmr10!
+Missing character: There is no Ô in font cmr10!
+Missing character: There is no ¨ in font cmr10!
+Missing character: There is no Å in font cmr10!
+[10]
+Missing character: There is no ¬ in font cmr10!
+Missing character: There is no ¥ in font cmr10!
+Missing character: There is no ¬ in font cmr10!
+Missing character: There is no ¥ in font cmr10!
+ [11] [12] (Seminarpaper.bbl
 Overfull \hbox (212.38313pt too wide) in paragraph at lines 6--8
 []\OT1/cmr/m/n/9 Ipumsl-confidentiality, https://web.archive.org/web/2007082301
 0133/http://international.ipums.org/international/confidentiality.html 
@@ -563,40 +575,40 @@ Underfull \hbox (badness 10000) in paragraph at lines 63--65
 ntury-2-
  []
 
-) [12] (Seminarpaper.aux)
+) [13] (Seminarpaper.aux) )
+(\end occurred inside a group at level 1)
 
-LaTeX Warning: There were undefined references.
-
- ) 
+### simple group (level 1) entered at line 274 ({)
+### bottom level 
 Here is how much of TeX's memory you used:
- 4386 strings out of 493323
- 60458 string characters out of 3139062
- 148907 words of memory out of 3000000
- 7844 multiletter control sequences out of 15000+200000
+ 4392 strings out of 493323
+ 60567 string characters out of 3139062
+ 147925 words of memory out of 3000000
+ 7849 multiletter control sequences out of 15000+200000
  15561 words of font info for 60 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,12n,26p,2416b,375s stack positions out of 5000i,500n,10000p,200000b,50000s
-<D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx7.pfb><D:/Program Files/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><D:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cmextra/cmex7.pfb><D:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmmi10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmmi5.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmmi7.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-r10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><
-D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><D:/Program
- Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><D:/Program Files/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><D:/Program Files/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmsy5.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmsy7.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmsy9.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10
-.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pf
-b>
-Output written on Seminarpaper.pdf (14 pages, 292151 bytes).
+ 39i,12n,26p,2416b,373s stack positions out of 5000i,500n,10000p,200000b,50000s
+<D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmb
+x10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+<D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx7.pfb><D:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><D:/Program Files/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmex7.pfb><D:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmmi5.pfb><D:/Program Files/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmmi7.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmr10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmr17.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.p
+fb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><D:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><D:/Program Files
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program Files/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><D:/Program Files/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmsy7.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmsy9.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmti10.pfb><D:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/sym
+bols/msbm10.pfb>
+Output written on Seminarpaper.pdf (15 pages, 587060 bytes).
 PDF statistics:
- 127 PDF objects out of 1000 (max. 8388607)
+ 133 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
