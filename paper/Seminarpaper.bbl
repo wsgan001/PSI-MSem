@@ -3,8 +3,7 @@
 \providecommand{\urlprefix}{URL }
 
 \bibitem{microdataweb}
-Ipumsl-confidentiality,
-  \url{https://web.archive.org/web/20070823010133/http://international.ipums.org/international/confidentiality.html}
+Ipumsl-confidentiality, \url{https://web.archive.org/web/20070823010133/}
 
 \bibitem{aggarwal2005k}
 Aggarwal, C.C.: On k-anonymity and the curse of dimensionality. In: Proceedings
