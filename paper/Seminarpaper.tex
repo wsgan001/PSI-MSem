@@ -238,8 +238,8 @@ This algorithm has a runtime of $O(nlogn + |E|^{2})$. Li, Wong, Fu, and Pei have
 
 \subsection{The OLA Algorithm }
 
-The OLA Algortihm was original produced for the field of health data anonymization. Also he wants to prodcue optimal k-anonymity. That means producing the usual definition of k-anonymity with the differents to produce less information loss as possible. In chapter \ref{sec:Distortion of data as Barrier} was shown one possibilty of measuring the information loss. 
-The Algortihm can use 3 different Kind of Information loss metrices which result in different anonymization result. Information loss can result in loss of statistical power, inaccurate analysis result and inefficient use of data.  The alogrithem works with supression and generalization of the data. Supression can result in drastical information loss due to the fact that a hole attribute gets raced.  Generalization will performed on all potential Quasi identifiers. An example for generalization can be found in figure \ref{Generalization}.For different kind of data there a different kind of genralization techniks. So for strings the rightmost char can be deleted. For numerical data we can produce intervals which will include the generalicate attribute. For date we can reduce the specifikation from days to months till years. Generalization includes Supression. The hightes attribute on each generalication lattice is the supressed version of the attribute in includes no information at all \cite{el2009globally}. The most time consuming operation is finding the all the K-anonymous notes and comparing them to each other with respect to information loss. In order to achieve a better performance at the Programm step 1) the OLA algorithm uses Predictive Tagging which enhances the process.  This Tagging take advantage of the structure of the generalization Lattice. A lattice is shown in Figure \ref{lattice}. That every k-anonymous note in the same generalization lattice on hight n. All notes above n and in the same generalization strategy are also k-anonymous. So the algorithm only has to find the first k-anonymous note in the strategy and tag all above this node as k-anonymous.
+The OLA Algortihm was original produced for the field of health data anonymization. The goal of OLA is  to prodcue optimal k-anonymity. That means producing the usual definition of k-anonymity with the differents to produce less information loss as possible. In chapter \ref{sec:Distortion of data as Barrier} was shown one possibilty of measuring the information loss. 
+The Algortihm can use three different kind of information loss metrices which result in different anonymization result. Information loss can result in loss of statistical power, inaccurate analysis result and inefficient use of data.  The alogrithem works with supression and generalization of the data. Supression can result in drastical information loss due to the fact that a hole attribute gets removed.\\
 
 \begin{figure}
 	\centering
@@ -248,9 +248,14 @@ The Algortihm can use 3 different Kind of Information loss metrices which result
 	\label{Generalization}
 \end{figure}
 
+
+
+Generalization will performed on all potential quasi identifiers. An example for generalization can be found in figure \ref{Generalization}. For different kind of data there a different kind of genralization technics. So for strings the rightmost char can be deleted. For numerical data we can produce intervals which will include the generalized attribute. For dates we can reduce the specifikation from days to months till years. Generalization includes supression. The highest attribute on each generalication lattice is the supressed version of the attribute and includes no information at all \cite{el2009globally}. The most time consuming operation is finding the all the K-anonymous solution in a dataset and comparing them to each other with respect to their information loss. In order to achieve a better performance at the Programm step 1) the OLA algorithm uses Predictive Tagging which enhances the process.  This tagging take advantage of the structure of the generalization lattice. A lattice is shown in Figure \ref{lattice}. In such, every k-anonymous note in the same generalization lattice on hight n. All notes above n and in the same generalization strategy are also k-anonymous. As a result, the algorithm only has to find the first k-anonymous note in the strategy and tag all above this node as k-anonymous. Two possible generalization strategies are market with a red line in figure \ref{lattice}. The grey shader nodes are k-anonymous.
+
+
 \begin{figure}
 	\centering
-	\includegraphics[width=0.6\textwidth]{lattice.png}
+	\includegraphics[width=1.0\textwidth]{lattice.png}
 	\caption{Generalization Lattice}%
 	\label{lattice}
 \end{figure}
@@ -260,9 +265,9 @@ The Algortihm can use 3 different Kind of Information loss metrices which result
 \caption{The OLA Algorithm works in 3 Steps:}
 \While{not all generalization strategies are compared}
 {
- For every generalization, strategy builds a binary search to find all k-anonymous nodes in the different strategies\\
-For every generalization strategy that includes k-anonymous nodes save the one with the least Information loss in the hole generalization strategy, this is referred to a local option k-anonymous solution\\
-Compare the local optimum solutions to respect of the information loss. The one with the lowest Information loss of all local optimum solutions is the global optimum solution\\
+For every generalization strategy I build a binary search to find all k-anonymous nodes K in I\\
+For every I that includes k-anonymous nodes save the one with the least Information loss L in I\\
+Compare I to respect of the information loss. The one with the lowest Information loss of all L is the global optimum solution\\
 \Return{global optimal solution}
 }
 \end{algorithm}
